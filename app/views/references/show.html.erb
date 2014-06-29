@@ -1,94 +1,127 @@
-<p id="notice"><%= notice %></p>
+<div class="bs-docs-section">
+  <div class="row">
+    <div class="col-md-12">
 
-<p>
-  <strong>Type of literatur:</strong>
-  <%= @reference.type_of_literatur %>
-</p>
 
-<p>
-  <strong>First author name:</strong>
-  <%= @reference.first_author_name %>
-</p>
+      <div class="page-header">          
+        <h1>
+          Reference <%= @reference.first_author_name %> <%= @reference.year %>
+        </h1>
+      </div>
 
-<p>
-  <strong>Year:</strong>
-  <%= @reference.year %>
-</p>
+      <div class="col-md-3" id="leftCol">
+        <div class="well">    
+          <%= render 'layouts/sidebar_show' %>
+        </div>
+      </div>     
 
-<p>
-  <strong>Title:</strong>
-  <%= @reference.title %>
-</p>
+      <div class="col-md-9" id="rightCol"> 
+        <div class="well">          
+          <div class="panel panel-info">
+            <div class="panel-body"> 
 
-<p>
-  <strong>Journal:</strong>
-  <%= @reference.journal %>
-</p>
 
-<p>
-  <strong>Volume:</strong>
-  <%= @reference.volume %>
-</p>
+              <p>
+                <strong>Type of literatur:</strong>
+                <%= @reference.type_of_literatur %>
+              </p>
 
-<p>
-  <strong>Page from:</strong>
-  <%= @reference.page_from %>
-</p>
+              <p>
+                <strong>First author name:</strong>
+                <%= @reference.first_author_name %>
+              </p>
 
-<p>
-  <strong>Page to:</strong>
-  <%= @reference.page_to %>
-</p>
+              <p>
+                <strong>Year:</strong>
+                <%= @reference.year %>
+              </p>
 
-<p>
-  <strong>Link:</strong>
-  <%= @reference.link %>
-</p>
+              <p>
+                <strong>Title:</strong>
+                <%= @reference.title %>
+              </p>
 
-<p>
-  <strong>Matrix:</strong>
-  <%= @reference.matrix %>
-</p>
+              <p>
+                <strong>Journal:</strong>
+                <%= @reference.journal %>
+              </p>
 
-<p>
-  <strong>Agent:</strong>
-  <%= @reference.agent %>
-</p>
+              <p>
+                <strong>Volume:</strong>
+                <%= @reference.volume %>
+              </p>
 
-<p>
-  <strong>Spiking:</strong>
-  <%= @reference.spiking %>
-</p>
+              <p>
+                <strong>Page from:</strong>
+                <%= @reference.page_from %>
+              </p>
 
-<p>
-  <strong>Treatment:</strong>
-  <%= @reference.treatment %>
-</p>
+              <p>
+                <strong>Page to:</strong>
+                <%= @reference.page_to %>
+              </p>
 
-<p>
-  <strong>Sample prep:</strong>
-  <%= @reference.sample_prep %>
-</p>
+              <p>
+                <strong>Link:</strong>
+                <%= @reference.link %>
+              </p>
 
-<p>
-  <strong>Detection:</strong>
-  <%= @reference.detection %>
-</p>
+              <p>
+                <strong>Matrix:</strong>
+                <%= @reference.matrix %>
+              </p>
 
-<p>
-  <strong>Tenacity:</strong>
-  <%= @reference.tenacity %>
-</p>
+              <p>
+                <strong>Agent:</strong>
+                <%= @reference.agent %>
+              </p>
 
-<p>
-  <strong>R comment:</strong>
-  <%= @reference.r_comment %>
-</p>
+              <p>
+                <strong>Spiking:</strong>
+                <%= @reference.spiking %>
+              </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @reference.user_id %>
-</p>
+              <p>
+                <strong>Treatment:</strong>
+                <%= @reference.treatment %>
+              </p>
 
-<%= link_to 'Edit', edit_reference_path(@reference) %> |
-<%= link_to 'Back', references_path %>
+              <p>
+                <strong>Sample prep:</strong>
+                <%= @reference.sample_prep %>
+              </p>
+
+              <p>
+                <strong>Detection:</strong>
+                <%= @reference.detection %>
+              </p>
+
+              <p>
+                <strong>Tenacity:</strong>
+                <%= @reference.tenacity %>
+              </p>
+
+              <p>
+                <strong>R comment:</strong>
+                <%= @reference.r_comment %>
+              </p>
+
+              <p>
+                <strong>User:</strong>
+                <%= @reference.user_id %>
+              </p>
+
+
+
+
+            </div>
+          </div>    
+          <%= link_to 'Edit Reference', edit_reference_path(@reference) , class: "btn btn-warning btn-sm" %> |  | 
+          <%= link_to 'Delete', @reference, class: "btn btn-danger btn-sm", method: :delete, data: { confirm: 'Are you sure?' } %> | 
+          <%= link_to 'Back to all References', references_path, class: "btn btn-info btn-sm" %>
+        </div>
+      </div>
+
+    </div>     
+  </div>
+</div>

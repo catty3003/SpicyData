@@ -56,7 +56,7 @@ class AgentsController < ApplicationController
   def destroy
     @agent.destroy
     respond_to do |format|
-      format.html { redirect_to agents_url }
+      format.html { redirect_to agents_url, notice: 'Agent was successfully deleted.' }
       format.json { head :no_content }
     end
   end

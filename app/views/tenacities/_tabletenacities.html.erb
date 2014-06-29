@@ -1,0 +1,35 @@
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover ">
+  	<thead>
+	    <tr>
+	      <th>Total sample number</th>
+	      <th>Inoculum concentration initial</th>
+	      <th>I concentration unit</th>
+	      <th>Reference</th>
+	      <th>User</th>
+	      <th></th>
+	      <th></th>
+	    </tr>
+	  </thead>
+
+	  <tbody>
+	    <% @tenacities.each do |tenacity| %>
+	      <tr>
+	        <td width="30%"><h4><%= link_to tenacity.total_sample_number, tenacity_path(tenacity) %></h4></td>
+	        <td><%= tenacity.inoculum_concentration_initial %></td>
+	        <td><%= tenacity.i_concentration_unit %></td>
+	        <td><%= tenacity.reference_id %></td>
+	        <td><%= tenacity.user_id %></td>
+	        <td><%= link_to 'Show', tenacity, class: "btn btn-info btn-sm" %></td>
+	        <td><%= link_to 'Edit', edit_tenacity_path(tenacity), class: "btn btn-warning btn-sm" %></td>
+	      </tr>
+	    <% end %>
+	  </tbody>
+	</table>
+
+	<br>
+
+	<%= link_to 'New Tenacity', new_tenacity_path, class: "btn btn-success"  %>
+  
+
+</div>

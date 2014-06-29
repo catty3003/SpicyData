@@ -1,44 +1,75 @@
-<p id="notice"><%= notice %></p>
+<div class="bs-docs-section">
+  <div class="row">
+    <div class="col-md-12">
 
-<p>
-  <strong>Spik short name:</strong>
-  <%= @spiking.spik_short_name %>
-</p>
 
-<p>
-  <strong>Spik long name:</strong>
-  <%= @spiking.spik_long_name %>
-</p>
+      <div class="page-header">          
+        <h1>
+          Spiking Method <%= @spiking.spik_short_name %>
+        </h1>
+      </div>
 
-<p>
-  <strong>Spik process description:</strong>
-  <%= @spiking.spik_process_description %>
-</p>
+      <div class="col-md-3" id="leftCol">
+        <div class="well">    
+          <%= render 'layouts/sidebar_show' %>
+        </div>
+      </div>     
 
-<p>
-  <strong>Spik device needed:</strong>
-  <%= @spiking.spik_device_needed %>
-</p>
+      <div class="col-md-9" id="rightCol"> 
+        <div class="well">          
+          <div class="panel panel-info">
+            <div class="panel-body"> 
 
-<p>
-  <strong>Pros:</strong>
-  <%= @spiking.pros %>
-</p>
+              <p>
+                <strong>Spik short name:</strong>
+                <%= @spiking.spik_short_name %>
+              </p>
 
-<p>
-  <strong>Cons:</strong>
-  <%= @spiking.cons %>
-</p>
+              <p>
+                <strong>Spik long name:</strong>
+                <%= @spiking.spik_long_name %>
+              </p>
 
-<p>
-  <strong>Reference:</strong>
-  <%= @spiking.reference_id %>
-</p>
+              <p>
+                <strong>Spik process description:</strong>
+                <%= @spiking.spik_process_description %>
+              </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @spiking.user_id %>
-</p>
+              <p>
+                <strong>Spik device needed:</strong>
+                <%= @spiking.spik_device_needed %>
+              </p>
 
-<%= link_to 'Edit', edit_spiking_path(@spiking) %> |
-<%= link_to 'Back', spikings_path %>
+              <p>
+                <strong>Pros:</strong>
+                <%= @spiking.pros %>
+              </p>
+
+              <p>
+                <strong>Cons:</strong>
+                <%= @spiking.cons %>
+              </p>
+
+              <p>
+                <strong>Reference:</strong>
+                <%= @spiking.reference_id %>
+              </p>
+
+              <p>
+                <strong>User:</strong>
+                <%= @spiking.user_id %>
+              </p>
+
+
+            </div>
+          </div>    
+
+          <%= link_to 'Edit Spiking', edit_spiking_path(@spiking), class: "btn btn-warning btn-sm" %> |  | 
+          <%= link_to 'Delete', @spiking, class: "btn btn-danger btn-sm", method: :delete, data: { confirm: 'Are you sure?' } %> | 
+          <%= link_to 'Back to all Spikings', spikings_path, class: "btn btn-info btn-sm" %>   
+        </div>
+      </div>
+
+    </div>     
+  </div>
+</div>

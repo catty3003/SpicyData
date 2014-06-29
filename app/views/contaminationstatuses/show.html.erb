@@ -1,59 +1,94 @@
-<p id="notice"><%= notice %></p>
+<div class="bs-docs-section">
+  <div class="row">
+    <div class="col-md-12">
 
-<p>
-  <strong>Cfu natural contamination:</strong>
-  <%= @contaminationstatus.cfu_natural_contamination %>
-</p>
 
-<p>
-  <strong>Cfu natural contamination unit:</strong>
-  <%= @contaminationstatus.cfu_natural_contamination_unit %>
-</p>
+      <div class="page-header">          
+        <h1>
+          Contamination Status/ Master Data <%= @contaminationstatus.id %>
+        </h1>
+      </div>
 
-<p>
-  <strong>Matrix:</strong>
-  <%= @contaminationstatus.matrix_id %>
-</p>
+      <div class="col-md-3" id="leftCol">
+        <div class="well">    
+          <%= render 'layouts/sidebar_show' %>
+        </div>
+      </div>     
 
-<p>
-  <strong>Agent:</strong>
-  <%= @contaminationstatus.agent_id %>
-</p>
+      <div class="col-md-9" id="rightCol"> 
+        <div class="well">          
+          <div class="panel panel-info">
+            <div class="panel-body"> 
 
-<p>
-  <strong>Tenacity:</strong>
-  <%= @contaminationstatus.tenacity_id %>
-</p>
 
-<p>
-  <strong>Treatment:</strong>
-  <%= @contaminationstatus.treatment_id %>
-</p>
+              <p>
+                <strong>Cfu natural contamination:</strong>
+                <%= @contaminationstatus.cfu_natural_contamination %>
+              </p>
 
-<p>
-  <strong>Spiking:</strong>
-  <%= @contaminationstatus.spiking_id %>
-</p>
+              <p>
+                <strong>Cfu natural contamination unit:</strong>
+                <%= @contaminationstatus.cfu_natural_contamination_unit %>
+              </p>
 
-<p>
-  <strong>Samplepreparation:</strong>
-  <%= @contaminationstatus.samplepreparation_id %>
-</p>
+              <p>
+                <strong>Matrix:</strong>
+                <%= @contaminationstatus.matrix_id %>
+              </p>
 
-<p>
-  <strong>Detection:</strong>
-  <%= @contaminationstatus.detection_id %>
-</p>
+              <p>
+                <strong>Agent:</strong>
+                <%= @contaminationstatus.agent_id %>
+              </p>
 
-<p>
-  <strong>Reference:</strong>
-  <%= @contaminationstatus.reference_id %>
-</p>
+              <p>
+                <strong>Tenacity:</strong>
+                <%= @contaminationstatus.tenacity_id %>
+              </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @contaminationstatus.user_id %>
-</p>
+              <p>
+                <strong>Treatment:</strong>
+                <%= @contaminationstatus.treatment_id %>
+              </p>
 
-<%= link_to 'Edit', edit_contaminationstatus_path(@contaminationstatus) %> |
-<%= link_to 'Back', contaminationstatuses_path %>
+              <p>
+                <strong>Spiking:</strong>
+                <%= @contaminationstatus.spiking_id %>
+              </p>
+
+              <p>
+                <strong>Samplepreparation:</strong>
+                <%= @contaminationstatus.samplepreparation_id %>
+              </p>
+
+              <p>
+                <strong>Detection:</strong>
+                <%= @contaminationstatus.detection_id %>
+              </p>
+
+              <p>
+                <strong>Result:</strong>
+                <%= @contaminationstatus.result_id %>
+              </p>
+
+              <p>
+                <strong>Reference:</strong>
+                <%= @contaminationstatus.reference_id %>
+              </p>
+
+              <p>
+                <strong>User:</strong>
+                <%= @contaminationstatus.user_id %>
+              </p>
+
+            </div>
+          </div>    
+              <%= link_to 'Edit', edit_contaminationstatus_path(@contaminationstatus), class: "btn btn-warning btn-sm" %> |  | 
+              <%= link_to 'Delete', @contaminationstatus, class: "btn btn-danger btn-sm", method: :delete, data: { confirm: 'Are you sure?' } %> | 
+              <%= link_to 'Back to all Contamination Status', contaminationstatuses_path, class: "btn btn-info btn-sm" %> 
+        </div>
+      </div>
+
+    </div>     
+  </div>
+</div>

@@ -1,84 +1,122 @@
-<p id="notice"><%= notice %></p>
+<div class="bs-docs-section">
+  <div class="row">
+    <div class="col-md-12">
 
-<p>
-  <strong>A common name:</strong>
-  <%= @agent.a_common_name %>
-</p>
 
-<p>
-  <strong>A family:</strong>
-  <%= @agent.a_family %>
-</p>
+      <div class="page-header">          
+        <h1>
+          Agent <%= @agent.a_genus %> <%= @agent.a_species %>
+        </h1>
+      </div>
 
-<p>
-  <strong>A genus:</strong>
-  <%= @agent.a_genus %>
-</p>
+      <div class="col-md-3" id="leftCol">
+        <div class="well">    
+          <%= render 'layouts/sidebar_show' %>
+        </div>
+      </div>     
 
-<p>
-  <strong>A species:</strong>
-  <%= @agent.a_species %>
-</p>
+      <div class="col-md-9" id="rightCol"> 
+        <div class="well">          
+          <div class="panel panel-info">
+            <div class="panel-body"> 
 
-<p>
-  <strong>Subspecies:</strong>
-  <%= @agent.subspecies %>
-</p>
+              <p>              
+                <strong>A common name:</strong>
+                <%= @agent.a_common_name %>
+              </p>
 
-<p>
-  <strong>Serovar:</strong>
-  <%= @agent.serovar %>
-</p>
+              <p>
+                <strong>A family:</strong>
+                <%= @agent.a_family %>
+              </p>
 
-<p>
-  <strong>Other agent name:</strong>
-  <%= @agent.other_agent_name %>
-</p>
+              <p>
+                <strong>A genus:</strong>
+                <%= @agent.a_genus %>
+              </p>
 
-<p>
-  <strong>Ref number:</strong>
-  <%= @agent.ref_number %>
-</p>
+              <p>
+                <strong>A species:</strong>
+                <%= @agent.a_species %>
+              </p>
 
-<p>
-  <strong>Rate of illness:</strong>
-  <%= @agent.rate_of_illness %>
-</p>
+              <p>
+                <strong>Subspecies:</strong>
+                <%= @agent.subspecies %>
+              </p>
 
-<p>
-  <strong>Morbidity:</strong>
-  <%= @agent.morbidity %>
-</p>
+              <p>
+                <strong>Serovar:</strong>
+                <%= @agent.serovar %>
+              </p>
 
-<p>
-  <strong>Mortality:</strong>
-  <%= @agent.mortality %>
-</p>
+              <p>
+                <strong>Other agent name:</strong>
+                <%= @agent.other_agent_name %>
+              </p>
 
-<p>
-  <strong>Isolation source:</strong>
-  <%= @agent.isolation_source %>
-</p>
+              <p>
+                <strong>Ref number:</strong>
+                <%= @agent.ref_number %>
+              </p>
 
-<p>
-  <strong>Natural occurence:</strong>
-  <%= @agent.natural_occurence %>
-</p>
+              <p>
+                <strong>Rate of illness:</strong>
+                <%= @agent.rate_of_illness %>
+              </p>
 
-<p>
-  <strong>A comment:</strong>
-  <%= @agent.a_comment %>
-</p>
+              <p>
+                <strong>Morbidity:</strong>
+                <%= @agent.morbidity %>
+              </p>
 
-<p>
-  <strong>Reference:</strong>
-  <%= @agent.reference_id %>
-</p>
+              <p>
+                <strong>Mortality:</strong>
+                <%= @agent.mortality %>
+              </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @agent.user_id %>
-</p>
+              <p>
+                <strong>Isolation source:</strong>
+                <%= @agent.isolation_source %>
+              </p>
 
-<%= link_to 'Edit', edit_agent_path(@agent) %> |
-<%= link_to 'Back', agents_path %>
+              <p>
+                <strong>Natural occurence:</strong>
+                <%= @agent.natural_occurence %>
+              </p>
+
+              <p>
+                <strong>A comment:</strong>
+                <%= @agent.a_comment %>
+              </p>
+
+              <p>
+                <strong>Reference:</strong>
+                <%= @agent.reference_id %>
+              </p>
+
+              <p>
+                <strong>User:</strong>
+                <%= @agent.user_id %>
+              </p>
+
+
+            </div>
+
+          </div>    
+          <%= link_to 'Edit Agent', edit_agent_path(@agent), class: "btn btn-warning btn-sm" %> |  | 
+          <%= link_to 'Delete', @agent, class: "btn btn-danger btn-sm", method: :delete, data: { confirm: 'Are you sure?' } %> | 
+          <%= link_to 'Back to all Agents', agents_path, class: "btn btn-info btn-sm" %>   
+        </div>
+      </div>
+
+    </div>     
+  </div>
+</div>
+
+
+
+
+
+
+

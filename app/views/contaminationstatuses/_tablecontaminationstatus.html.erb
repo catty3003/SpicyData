@@ -1,0 +1,46 @@
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover ">
+  	<thead>
+      <tr>
+        <th>Cfu natural contamination</th>
+        <th>Cfu natural contamination unit</th>
+        <th>Matrix</th>
+        <th>Agent</th>
+        <th>Tenacity</th>
+        <th>Treatment</th>
+        <th>Spiking</th>
+        <th>Samplepreparation</th>
+        <th>Detection</th>
+        <th>Reference</th>
+        <th>User</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @contaminationstatuses.each do |contaminationstatus| %>
+        <tr>
+          <td width="30%"><h4><%= link_to contaminationstatus.cfu_natural_contamination, contaminationstatus_path(contaminationstatus) %></h4></td>
+          <td><%= contaminationstatus.cfu_natural_contamination_unit %></td>
+          <td><%= contaminationstatus.matrix_id %></td>
+          <td><%= contaminationstatus.agent_id %></td>
+          <td><%= contaminationstatus.tenacity_id %></td>
+          <td><%= contaminationstatus.treatment_id %></td>
+          <td><%= contaminationstatus.spiking_id %></td>
+          <td><%= contaminationstatus.samplepreparation_id %></td>
+          <td><%= contaminationstatus.detection_id %></td>
+          <td><%= contaminationstatus.result_id %></td>
+          <td><%= contaminationstatus.reference_id %></td>
+          <td><%= contaminationstatus.user_id %></td>
+          <td><%= link_to 'Show', contaminationstatus, class: "btn btn-info btn-sm" %></td>
+          <td><%= link_to 'Edit', edit_contaminationstatus_path(contaminationstatus), class: "btn btn-warning btn-sm" %></td>          
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= link_to 'New Contaminationstatus', new_contaminationstatus_path, class: "btn btn-success" %>
+
+</div>

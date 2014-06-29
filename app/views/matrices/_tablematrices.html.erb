@@ -1,0 +1,71 @@
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover ">
+  	<thead>
+	    <tr>
+	      <th>M common name</th>
+	      <th>M genus</th>
+	      <th>M species</th>
+	      <th>Other matrix name</th>
+	      <th>Plant part</th>
+	      <th>Storage form</th>
+	      <th>Product form</th>
+	      <th>Place of origin</th>
+	      <th>Date of harvest</th>
+	      <th>Relative humidity during harvest</th>
+	      <th>Temperature during harvest</th>
+	      <th>Pre treatment</th>
+	      <th>Sampling date</th>
+	      <th>M ph</th>
+	      <th>M aw</th>
+	      <th>Humidity of matrix</th>
+	      <th>Ash</th>
+	      <th>Sand</th>
+	      <th>Lipids</th>
+	      <th>Further ingredients</th>
+	      <th>M comment</th>
+	      <th>Reference</th>
+	      <th>User</th>
+	      <th></th>
+	      <th></th>
+	    </tr>
+	  </thead>
+
+	  <tbody>
+	    <% @matrices.each do |matrix| %>
+	      <tr>
+	        <td width="30%"><h4><%= link_to matrix.m_common_name, matrix_path(matrix) %></h4></td>
+	        <td><%= matrix.m_genus %></td>
+	        <td><%= matrix.m_species %></td>
+	        <td><%= matrix.other_matrix_name %></td>
+	        <td><%= matrix.plant_part %></td>
+	        <td><%= matrix.storage_form %></td>
+	        <td><%= matrix.product_form %></td>
+	        <td><%= matrix.place_of_origin %></td>
+	        <td><%= matrix.date_of_harvest %></td>
+	        <td><%= matrix.relative_humidity_during_harvest %></td>
+	        <td><%= matrix.temperature_during_harvest %></td>
+	        <td><%= matrix.pre_treatment %></td>
+	        <td><%= matrix.sampling_date %></td>
+	        <td><%= matrix.m_ph %></td>
+	        <td><%= matrix.m_aw %></td>
+	        <td><%= matrix.humidity_of_matrix %></td>
+	        <td><%= matrix.ash %></td>
+	        <td><%= matrix.sand %></td>
+	        <td><%= matrix.lipids %></td>
+	        <td><%= matrix.further_ingredients %></td>
+	        <td><%= matrix.m_comment %></td>
+	        <td><%= matrix.reference_id %></td>
+	        <td><%= matrix.user_id %></td>
+	        <td><%= link_to 'Show', matrix, class: "btn btn-info btn-sm" %></td>
+	        <td><%= link_to 'Edit', edit_matrix_path(matrix), class: "btn btn-warning btn-sm" %></td>
+	      </tr>
+	    <% end %>
+	  </tbody>
+	</table>
+
+	<br>
+
+	<%= link_to 'New Matrix', new_matrix_path, class: "btn btn-success"  %>
+  
+
+</div>

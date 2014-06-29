@@ -1,119 +1,150 @@
-<p id="notice"><%= notice %></p>
+<div class="bs-docs-section">
+  <div class="row">
+    <div class="col-md-12">
 
-<p>
-  <strong>Samprep short name:</strong>
-  <%= @samplepreparation.samprep_short_name %>
-</p>
 
-<p>
-  <strong>Samprep long name:</strong>
-  <%= @samplepreparation.samprep_long_name %>
-</p>
+      <div class="page-header">          
+        <h1>
+          Samplepreparation Method <%= @samplepreparation.samprep_short_name %>
+        </h1>
+      </div>
 
-<p>
-  <strong>Samprep method validated for condiments:</strong>
-  <%= @samplepreparation.samprep_method_validated_for_condiments %>
-</p>
+      <div class="col-md-3" id="leftCol">
+        <div class="well">    
+          <%= render 'layouts/sidebar_show' %>
+        </div>
+      </div>     
 
-<p>
-  <strong>Samprep process description:</strong>
-  <%= @samplepreparation.samprep_process_description %>
-</p>
+      <div class="col-md-9" id="rightCol"> 
+        <div class="well">          
+          <div class="panel panel-info">
+            <div class="panel-body"> 
 
-<p>
-  <strong>Spik weight of sample:</strong>
-  <%= @samplepreparation.spik_weight_of_sample %>
-</p>
 
-<p>
-  <strong>Spik weight of sample unit:</strong>
-  <%= @samplepreparation.spik_weight_of_sample_unit %>
-</p>
+              <p>
+                <strong>Samprep short name:</strong>
+                <%= @samplepreparation.samprep_short_name %>
+              </p>
 
-<p>
-  <strong>Dilution fuid:</strong>
-  <%= @samplepreparation.dilution_fuid %>
-</p>
+              <p>
+                <strong>Samprep long name:</strong>
+                <%= @samplepreparation.samprep_long_name %>
+              </p>
 
-<p>
-  <strong>First dilution ratio:</strong>
-  <%= @samplepreparation.first_dilution_ratio %>
-</p>
+              <p>
+                <strong>Samprep method validated for condiments:</strong>
+                <%= @samplepreparation.samprep_method_validated_for_condiments %>
+              </p>
 
-<p>
-  <strong>Homogenize with:</strong>
-  <%= @samplepreparation.homogenize_with %>
-</p>
+              <p>
+                <strong>Samprep process description:</strong>
+                <%= @samplepreparation.samprep_process_description %>
+              </p>
 
-<p>
-  <strong>Enrichment:</strong>
-  <%= @samplepreparation.enrichment %>
-</p>
+              <p>
+                <strong>Spik weight of sample:</strong>
+                <%= @samplepreparation.spik_weight_of_sample %>
+              </p>
 
-<p>
-  <strong>Dna extraction:</strong>
-  <%= @samplepreparation.dna_extraction %>
-</p>
+              <p>
+                <strong>Spik weight of sample unit:</strong>
+                <%= @samplepreparation.spik_weight_of_sample_unit %>
+              </p>
 
-<p>
-  <strong>Rna extraction:</strong>
-  <%= @samplepreparation.rna_extraction %>
-</p>
+              <p>
+                <strong>Dilution fuid:</strong>
+                <%= @samplepreparation.dilution_fuid %>
+              </p>
 
-<p>
-  <strong>Protein extraction:</strong>
-  <%= @samplepreparation.protein_extraction %>
-</p>
+              <p>
+                <strong>First dilution ratio:</strong>
+                <%= @samplepreparation.first_dilution_ratio %>
+              </p>
 
-<p>
-  <strong>Homogenizing method:</strong>
-  <%= @samplepreparation.homogenizing_method %>
-</p>
+              <p>
+                <strong>Homogenize with:</strong>
+                <%= @samplepreparation.homogenize_with %>
+              </p>
 
-<p>
-  <strong>Cell lysis:</strong>
-  <%= @samplepreparation.cell_lysis %>
-</p>
+              <p>
+                <strong>Enrichment:</strong>
+                <%= @samplepreparation.enrichment %>
+              </p>
 
-<p>
-  <strong>Applied kit:</strong>
-  <%= @samplepreparation.applied_kit %>
-</p>
+              <p>
+                <strong>Dna extraction:</strong>
+                <%= @samplepreparation.dna_extraction %>
+              </p>
 
-<p>
-  <strong>Other samprep method type:</strong>
-  <%= @samplepreparation.other_samprep_method_type %>
-</p>
+              <p>
+                <strong>Rna extraction:</strong>
+                <%= @samplepreparation.rna_extraction %>
+              </p>
 
-<p>
-  <strong>Samprep method type details text:</strong>
-  <%= @samplepreparation.samprep_method_type_details_text %>
-</p>
+              <p>
+                <strong>Protein extraction:</strong>
+                <%= @samplepreparation.protein_extraction %>
+              </p>
 
-<p>
-  <strong>Samprep duration:</strong>
-  <%= @samplepreparation.samprep_duration %>
-</p>
+              <p>
+                <strong>Homogenizing method:</strong>
+                <%= @samplepreparation.homogenizing_method %>
+              </p>
 
-<p>
-  <strong>Samprep duration unit:</strong>
-  <%= @samplepreparation.samprep_duration_unit %>
-</p>
+              <p>
+                <strong>Cell lysis:</strong>
+                <%= @samplepreparation.cell_lysis %>
+              </p>
 
-<p>
-  <strong>Samprep comment:</strong>
-  <%= @samplepreparation.samprep_comment %>
-</p>
+              <p>
+                <strong>Applied kit:</strong>
+                <%= @samplepreparation.applied_kit %>
+              </p>
 
-<p>
-  <strong>Reference:</strong>
-  <%= @samplepreparation.reference_id %>
-</p>
+              <p>
+                <strong>Other samprep method type:</strong>
+                <%= @samplepreparation.other_samprep_method_type %>
+              </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @samplepreparation.user_id %>
-</p>
+              <p>
+                <strong>Samprep method type details text:</strong>
+                <%= @samplepreparation.samprep_method_type_details_text %>
+              </p>
 
-<%= link_to 'Edit', edit_samplepreparation_path(@samplepreparation) %> |
-<%= link_to 'Back', samplepreparations_path %>
+              <p>
+                <strong>Samprep duration:</strong>
+                <%= @samplepreparation.samprep_duration %>
+              </p>
+
+              <p>
+                <strong>Samprep duration unit:</strong>
+                <%= @samplepreparation.samprep_duration_unit %>
+              </p>
+
+              <p>
+                <strong>Samprep comment:</strong>
+                <%= @samplepreparation.samprep_comment %>
+              </p>
+
+              <p>
+                <strong>Reference:</strong>
+                <%= @samplepreparation.reference_id %>
+              </p>
+
+              <p>
+                <strong>User:</strong>
+                <%= @samplepreparation.user_id %>
+              </p>
+
+
+            </div>
+          </div>    
+          <%= link_to 'Edit Samplepreparation', edit_samplepreparation_path(@samplepreparation), class: "btn btn-warning btn-sm" %> |  | 
+          <%= link_to 'Delete', @samplepreparation, class: "btn btn-danger btn-sm", method: :delete, data: { confirm: 'Are you sure?' } %> | 
+          <%= link_to 'Back to all Samplepreparations',  samplepreparations_path, class: "btn btn-info btn-sm" %>
+        </div>
+      </div>
+
+    </div>     
+  </div>
+</div>

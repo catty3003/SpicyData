@@ -1,6 +1,25 @@
-<h1>Editing contaminationstatus</h1>
+<div class="bs-docs-section">
+  <div class="row">
+    <div class="col-md-12">
 
-<%= render 'form' %>
 
-<%= link_to 'Show', @contaminationstatus %> |
-<%= link_to 'Back', contaminationstatuses_path %>
+      <div class="page-header">          
+        <h1>Editing Contaminationstatus <%= @contaminationstatus.id %></h1>
+      </div>
+
+		  <div class="col-md-3" id="leftCol">
+		  	<div class="well">  	
+			    <%= render 'layouts/sidebar_insert' %>
+				</div>
+	    </div>		 
+
+		  <div class="col-md-9" id="rightCol">		  		
+				<%= render 'form' %>	
+				<%= link_to 'Cancel! Back to current Contaminationstatus', @contaminationstatus %> 			
+			</div>
+
+
+		</div>		 
+  </div>
+</div>
+

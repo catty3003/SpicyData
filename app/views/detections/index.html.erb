@@ -1,75 +1,25 @@
-<h1>Listing detections</h1>
+<div class="bs-docs-section">
+  <div class="row">
+    <div class="col-md-12">
 
-<table>
-  <thead>
-    <tr>
-      <th>D short name</th>
-      <th>D long name</th>
-      <th>D method validated for condiments</th>
-      <th>D process description</th>
-      <th>D weight of sample</th>
-      <th>D weight of sample unit</th>
-      <th>Detection method dilution</th>
-      <th>Detection method type</th>
-      <th>Duration until result</th>
-      <th>Duration until result unit</th>
-      <th>Target gen</th>
-      <th>Target protein</th>
-      <th>Other characteristic</th>
-      <th>Technique</th>
-      <th>Verification</th>
-      <th>Interpretation</th>
-      <th>D device needed</th>
-      <th>Method for comparison</th>
-      <th>Lod</th>
-      <th>Sensitivity</th>
-      <th>Specifity</th>
-      <th>Reliability score</th>
-      <th>D comment</th>
-      <th>Reference</th>
-      <th>User</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @detections.each do |detection| %>
-      <tr>
-        <td><%= detection.d_short_name %></td>
-        <td><%= detection.d_long_name %></td>
-        <td><%= detection.d_method_validated_for_condiments %></td>
-        <td><%= detection.d_process_description %></td>
-        <td><%= detection.d_weight_of_sample %></td>
-        <td><%= detection.d_weight_of_sample_unit %></td>
-        <td><%= detection.detection_method_dilution %></td>
-        <td><%= detection.detection_method_type %></td>
-        <td><%= detection.duration_until_result %></td>
-        <td><%= detection.duration_until_result_unit %></td>
-        <td><%= detection.target_gen %></td>
-        <td><%= detection.target_protein %></td>
-        <td><%= detection.other_characteristic %></td>
-        <td><%= detection.technique %></td>
-        <td><%= detection.verification %></td>
-        <td><%= detection.interpretation %></td>
-        <td><%= detection.d_device_needed %></td>
-        <td><%= detection.method_for_comparison %></td>
-        <td><%= detection.lod %></td>
-        <td><%= detection.sensitivity %></td>
-        <td><%= detection.specifity %></td>
-        <td><%= detection.reliability_score %></td>
-        <td><%= detection.d_comment %></td>
-        <td><%= detection.reference_id %></td>
-        <td><%= detection.user_id %></td>
-        <td><%= link_to 'Show', detection %></td>
-        <td><%= link_to 'Edit', edit_detection_path(detection) %></td>
-        <td><%= link_to 'Destroy', detection, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      <div class="page-header">          
+        <h1>Listing all Detection Methods <br>
+          <small><%= pluralize(@detections.count, "Detection Method") %></small></h1>
+      </div>
 
-<br>
+      <div class="col-md-3" id="leftCol">
+        <div class="well">    
+          <%= render 'layouts/sidebar_show' %>
+        </div>
+      </div>     
 
-<%= link_to 'New Detection', new_detection_path %>
+      <div class="col-md-9" id="rightCol"> 
+        
+            <%= render 'tabledetections' %>
+      </div>
+    </div>
+  </div>
+</div>
+     
+      

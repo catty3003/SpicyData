@@ -69,6 +69,6 @@ class AdminMatricesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def admin_matrix_params
-      params.require(:admin_matrix).permit(:name)
+      params.require(:admin_matrix).permit(:name, :genus, :species, :pre_treatment)
     end
 end

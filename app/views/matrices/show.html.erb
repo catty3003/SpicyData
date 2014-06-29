@@ -1,119 +1,150 @@
-<p id="notice"><%= notice %></p>
+<div class="bs-docs-section">
+  <div class="row">
+    <div class="col-md-12">
 
-<p>
-  <strong>M common name:</strong>
-  <%= @matrix.m_common_name %>
-</p>
 
-<p>
-  <strong>M genus:</strong>
-  <%= @matrix.m_genus %>
-</p>
+      <div class="page-header">          
+        <h1>
+          Matrix <%= @matrix.m_common_name %>
+        </h1>
+      </div>
 
-<p>
-  <strong>M species:</strong>
-  <%= @matrix.m_species %>
-</p>
+      <div class="col-md-3" id="leftCol">
+        <div class="well">    
+          <%= render 'layouts/sidebar_show' %>
+        </div>
+      </div>     
 
-<p>
-  <strong>Other matrix name:</strong>
-  <%= @matrix.other_matrix_name %>
-</p>
+      <div class="col-md-9" id="rightCol"> 
+        <div class="well">          
+          <div class="panel panel-info">
+            <div class="panel-body"> 
 
-<p>
-  <strong>Plant part:</strong>
-  <%= @matrix.plant_part %>
-</p>
 
-<p>
-  <strong>Storage form:</strong>
-  <%= @matrix.storage_form %>
-</p>
+              <p>
+                <strong>M common name:</strong>
+                <%= @matrix.m_common_name %>
+              </p>
 
-<p>
-  <strong>Product form:</strong>
-  <%= @matrix.product_form %>
-</p>
+              <p>
+                <strong>M genus:</strong>
+                <%= @matrix.m_genus %>
+              </p>
 
-<p>
-  <strong>Place of origin:</strong>
-  <%= @matrix.place_of_origin %>
-</p>
+              <p>
+                <strong>M species:</strong>
+                <%= @matrix.m_species %>
+              </p>
 
-<p>
-  <strong>Date of harvest:</strong>
-  <%= @matrix.date_of_harvest %>
-</p>
+              <p>
+                <strong>Other matrix name:</strong>
+                <%= @matrix.other_matrix_name %>
+              </p>
 
-<p>
-  <strong>Relative humidity during harvest:</strong>
-  <%= @matrix.relative_humidity_during_harvest %>
-</p>
+              <p>
+                <strong>Plant part:</strong>
+                <%= @matrix.plant_part %>
+              </p>
 
-<p>
-  <strong>Temperature during harvest:</strong>
-  <%= @matrix.temperature_during_harvest %>
-</p>
+              <p>
+                <strong>Storage form:</strong>
+                <%= @matrix.storage_form %>
+              </p>
 
-<p>
-  <strong>Pre treatment:</strong>
-  <%= @matrix.pre_treatment %>
-</p>
+              <p>
+                <strong>Product form:</strong>
+                <%= @matrix.product_form %>
+              </p>
 
-<p>
-  <strong>Sampling date:</strong>
-  <%= @matrix.sampling_date %>
-</p>
+              <p>
+                <strong>Place of origin:</strong>
+                <%= @matrix.place_of_origin %>
+              </p>
 
-<p>
-  <strong>M ph:</strong>
-  <%= @matrix.m_ph %>
-</p>
+              <p>
+                <strong>Date of harvest:</strong>
+                <%= @matrix.date_of_harvest %>
+              </p>
 
-<p>
-  <strong>M aw:</strong>
-  <%= @matrix.m_aw %>
-</p>
+              <p>
+                <strong>Relative humidity during harvest:</strong>
+                <%= @matrix.relative_humidity_during_harvest %>
+              </p>
 
-<p>
-  <strong>Humidity of matrix:</strong>
-  <%= @matrix.humidity_of_matrix %>
-</p>
+              <p>
+                <strong>Temperature during harvest:</strong>
+                <%= @matrix.temperature_during_harvest %>
+              </p>
 
-<p>
-  <strong>Ash:</strong>
-  <%= @matrix.ash %>
-</p>
+              <p>
+                <strong>Pre treatment:</strong>
+                <%= @matrix.pre_treatment %>
+              </p>
 
-<p>
-  <strong>Sand:</strong>
-  <%= @matrix.sand %>
-</p>
+              <p>
+                <strong>Sampling date:</strong>
+                <%= @matrix.sampling_date %>
+              </p>
 
-<p>
-  <strong>Lipids:</strong>
-  <%= @matrix.lipids %>
-</p>
+              <p>
+                <strong>M ph:</strong>
+                <%= @matrix.m_ph %>
+              </p>
 
-<p>
-  <strong>Further ingredients:</strong>
-  <%= @matrix.further_ingredients %>
-</p>
+              <p>
+                <strong>M aw:</strong>
+                <%= @matrix.m_aw %>
+              </p>
 
-<p>
-  <strong>M comment:</strong>
-  <%= @matrix.m_comment %>
-</p>
+              <p>
+                <strong>Humidity of matrix:</strong>
+                <%= @matrix.humidity_of_matrix %>
+              </p>
 
-<p>
-  <strong>Reference:</strong>
-  <%= @matrix.reference_id %>
-</p>
+              <p>
+                <strong>Ash:</strong>
+                <%= @matrix.ash %>
+              </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @matrix.user_id %>
-</p>
+              <p>
+                <strong>Sand:</strong>
+                <%= @matrix.sand %>
+              </p>
 
-<%= link_to 'Edit', edit_matrix_path(@matrix) %> |
-<%= link_to 'Back', matrices_path %>
+              <p>
+                <strong>Lipids:</strong>
+                <%= @matrix.lipids %>
+              </p>
+
+              <p>
+                <strong>Further ingredients:</strong>
+                <%= @matrix.further_ingredients %>
+              </p>
+
+              <p>
+                <strong>M comment:</strong>
+                <%= @matrix.m_comment %>
+              </p>
+
+              <p>
+                <strong>Reference:</strong>
+                <%= @matrix.reference_id %>
+              </p>
+
+              <p>
+                <strong>User:</strong>
+                <%= @matrix.user_id %>
+              </p>
+
+            </div>
+          </div>    
+          <%= link_to 'Edit Matrix', edit_matrix_path(@matrix), class: "btn btn-warning btn-sm" %> |  | 
+          <%= link_to 'Delete', @matrix, class: "btn btn-danger btn-sm", method: :delete, data: { confirm: 'Are you sure?' } %> | 
+          <%= link_to 'Back to all Matrices', matrices_path, class: "btn btn-info btn-sm" %>
+        </div>
+      </div>
+
+    </div>     
+  </div>
+</div>
+

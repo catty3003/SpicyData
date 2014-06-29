@@ -1,0 +1,70 @@
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover ">
+  	<thead>
+	    <tr>
+	      <th>Samprep short name</th>
+	      <th>Samprep long name</th>
+	      <th>Samprep method validated for condiments</th>
+	      <th>Samprep process description</th>
+	      <th>Spik weight of sample</th>
+	      <th>Spik weight of sample unit</th>
+	      <th>Dilution fuid</th>
+	      <th>First dilution ratio</th>
+	      <th>Homogenize with</th>
+	      <th>Enrichment</th>
+	      <th>Dna extraction</th>
+	      <th>Rna extraction</th>
+	      <th>Protein extraction</th>
+	      <th>Homogenizing method</th>
+	      <th>Cell lysis</th>
+	      <th>Applied kit</th>
+	      <th>Other samprep method type</th>
+	      <th>Samprep method type details text</th>
+	      <th>Samprep duration</th>
+	      <th>Samprep duration unit</th>
+	      <th>Samprep comment</th>
+	      <th>Reference</th>
+	      <th>User</th>
+	      <th></th>
+	      <th></th>
+	    </tr>
+	  </thead>
+
+	  <tbody>
+	    <% @samplepreparations.each do |samplepreparation| %>
+	      <tr>
+	        <td width="30%"><h4><%= link_to samplepreparation.samprep_short_name, samplepreparation_path(samplepreparation) %></h4></td>
+	        <td><%= samplepreparation.samprep_long_name %></td>
+	        <td><%= samplepreparation.samprep_method_validated_for_condiments %></td>
+	        <td><%= samplepreparation.samprep_process_description %></td>
+	        <td><%= samplepreparation.spik_weight_of_sample %></td>
+	        <td><%= samplepreparation.spik_weight_of_sample_unit %></td>
+	        <td><%= samplepreparation.dilution_fuid %></td>
+	        <td><%= samplepreparation.first_dilution_ratio %></td>
+	        <td><%= samplepreparation.homogenize_with %></td>
+	        <td><%= samplepreparation.enrichment %></td>
+	        <td><%= samplepreparation.dna_extraction %></td>
+	        <td><%= samplepreparation.rna_extraction %></td>
+	        <td><%= samplepreparation.protein_extraction %></td>
+	        <td><%= samplepreparation.homogenizing_method %></td>
+	        <td><%= samplepreparation.cell_lysis %></td>
+	        <td><%= samplepreparation.applied_kit %></td>
+	        <td><%= samplepreparation.other_samprep_method_type %></td>
+	        <td><%= samplepreparation.samprep_method_type_details_text %></td>
+	        <td><%= samplepreparation.samprep_duration %></td>
+	        <td><%= samplepreparation.samprep_duration_unit %></td>
+	        <td><%= samplepreparation.samprep_comment %></td>
+	        <td><%= samplepreparation.reference_id %></td>
+	        <td><%= samplepreparation.user_id %></td>
+	        <td><%= link_to 'Show', samplepreparation, class: "btn btn-info btn-sm" %></td>
+	        <td><%= link_to 'Edit', edit_samplepreparation_path(samplepreparation), class: "btn btn-warning btn-sm" %></td>
+	      </tr>
+	    <% end %>
+	  </tbody>
+	</table>
+
+	<br>
+
+	<%= link_to 'New Samplepreparation', new_samplepreparation_path, class: "btn btn-success"  %>
+
+</div>

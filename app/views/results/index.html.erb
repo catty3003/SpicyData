@@ -1,37 +1,25 @@
-<h1>Listing results</h1>
+<div class="bs-docs-section">
+  <div class="row">
+    <div class="col-md-12">
 
-<table>
-  <thead>
-    <tr>
-      <th>Cfu initial</th>
-      <th>Cfu initial unit</th>
-      <th>Detectability</th>
-      <th>Cfu detected</th>
-      <th>Cfu detected unit</th>
-      <th>R comment</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @results.each do |result| %>
-      <tr>
-        <td><%= result.cfu_initial %></td>
-        <td><%= result.cfu_initial_unit %></td>
-        <td><%= result.detectability %></td>
-        <td><%= result.cfu_detected %></td>
-        <td><%= result.cfu_detected_unit %></td>
-        <td><%= result.r_comment %></td>
-        <td><%= link_to 'Show', result %></td>
-        <td><%= link_to 'Edit', edit_result_path(result) %></td>
-        <td><%= link_to 'Destroy', result, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      <div class="page-header">          
+        <h1>Listing all Concentration Results <br>
+          <small><%= pluralize(@results.count, "Concentration") %></small></h1>
+      </div>
 
-<br>
+      <div class="col-md-3" id="leftCol">
+        <div class="well">    
+          <%= render 'layouts/sidebar_show' %>
+        </div>
+      </div>     
 
-<%= link_to 'New Result', new_result_path %>
+      <div class="col-md-9" id="rightCol"> 
+        
+            <%= render 'tableresults' %>
+      </div>
+    </div>
+  </div>
+</div>
+     
+      

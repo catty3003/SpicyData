@@ -11,6 +11,14 @@
     </div>
   <% end %>
 
+        <div class="col-md-3" id="leftCol">
+        <div class="well">    
+          <%= render 'layouts/sidebar_show' %>
+        </div>
+      </div>     
+
+      <div class="col-md-9" id="rightCol">
+
   <div class="field">
     <%= f.label :m_common_name %><br>
     <%= f.text_field :m_common_name %>
@@ -107,3 +115,4 @@
     <%= f.submit %>
   </div>
 <% end %>
+</div>

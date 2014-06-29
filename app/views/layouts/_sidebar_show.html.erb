@@ -1,0 +1,43 @@
+<h3>Show</h3>
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title">Basics</h3>
+  </div>
+  <div class="panel-body"> 
+    <ul class="nav nav-sidebar">
+      <li ><%= link_to "Reference", references_path %></li>
+      <li class="active"><%= link_to "Agent", agents_path %></li>
+      <li class="active"><%= link_to "Matrix", matrices_path %></li>      
+    </ul>
+  </div> 
+</div> 
+
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title">Methods</h3>
+  </div>
+  <div class="panel-body"> 
+    <ul class="nav nav-sidebar">
+      <li class="active"><%= link_to "Detection", detections_path %></li>
+      <li class="active"><%= link_to "Sample-preparation", samplepreparations_path %></li>
+      <li class="active"><%= link_to "Spiking", spikings_path %></li>
+      <li class="active"><%= link_to "Treatment", treatments_path %></li>
+    </ul>
+  </div> 
+</div>
+
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title">Results</h3>
+  </div>
+  <div class="panel-body"> 
+    <ul class="nav nav-sidebar">
+      <li class="active"><%= link_to "Final Concentration", results_path %></li>
+      <li class="active"><%= link_to "Tenacity Result", tenacities_path %></li>
+      <li class="active"><%= link_to "Masterdata with natural contamination status", contaminationstatuses_path %></li>
+    </ul>
+  </div> 
+</div>
+
+
+

@@ -1,34 +1,65 @@
-<p id="notice"><%= notice %></p>
+<div class="bs-docs-section">
+  <div class="row">
+    <div class="col-md-12">
 
-<p>
-  <strong>Cfu initial:</strong>
-  <%= @result.cfu_initial %>
-</p>
 
-<p>
-  <strong>Cfu initial unit:</strong>
-  <%= @result.cfu_initial_unit %>
-</p>
+      <div class="page-header">          
+        <h1>
+          Concentration Result <%= @result.id %>
+        </h1>
+      </div>
 
-<p>
-  <strong>Detectability:</strong>
-  <%= @result.detectability %>
-</p>
+      <div class="col-md-3" id="leftCol">
+        <div class="well">    
+          <%= render 'layouts/sidebar_show' %>
+        </div>
+      </div>     
 
-<p>
-  <strong>Cfu detected:</strong>
-  <%= @result.cfu_detected %>
-</p>
+      <div class="col-md-9" id="rightCol"> 
+        <div class="well">          
+          <div class="panel panel-info">
+            <div class="panel-body"> 
 
-<p>
-  <strong>Cfu detected unit:</strong>
-  <%= @result.cfu_detected_unit %>
-</p>
 
-<p>
-  <strong>R comment:</strong>
-  <%= @result.r_comment %>
-</p>
+              <p>
+                <strong>Cfu initial:</strong>
+                <%= @result.cfu_initial %>
+              </p>
 
-<%= link_to 'Edit', edit_result_path(@result) %> |
-<%= link_to 'Back', results_path %>
+              <p>
+                <strong>Cfu initial unit:</strong>
+                <%= @result.cfu_initial_unit %>
+              </p>
+
+              <p>
+                <strong>Detectability:</strong>
+                <%= @result.detectability %>
+              </p>
+
+              <p>
+                <strong>Cfu detected:</strong>
+                <%= @result.cfu_detected %>
+              </p>
+
+              <p>
+                <strong>Cfu detected unit:</strong>
+                <%= @result.cfu_detected_unit %>
+              </p>
+
+              <p>
+                <strong>R comment:</strong>
+                <%= @result.r_comment %>
+              </p>
+
+
+            </div>
+          </div>    
+          <%= link_to 'Edit Result', edit_result_path(@result), class: "btn btn-warning btn-sm" %> |  | 
+          <%= link_to 'Delete', @result, class: "btn btn-danger btn-sm", method: :delete, data: { confirm: 'Are you sure?' } %> | 
+          <%= link_to 'Back to all Results',  results_path, class: "btn btn-info btn-sm" %>
+        </div>
+      </div>
+
+    </div>     
+  </div>
+</div>

@@ -1,0 +1,66 @@
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover ">
+    
+      <thead>
+        <tr>
+          <th>Temperature</th>
+          <th>Temperature in degree</th>
+          <th>Steam</th>
+          <th>Steam in percent</th>
+          <th>Fumigation gas</th>
+          <th>Fumigation gas in percent</th>
+          <th>Optical</th>
+          <th>Mechanical</th>
+          <th>Process type</th>
+          <th>T ph</th>
+          <th>Pressure</th>
+          <th>Kgy dose</th>
+          <th>T aw</th>
+          <th>Water activity</th>
+          <th>Other condition</th>
+          <th>Treat duration</th>
+          <th>Treat duration unit</th>
+          <th>T comment</th>
+          <th>Reference</th>
+          <th>User</th>
+          <th>Matrix</th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @treatments.each do |treatment| %>
+          <tr>
+            <td width="30%"><h4><%= link_to treatment.temperature, treatment_path(treatment) %></h4></td>
+            <td><%= treatment.temperature_in_degree %></td>
+            <td><%= treatment.steam %></td>
+            <td><%= treatment.steam_in_percent %></td>
+            <td><%= treatment.fumigation_gas %></td>
+            <td><%= treatment.fumigation_gas_in_percent %></td>
+            <td><%= treatment.optical %></td>
+            <td><%= treatment.mechanical %></td>
+            <td><%= treatment.process_type %></td>
+            <td><%= treatment.t_ph %></td>
+            <td><%= treatment.pressure %></td>
+            <td><%= treatment.kgy_dose %></td>
+            <td><%= treatment.t_aw %></td>
+            <td><%= treatment.water_activity %></td>
+            <td><%= treatment.other_condition %></td>
+            <td><%= treatment.treat_duration %></td>
+            <td><%= treatment.treat_duration_unit %></td>
+            <td><%= treatment.t_comment %></td>
+            <td><%= treatment.reference_id %></td>
+            <td><%= treatment.user_id %></td>
+            <td><%= treatment.matrix_id %></td>
+            <td><%= link_to 'Show', treatment, class: "btn btn-info btn-sm" %></td>
+            <td><%= link_to 'Edit', edit_treatment_path(treatment), class: "btn btn-warning btn-sm" %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+    <br>
+
+    <%= link_to 'New Treatment', new_treatment_path, class: "btn btn-success"  %>
+</div>

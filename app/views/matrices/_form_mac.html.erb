@@ -1,0 +1,32 @@
+
+
+
+
+<%= form_for @matrix do |f| %>
+
+  <p>
+    <%= f.label :m_common_name %><br />
+    <%= f.text_field :m_common_name %>
+  </p>
+
+  <%= f.fields_for :agents do |i| %>
+  <p>
+    <%= i.label :a_genus %><br />
+    <%= i.text_field :a_genus %>
+  </p>
+    <p>
+    <%= i.label :a_species %><br />
+    <%= i.text_field :a_species %>
+  </p>
+    <% end %>
+
+  <%= f.fields_for :contaminationstatuses do |q| %>  
+  <p>
+    <%= q.label :cfu_natural_contamination %><br />
+    <%= q.text_field :cfu_natural_contamination %>
+  </p>
+    <% end %>    
+
+
+  <p><%= f.submit "Submit" %></p>
+<% end %>

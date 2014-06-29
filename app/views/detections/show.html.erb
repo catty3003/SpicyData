@@ -1,129 +1,160 @@
-<p id="notice"><%= notice %></p>
+<div class="bs-docs-section">
+  <div class="row">
+    <div class="col-md-12">
 
-<p>
-  <strong>D short name:</strong>
-  <%= @detection.d_short_name %>
-</p>
 
-<p>
-  <strong>D long name:</strong>
-  <%= @detection.d_long_name %>
-</p>
+      <div class="page-header">          
+        <h1>
+          Detection Method <%= @detection.d_short_name %>
+        </h1>
+      </div>
 
-<p>
-  <strong>D method validated for condiments:</strong>
-  <%= @detection.d_method_validated_for_condiments %>
-</p>
+      <div class="col-md-3" id="leftCol">
+        <div class="well">    
+          <%= render 'layouts/sidebar_show' %>
+        </div>
+      </div>     
 
-<p>
-  <strong>D process description:</strong>
-  <%= @detection.d_process_description %>
-</p>
+      <div class="col-md-9" id="rightCol"> 
+        <div class="well">          
+          <div class="panel panel-info">
+            <div class="panel-body"> 
 
-<p>
-  <strong>D weight of sample:</strong>
-  <%= @detection.d_weight_of_sample %>
-</p>
 
-<p>
-  <strong>D weight of sample unit:</strong>
-  <%= @detection.d_weight_of_sample_unit %>
-</p>
+              <p>
+                <strong>D short name:</strong>
+                <%= @detection.d_short_name %>
+              </p>
 
-<p>
-  <strong>Detection method dilution:</strong>
-  <%= @detection.detection_method_dilution %>
-</p>
+              <p>
+                <strong>D long name:</strong>
+                <%= @detection.d_long_name %>
+              </p>
 
-<p>
-  <strong>Detection method type:</strong>
-  <%= @detection.detection_method_type %>
-</p>
+              <p>
+                <strong>D method validated for condiments:</strong>
+                <%= @detection.d_method_validated_for_condiments %>
+              </p>
 
-<p>
-  <strong>Duration until result:</strong>
-  <%= @detection.duration_until_result %>
-</p>
+              <p>
+                <strong>D process description:</strong>
+                <%= @detection.d_process_description %>
+              </p>
 
-<p>
-  <strong>Duration until result unit:</strong>
-  <%= @detection.duration_until_result_unit %>
-</p>
+              <p>
+                <strong>D weight of sample:</strong>
+                <%= @detection.d_weight_of_sample %>
+              </p>
 
-<p>
-  <strong>Target gen:</strong>
-  <%= @detection.target_gen %>
-</p>
+              <p>
+                <strong>D weight of sample unit:</strong>
+                <%= @detection.d_weight_of_sample_unit %>
+              </p>
 
-<p>
-  <strong>Target protein:</strong>
-  <%= @detection.target_protein %>
-</p>
+              <p>
+                <strong>Detection method dilution:</strong>
+                <%= @detection.detection_method_dilution %>
+              </p>
 
-<p>
-  <strong>Other characteristic:</strong>
-  <%= @detection.other_characteristic %>
-</p>
+              <p>
+                <strong>Detection method type:</strong>
+                <%= @detection.detection_method_type %>
+              </p>
 
-<p>
-  <strong>Technique:</strong>
-  <%= @detection.technique %>
-</p>
+              <p>
+                <strong>Duration until result:</strong>
+                <%= @detection.duration_until_result %>
+              </p>
 
-<p>
-  <strong>Verification:</strong>
-  <%= @detection.verification %>
-</p>
+              <p>
+                <strong>Duration until result unit:</strong>
+                <%= @detection.duration_until_result_unit %>
+              </p>
 
-<p>
-  <strong>Interpretation:</strong>
-  <%= @detection.interpretation %>
-</p>
+              <p>
+                <strong>Target gen:</strong>
+                <%= @detection.target_gen %>
+              </p>
 
-<p>
-  <strong>D device needed:</strong>
-  <%= @detection.d_device_needed %>
-</p>
+              <p>
+                <strong>Target protein:</strong>
+                <%= @detection.target_protein %>
+              </p>
 
-<p>
-  <strong>Method for comparison:</strong>
-  <%= @detection.method_for_comparison %>
-</p>
+              <p>
+                <strong>Other characteristic:</strong>
+                <%= @detection.other_characteristic %>
+              </p>
 
-<p>
-  <strong>Lod:</strong>
-  <%= @detection.lod %>
-</p>
+              <p>
+                <strong>Technique:</strong>
+                <%= @detection.technique %>
+              </p>
 
-<p>
-  <strong>Sensitivity:</strong>
-  <%= @detection.sensitivity %>
-</p>
+              <p>
+                <strong>Verification:</strong>
+                <%= @detection.verification %>
+              </p>
 
-<p>
-  <strong>Specifity:</strong>
-  <%= @detection.specifity %>
-</p>
+              <p>
+                <strong>Interpretation:</strong>
+                <%= @detection.interpretation %>
+              </p>
 
-<p>
-  <strong>Reliability score:</strong>
-  <%= @detection.reliability_score %>
-</p>
+              <p>
+                <strong>D device needed:</strong>
+                <%= @detection.d_device_needed %>
+              </p>
 
-<p>
-  <strong>D comment:</strong>
-  <%= @detection.d_comment %>
-</p>
+              <p>
+                <strong>Method for comparison:</strong>
+                <%= @detection.method_for_comparison %>
+              </p>
 
-<p>
-  <strong>Reference:</strong>
-  <%= @detection.reference_id %>
-</p>
+              <p>
+                <strong>Lod:</strong>
+                <%= @detection.lod %>
+              </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @detection.user_id %>
-</p>
+              <p>
+                <strong>Sensitivity:</strong>
+                <%= @detection.sensitivity %>
+              </p>
 
-<%= link_to 'Edit', edit_detection_path(@detection) %> |
-<%= link_to 'Back', detections_path %>
+              <p>
+                <strong>Specifity:</strong>
+                <%= @detection.specifity %>
+              </p>
+
+              <p>
+                <strong>Reliability score:</strong>
+                <%= @detection.reliability_score %>
+              </p>
+
+              <p>
+                <strong>D comment:</strong>
+                <%= @detection.d_comment %>
+              </p>
+
+              <p>
+                <strong>Reference:</strong>
+                <%= @detection.reference_id %>
+              </p>
+
+              <p>
+                <strong>User:</strong>
+                <%= @detection.user_id %>
+              </p>
+
+            </div>
+          </div>    
+          <%= link_to 'Edit Detection', edit_detection_path(@detection), class: "btn btn-warning btn-sm" %> |  | 
+          <%= link_to 'Delete', @detection, class: "btn btn-danger btn-sm", method: :delete, data: { confirm: 'Are you sure?' } %> | 
+          <%= link_to 'Back to all Detections', detections_path, class: "btn btn-info btn-sm" %>   
+        </div>
+      </div>
+
+    </div>     
+  </div>
+</div>
+

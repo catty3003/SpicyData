@@ -56,7 +56,7 @@ class AgentparamsController < ApplicationController
   def destroy
     @agentparam.destroy
     respond_to do |format|
-      format.html { redirect_to agentparams_url }
+      format.html { redirect_to agentparams_url}
       format.json { head :no_content }
     end
   end

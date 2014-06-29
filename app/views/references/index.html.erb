@@ -1,61 +1,25 @@
-<h1>Listing references</h1>
+<div class="bs-docs-section">
+  <div class="row">
+    <div class="col-md-12">
 
-<table>
-  <thead>
-    <tr>
-      <th>Type of literatur</th>
-      <th>First author name</th>
-      <th>Year</th>
-      <th>Title</th>
-      <th>Journal</th>
-      <th>Volume</th>
-      <th>Page from</th>
-      <th>Page to</th>
-      <th>Link</th>
-      <th>Matrix</th>
-      <th>Agent</th>
-      <th>Spiking</th>
-      <th>Treatment</th>
-      <th>Sample prep</th>
-      <th>Detection</th>
-      <th>Tenacity</th>
-      <th>R comment</th>
-      <th>User</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @references.each do |reference| %>
-      <tr>
-        <td><%= reference.type_of_literatur %></td>
-        <td><%= reference.first_author_name %></td>
-        <td><%= reference.year %></td>
-        <td><%= reference.title %></td>
-        <td><%= reference.journal %></td>
-        <td><%= reference.volume %></td>
-        <td><%= reference.page_from %></td>
-        <td><%= reference.page_to %></td>
-        <td><%= reference.link %></td>
-        <td><%= reference.matrix %></td>
-        <td><%= reference.agent %></td>
-        <td><%= reference.spiking %></td>
-        <td><%= reference.treatment %></td>
-        <td><%= reference.sample_prep %></td>
-        <td><%= reference.detection %></td>
-        <td><%= reference.tenacity %></td>
-        <td><%= reference.r_comment %></td>
-        <td><%= reference.user_id %></td>
-        <td><%= link_to 'Show', reference %></td>
-        <td><%= link_to 'Edit', edit_reference_path(reference) %></td>
-        <td><%= link_to 'Destroy', reference, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      <div class="page-header">          
+        <h1>Listing all References <br>
+          <small><%= pluralize(@references.count, "Reference") %></small></h1>
+      </div>
 
-<br>
+      <div class="col-md-3" id="leftCol">
+        <div class="well">    
+          <%= render 'layouts/sidebar_show' %>
+        </div>
+      </div>     
 
-<%= link_to 'New Reference', new_reference_path %>
+      <div class="col-md-9" id="rightCol"> 
+        
+            <%= render 'tablereferences' %>
+      </div>
+    </div>
+  </div>
+</div>
+     
+      
