@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  spik_short_name: MyString
+  spik_long_name: MyText
+  spik_process_description: MyText
+  spik_device_needed: MyString
+  pros: MyText
+  cons: MyText
+  reference_id: 1
+  user_id: 1
+
+two:
+  spik_short_name: MyString
+  spik_long_name: MyText
+  spik_process_description: MyText
+  spik_device_needed: MyString
+  pros: MyText
+  cons: MyText
+  reference_id: 1
+  user_id: 1

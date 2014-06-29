@@ -1,0 +1,49 @@
+<%= form_for(@culdetec) do |f| %>
+  <% if @culdetec.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@culdetec.errors.count, "error") %> prohibited this culdetec from being saved:</h2>
+
+      <ul>
+      <% @culdetec.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :medium %><br>
+    <%= f.text_field :medium %>
+  </div>
+  <div class="field">
+    <%= f.label :agar %><br>
+    <%= f.text_field :agar %>
+  </div>
+  <div class="field">
+    <%= f.label :incubation_duration %><br>
+    <%= f.text_field :incubation_duration %>
+  </div>
+  <div class="field">
+    <%= f.label :incubation_duration_unit %><br>
+    <%= f.text_field :incubation_duration_unit %>
+  </div>
+  <div class="field">
+    <%= f.label :incubation_temp %><br>
+    <%= f.text_field :incubation_temp %>
+  </div>
+  <div class="field">
+    <%= f.label :sample_volume_per_disc %><br>
+    <%= f.number_field :sample_volume_per_disc %>
+  </div>
+  <div class="field">
+    <%= f.label :medium_volume_per_disc %><br>
+    <%= f.text_field :medium_volume_per_disc %>
+  </div>
+  <div class="field">
+    <%= f.label :detection_id %><br>
+    <%= f.number_field :detection_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

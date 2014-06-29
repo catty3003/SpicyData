@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tena_duration: 1.5
+  tena_duration_unit: MyString
+  final_concentration: 1
+  f_concentration_unit: MyString
+  decimal_reduction: 1.5
+  tena_comment: MyText
+  tenacity_id: 1
+
+two:
+  tena_duration: 1.5
+  tena_duration_unit: MyString
+  final_concentration: 1
+  f_concentration_unit: MyString
+  decimal_reduction: 1.5
+  tena_comment: MyText
+  tenacity_id: 1

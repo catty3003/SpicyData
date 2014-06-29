@@ -1,0 +1,43 @@
+<h1>Listing spikingparams</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Spik weight of sample</th>
+      <th>Spik weight of sample unit</th>
+      <th>Cfu of inoculum per ml</th>
+      <th>Cfu per gram spice spiked</th>
+      <th>Carrier substance</th>
+      <th>Carrier fluid</th>
+      <th>Spik duration</th>
+      <th>Spik duration unit</th>
+      <th>Spik comment</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @spikingparams.each do |spikingparam| %>
+      <tr>
+        <td><%= spikingparam.spik_weight_of_sample %></td>
+        <td><%= spikingparam.spik_weight_of_sample_unit %></td>
+        <td><%= spikingparam.cfu_of_inoculum_per_ml %></td>
+        <td><%= spikingparam.cfu_per_gram_spice_spiked %></td>
+        <td><%= spikingparam.carrier_substance %></td>
+        <td><%= spikingparam.carrier_fluid %></td>
+        <td><%= spikingparam.spik_duration %></td>
+        <td><%= spikingparam.spik_duration_unit %></td>
+        <td><%= spikingparam.spik_comment %></td>
+        <td><%= link_to 'Show', spikingparam %></td>
+        <td><%= link_to 'Edit', edit_spikingparam_path(spikingparam) %></td>
+        <td><%= link_to 'Destroy', spikingparam, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Spikingparam', new_spikingparam_path %>

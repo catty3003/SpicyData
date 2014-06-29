@@ -1,0 +1,51 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  m_common_name: MyString
+  m_genus: MyString
+  m_species: MyString
+  other_matrix_name: MyString
+  plant_part: MyString
+  storage_form: MyString
+  product_form: MyString
+  place_of_origin: MyString
+  date_of_harvest: 2014-06-30
+  relative_humidity_during_harvest: 1.5
+  temperature_during_harvest: 1.5
+  pre_treatment: MyString
+  sampling_date: 2014-06-30
+  m_ph: 1.5
+  m_aw: 1.5
+  humidity_of_matrix: 1.5
+  ash: 1.5
+  sand: 1.5
+  lipids: 1.5
+  further_ingredients: MyString
+  m_comment: MyText
+  reference_id: 1
+  user_id: 1
+
+two:
+  m_common_name: MyString
+  m_genus: MyString
+  m_species: MyString
+  other_matrix_name: MyString
+  plant_part: MyString
+  storage_form: MyString
+  product_form: MyString
+  place_of_origin: MyString
+  date_of_harvest: 2014-06-30
+  relative_humidity_during_harvest: 1.5
+  temperature_during_harvest: 1.5
+  pre_treatment: MyString
+  sampling_date: 2014-06-30
+  m_ph: 1.5
+  m_aw: 1.5
+  humidity_of_matrix: 1.5
+  ash: 1.5
+  sand: 1.5
+  lipids: 1.5
+  further_ingredients: MyString
+  m_comment: MyText
+  reference_id: 1
+  user_id: 1

@@ -1,0 +1,27 @@
+<h1>Listing admin_matrices</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @admin_matrices.each do |admin_matrix| %>
+      <tr>
+        <td><%= admin_matrix.name %></td>
+        <td><%= link_to 'Show', admin_matrix %></td>
+        <td><%= link_to 'Edit', edit_admin_matrix_path(admin_matrix) %></td>
+        <td><%= link_to 'Destroy', admin_matrix, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Admin matrix', new_admin_matrix_path %>

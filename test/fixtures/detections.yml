@@ -1,0 +1,55 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  d_short_name: MyString
+  d_long_name: MyText
+  d_method_validated_for_condiments: MyString
+  d_process_description: MyText
+  d_weight_of_sample: 1.5
+  d_weight_of_sample_unit: MyString
+  detection_method_dilution: MyString
+  detection_method_type: MyString
+  duration_until_result: 1.5
+  duration_until_result_unit: MyString
+  target_gen: MyString
+  target_protein: MyString
+  other_characteristic: MyText
+  technique: MyString
+  verification: MyText
+  interpretation: MyText
+  d_device_needed: MyString
+  method_for_comparison: MyText
+  lod: MyString
+  sensitivity: MyString
+  specifity: MyString
+  reliability_score: MyString
+  d_comment: MyText
+  reference_id: 1
+  user_id: 1
+
+two:
+  d_short_name: MyString
+  d_long_name: MyText
+  d_method_validated_for_condiments: MyString
+  d_process_description: MyText
+  d_weight_of_sample: 1.5
+  d_weight_of_sample_unit: MyString
+  detection_method_dilution: MyString
+  detection_method_type: MyString
+  duration_until_result: 1.5
+  duration_until_result_unit: MyString
+  target_gen: MyString
+  target_protein: MyString
+  other_characteristic: MyText
+  technique: MyString
+  verification: MyText
+  interpretation: MyText
+  d_device_needed: MyString
+  method_for_comparison: MyText
+  lod: MyString
+  sensitivity: MyString
+  specifity: MyString
+  reliability_score: MyString
+  d_comment: MyText
+  reference_id: 1
+  user_id: 1

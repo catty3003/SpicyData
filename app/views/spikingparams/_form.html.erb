@@ -1,0 +1,53 @@
+<%= form_for(@spikingparam) do |f| %>
+  <% if @spikingparam.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@spikingparam.errors.count, "error") %> prohibited this spikingparam from being saved:</h2>
+
+      <ul>
+      <% @spikingparam.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :spik_weight_of_sample %><br>
+    <%= f.text_field :spik_weight_of_sample %>
+  </div>
+  <div class="field">
+    <%= f.label :spik_weight_of_sample_unit %><br>
+    <%= f.text_field :spik_weight_of_sample_unit %>
+  </div>
+  <div class="field">
+    <%= f.label :cfu_of_inoculum_per_ml %><br>
+    <%= f.text_field :cfu_of_inoculum_per_ml %>
+  </div>
+  <div class="field">
+    <%= f.label :cfu_per_gram_spice_spiked %><br>
+    <%= f.text_field :cfu_per_gram_spice_spiked %>
+  </div>
+  <div class="field">
+    <%= f.label :carrier_substance %><br>
+    <%= f.text_field :carrier_substance %>
+  </div>
+  <div class="field">
+    <%= f.label :carrier_fluid %><br>
+    <%= f.text_field :carrier_fluid %>
+  </div>
+  <div class="field">
+    <%= f.label :spik_duration %><br>
+    <%= f.text_field :spik_duration %>
+  </div>
+  <div class="field">
+    <%= f.label :spik_duration_unit %><br>
+    <%= f.text_field :spik_duration_unit %>
+  </div>
+  <div class="field">
+    <%= f.label :spik_comment %><br>
+    <%= f.text_area :spik_comment %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

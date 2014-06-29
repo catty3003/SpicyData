@@ -1,0 +1,1 @@
+json.extract! @spikingparam, :id, :spik_weight_of_sample, :spik_weight_of_sample_unit, :cfu_of_inoculum_per_ml, :cfu_per_gram_spice_spiked, :carrier_substance, :carrier_fluid, :spik_duration, :spik_duration_unit, :spik_comment, :created_at, :updated_at

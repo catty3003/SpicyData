@@ -1,0 +1,35 @@
+<h1>Listing tenacities</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Total sample number</th>
+      <th>Inoculum concentration initial</th>
+      <th>I concentration unit</th>
+      <th>Reference</th>
+      <th>User</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tenacities.each do |tenacity| %>
+      <tr>
+        <td><%= tenacity.total_sample_number %></td>
+        <td><%= tenacity.inoculum_concentration_initial %></td>
+        <td><%= tenacity.i_concentration_unit %></td>
+        <td><%= tenacity.reference_id %></td>
+        <td><%= tenacity.user_id %></td>
+        <td><%= link_to 'Show', tenacity %></td>
+        <td><%= link_to 'Edit', edit_tenacity_path(tenacity) %></td>
+        <td><%= link_to 'Destroy', tenacity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tenacity', new_tenacity_path %>

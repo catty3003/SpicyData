@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  a_common_name: MyString
+  a_family: MyString
+  a_genus: MyString
+  a_species: MyString
+  subspecies: MyString
+  serovar: MyString
+  other_agent_name: MyString
+  ref_number: 1
+  rate_of_illness: 1.5
+  morbidity: 1.5
+  mortality: 1.5
+  isolation_source: MyString
+  natural_occurence: MyString
+  a_comment: MyText
+  reference_id: 1
+  user_id: 1
+
+two:
+  a_common_name: MyString
+  a_family: MyString
+  a_genus: MyString
+  a_species: MyString
+  subspecies: MyString
+  serovar: MyString
+  other_agent_name: MyString
+  ref_number: 1
+  rate_of_illness: 1.5
+  morbidity: 1.5
+  mortality: 1.5
+  isolation_source: MyString
+  natural_occurence: MyString
+  a_comment: MyText
+  reference_id: 1
+  user_id: 1

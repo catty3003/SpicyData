@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Infectious dose:</strong>
+  <%= @agentparam.infectious_dose %>
+</p>
+
+<p>
+  <strong>Level of infectious dose:</strong>
+  <%= @agentparam.level_of_infectious_dose %>
+</p>
+
+<p>
+  <strong>Infected species:</strong>
+  <%= @agentparam.infected_species %>
+</p>
+
+<p>
+  <strong>Agent:</strong>
+  <%= @agentparam.agent_id %>
+</p>
+
+<%= link_to 'Edit', edit_agentparam_path(@agentparam) %> |
+<%= link_to 'Back', agentparams_path %>

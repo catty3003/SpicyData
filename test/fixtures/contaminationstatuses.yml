@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cfu_natural_contamination: 1.5
+  cfu_natural_contamination_unit: MyString
+  matrix_id: 1
+  agent_id: 1
+  tenacity_id: 1
+  treatment_id: 1
+  spiking_id: 1
+  samplepreparation_id: 1
+  detection_id: 1
+  reference_id: 1
+  user_id: 1
+
+two:
+  cfu_natural_contamination: 1.5
+  cfu_natural_contamination_unit: MyString
+  matrix_id: 1
+  agent_id: 1
+  tenacity_id: 1
+  treatment_id: 1
+  spiking_id: 1
+  samplepreparation_id: 1
+  detection_id: 1
+  reference_id: 1
+  user_id: 1

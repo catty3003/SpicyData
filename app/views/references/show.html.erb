@@ -1,0 +1,94 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Type of literatur:</strong>
+  <%= @reference.type_of_literatur %>
+</p>
+
+<p>
+  <strong>First author name:</strong>
+  <%= @reference.first_author_name %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @reference.year %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @reference.title %>
+</p>
+
+<p>
+  <strong>Journal:</strong>
+  <%= @reference.journal %>
+</p>
+
+<p>
+  <strong>Volume:</strong>
+  <%= @reference.volume %>
+</p>
+
+<p>
+  <strong>Page from:</strong>
+  <%= @reference.page_from %>
+</p>
+
+<p>
+  <strong>Page to:</strong>
+  <%= @reference.page_to %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @reference.link %>
+</p>
+
+<p>
+  <strong>Matrix:</strong>
+  <%= @reference.matrix %>
+</p>
+
+<p>
+  <strong>Agent:</strong>
+  <%= @reference.agent %>
+</p>
+
+<p>
+  <strong>Spiking:</strong>
+  <%= @reference.spiking %>
+</p>
+
+<p>
+  <strong>Treatment:</strong>
+  <%= @reference.treatment %>
+</p>
+
+<p>
+  <strong>Sample prep:</strong>
+  <%= @reference.sample_prep %>
+</p>
+
+<p>
+  <strong>Detection:</strong>
+  <%= @reference.detection %>
+</p>
+
+<p>
+  <strong>Tenacity:</strong>
+  <%= @reference.tenacity %>
+</p>
+
+<p>
+  <strong>R comment:</strong>
+  <%= @reference.r_comment %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @reference.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_reference_path(@reference) %> |
+<%= link_to 'Back', references_path %>

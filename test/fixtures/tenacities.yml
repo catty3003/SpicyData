@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  total_sample_number: 1
+  inoculum_concentration_initial: 1
+  i_concentration_unit: MyString
+  reference_id: 1
+  user_id: 1
+
+two:
+  total_sample_number: 1
+  inoculum_concentration_initial: 1
+  i_concentration_unit: MyString
+  reference_id: 1
+  user_id: 1

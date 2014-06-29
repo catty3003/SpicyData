@@ -1,0 +1,51 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  samprep_short_name: MyString
+  samprep_long_name: MyText
+  samprep_method_validated_for_condiments: MyString
+  samprep_process_description: MyText
+  spik_weight_of_sample: 1.5
+  spik_weight_of_sample_unit: MyString
+  dilution_fuid: MyString
+  first_dilution_ratio: MyString
+  homogenize_with: MyString
+  enrichment: MyString
+  dna_extraction: MyString
+  rna_extraction: MyString
+  protein_extraction: MyString
+  homogenizing_method: MyString
+  cell_lysis: MyString
+  applied_kit: MyString
+  other_samprep_method_type: MyString
+  samprep_method_type_details_text: MyString
+  samprep_duration: 1.5
+  samprep_duration_unit: MyString
+  samprep_comment: MyText
+  reference_id: 1
+  user_id: 1
+
+two:
+  samprep_short_name: MyString
+  samprep_long_name: MyText
+  samprep_method_validated_for_condiments: MyString
+  samprep_process_description: MyText
+  spik_weight_of_sample: 1.5
+  spik_weight_of_sample_unit: MyString
+  dilution_fuid: MyString
+  first_dilution_ratio: MyString
+  homogenize_with: MyString
+  enrichment: MyString
+  dna_extraction: MyString
+  rna_extraction: MyString
+  protein_extraction: MyString
+  homogenizing_method: MyString
+  cell_lysis: MyString
+  applied_kit: MyString
+  other_samprep_method_type: MyString
+  samprep_method_type_details_text: MyString
+  samprep_duration: 1.5
+  samprep_duration_unit: MyString
+  samprep_comment: MyText
+  reference_id: 1
+  user_id: 1

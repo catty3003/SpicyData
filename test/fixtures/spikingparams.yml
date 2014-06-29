@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  spik_weight_of_sample: 1.5
+  spik_weight_of_sample_unit: MyString
+  cfu_of_inoculum_per_ml: 1.5
+  cfu_per_gram_spice_spiked: 1.5
+  carrier_substance: MyString
+  carrier_fluid: MyString
+  spik_duration: 1.5
+  spik_duration_unit: MyString
+  spik_comment: MyText
+
+two:
+  spik_weight_of_sample: 1.5
+  spik_weight_of_sample_unit: MyString
+  cfu_of_inoculum_per_ml: 1.5
+  cfu_per_gram_spice_spiked: 1.5
+  carrier_substance: MyString
+  carrier_fluid: MyString
+  spik_duration: 1.5
+  spik_duration_unit: MyString
+  spik_comment: MyText

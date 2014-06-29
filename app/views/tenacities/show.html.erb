@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Total sample number:</strong>
+  <%= @tenacity.total_sample_number %>
+</p>
+
+<p>
+  <strong>Inoculum concentration initial:</strong>
+  <%= @tenacity.inoculum_concentration_initial %>
+</p>
+
+<p>
+  <strong>I concentration unit:</strong>
+  <%= @tenacity.i_concentration_unit %>
+</p>
+
+<p>
+  <strong>Reference:</strong>
+  <%= @tenacity.reference_id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @tenacity.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_tenacity_path(@tenacity) %> |
+<%= link_to 'Back', tenacities_path %>

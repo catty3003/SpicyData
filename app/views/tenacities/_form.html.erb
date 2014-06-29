@@ -1,0 +1,37 @@
+<%= form_for(@tenacity) do |f| %>
+  <% if @tenacity.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tenacity.errors.count, "error") %> prohibited this tenacity from being saved:</h2>
+
+      <ul>
+      <% @tenacity.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :total_sample_number %><br>
+    <%= f.number_field :total_sample_number %>
+  </div>
+  <div class="field">
+    <%= f.label :inoculum_concentration_initial %><br>
+    <%= f.number_field :inoculum_concentration_initial %>
+  </div>
+  <div class="field">
+    <%= f.label :i_concentration_unit %><br>
+    <%= f.text_field :i_concentration_unit %>
+  </div>
+  <div class="field">
+    <%= f.label :reference_id %><br>
+    <%= f.number_field :reference_id %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

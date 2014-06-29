@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Spik short name:</strong>
+  <%= @spiking.spik_short_name %>
+</p>
+
+<p>
+  <strong>Spik long name:</strong>
+  <%= @spiking.spik_long_name %>
+</p>
+
+<p>
+  <strong>Spik process description:</strong>
+  <%= @spiking.spik_process_description %>
+</p>
+
+<p>
+  <strong>Spik device needed:</strong>
+  <%= @spiking.spik_device_needed %>
+</p>
+
+<p>
+  <strong>Pros:</strong>
+  <%= @spiking.pros %>
+</p>
+
+<p>
+  <strong>Cons:</strong>
+  <%= @spiking.cons %>
+</p>
+
+<p>
+  <strong>Reference:</strong>
+  <%= @spiking.reference_id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @spiking.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_spiking_path(@spiking) %> |
+<%= link_to 'Back', spikings_path %>

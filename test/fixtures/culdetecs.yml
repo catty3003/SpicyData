@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  medium: MyString
+  agar: MyString
+  incubation_duration: 1.5
+  incubation_duration_unit: MyString
+  incubation_temp: MyString
+  sample_volume_per_disc: 1
+  medium_volume_per_disc: MyString
+  detection_id: 1
+
+two:
+  medium: MyString
+  agar: MyString
+  incubation_duration: 1.5
+  incubation_duration_unit: MyString
+  incubation_temp: MyString
+  sample_volume_per_disc: 1
+  medium_volume_per_disc: MyString
+  detection_id: 1

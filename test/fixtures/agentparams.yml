@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  infectious_dose: 1.5
+  level_of_infectious_dose: 1.5
+  infected_species: MyString
+  agent_id: 1
+
+two:
+  infectious_dose: 1.5
+  level_of_infectious_dose: 1.5
+  infected_species: MyString
+  agent_id: 1

@@ -1,0 +1,109 @@
+<%= form_for(@samplepreparation) do |f| %>
+  <% if @samplepreparation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@samplepreparation.errors.count, "error") %> prohibited this samplepreparation from being saved:</h2>
+
+      <ul>
+      <% @samplepreparation.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :samprep_short_name %><br>
+    <%= f.text_field :samprep_short_name %>
+  </div>
+  <div class="field">
+    <%= f.label :samprep_long_name %><br>
+    <%= f.text_area :samprep_long_name %>
+  </div>
+  <div class="field">
+    <%= f.label :samprep_method_validated_for_condiments %><br>
+    <%= f.text_field :samprep_method_validated_for_condiments %>
+  </div>
+  <div class="field">
+    <%= f.label :samprep_process_description %><br>
+    <%= f.text_area :samprep_process_description %>
+  </div>
+  <div class="field">
+    <%= f.label :spik_weight_of_sample %><br>
+    <%= f.text_field :spik_weight_of_sample %>
+  </div>
+  <div class="field">
+    <%= f.label :spik_weight_of_sample_unit %><br>
+    <%= f.text_field :spik_weight_of_sample_unit %>
+  </div>
+  <div class="field">
+    <%= f.label :dilution_fuid %><br>
+    <%= f.text_field :dilution_fuid %>
+  </div>
+  <div class="field">
+    <%= f.label :first_dilution_ratio %><br>
+    <%= f.text_field :first_dilution_ratio %>
+  </div>
+  <div class="field">
+    <%= f.label :homogenize_with %><br>
+    <%= f.text_field :homogenize_with %>
+  </div>
+  <div class="field">
+    <%= f.label :enrichment %><br>
+    <%= f.text_field :enrichment %>
+  </div>
+  <div class="field">
+    <%= f.label :dna_extraction %><br>
+    <%= f.text_field :dna_extraction %>
+  </div>
+  <div class="field">
+    <%= f.label :rna_extraction %><br>
+    <%= f.text_field :rna_extraction %>
+  </div>
+  <div class="field">
+    <%= f.label :protein_extraction %><br>
+    <%= f.text_field :protein_extraction %>
+  </div>
+  <div class="field">
+    <%= f.label :homogenizing_method %><br>
+    <%= f.text_field :homogenizing_method %>
+  </div>
+  <div class="field">
+    <%= f.label :cell_lysis %><br>
+    <%= f.text_field :cell_lysis %>
+  </div>
+  <div class="field">
+    <%= f.label :applied_kit %><br>
+    <%= f.text_field :applied_kit %>
+  </div>
+  <div class="field">
+    <%= f.label :other_samprep_method_type %><br>
+    <%= f.text_field :other_samprep_method_type %>
+  </div>
+  <div class="field">
+    <%= f.label :samprep_method_type_details_text %><br>
+    <%= f.text_field :samprep_method_type_details_text %>
+  </div>
+  <div class="field">
+    <%= f.label :samprep_duration %><br>
+    <%= f.text_field :samprep_duration %>
+  </div>
+  <div class="field">
+    <%= f.label :samprep_duration_unit %><br>
+    <%= f.text_field :samprep_duration_unit %>
+  </div>
+  <div class="field">
+    <%= f.label :samprep_comment %><br>
+    <%= f.text_area :samprep_comment %>
+  </div>
+  <div class="field">
+    <%= f.label :reference_id %><br>
+    <%= f.number_field :reference_id %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

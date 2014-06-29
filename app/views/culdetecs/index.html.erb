@@ -1,0 +1,41 @@
+<h1>Listing culdetecs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Medium</th>
+      <th>Agar</th>
+      <th>Incubation duration</th>
+      <th>Incubation duration unit</th>
+      <th>Incubation temp</th>
+      <th>Sample volume per disc</th>
+      <th>Medium volume per disc</th>
+      <th>Detection</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @culdetecs.each do |culdetec| %>
+      <tr>
+        <td><%= culdetec.medium %></td>
+        <td><%= culdetec.agar %></td>
+        <td><%= culdetec.incubation_duration %></td>
+        <td><%= culdetec.incubation_duration_unit %></td>
+        <td><%= culdetec.incubation_temp %></td>
+        <td><%= culdetec.sample_volume_per_disc %></td>
+        <td><%= culdetec.medium_volume_per_disc %></td>
+        <td><%= culdetec.detection_id %></td>
+        <td><%= link_to 'Show', culdetec %></td>
+        <td><%= link_to 'Edit', edit_culdetec_path(culdetec) %></td>
+        <td><%= link_to 'Destroy', culdetec, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Culdetec', new_culdetec_path %>

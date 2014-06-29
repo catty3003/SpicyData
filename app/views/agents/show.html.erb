@@ -1,0 +1,84 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>A common name:</strong>
+  <%= @agent.a_common_name %>
+</p>
+
+<p>
+  <strong>A family:</strong>
+  <%= @agent.a_family %>
+</p>
+
+<p>
+  <strong>A genus:</strong>
+  <%= @agent.a_genus %>
+</p>
+
+<p>
+  <strong>A species:</strong>
+  <%= @agent.a_species %>
+</p>
+
+<p>
+  <strong>Subspecies:</strong>
+  <%= @agent.subspecies %>
+</p>
+
+<p>
+  <strong>Serovar:</strong>
+  <%= @agent.serovar %>
+</p>
+
+<p>
+  <strong>Other agent name:</strong>
+  <%= @agent.other_agent_name %>
+</p>
+
+<p>
+  <strong>Ref number:</strong>
+  <%= @agent.ref_number %>
+</p>
+
+<p>
+  <strong>Rate of illness:</strong>
+  <%= @agent.rate_of_illness %>
+</p>
+
+<p>
+  <strong>Morbidity:</strong>
+  <%= @agent.morbidity %>
+</p>
+
+<p>
+  <strong>Mortality:</strong>
+  <%= @agent.mortality %>
+</p>
+
+<p>
+  <strong>Isolation source:</strong>
+  <%= @agent.isolation_source %>
+</p>
+
+<p>
+  <strong>Natural occurence:</strong>
+  <%= @agent.natural_occurence %>
+</p>
+
+<p>
+  <strong>A comment:</strong>
+  <%= @agent.a_comment %>
+</p>
+
+<p>
+  <strong>Reference:</strong>
+  <%= @agent.reference_id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @agent.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_agent_path(@agent) %> |
+<%= link_to 'Back', agents_path %>

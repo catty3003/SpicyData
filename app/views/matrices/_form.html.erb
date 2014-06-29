@@ -1,0 +1,109 @@
+<%= form_for(@matrix) do |f| %>
+  <% if @matrix.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@matrix.errors.count, "error") %> prohibited this matrix from being saved:</h2>
+
+      <ul>
+      <% @matrix.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :m_common_name %><br>
+    <%= f.text_field :m_common_name %>
+  </div>
+  <div class="field">
+    <%= f.label :m_genus %><br>
+    <%= f.text_field :m_genus %>
+  </div>
+  <div class="field">
+    <%= f.label :m_species %><br>
+    <%= f.text_field :m_species %>
+  </div>
+  <div class="field">
+    <%= f.label :other_matrix_name %><br>
+    <%= f.text_field :other_matrix_name %>
+  </div>
+  <div class="field">
+    <%= f.label :plant_part %><br>
+    <%= f.text_field :plant_part %>
+  </div>
+  <div class="field">
+    <%= f.label :storage_form %><br>
+    <%= f.text_field :storage_form %>
+  </div>
+  <div class="field">
+    <%= f.label :product_form %><br>
+    <%= f.text_field :product_form %>
+  </div>
+  <div class="field">
+    <%= f.label :place_of_origin %><br>
+    <%= f.text_field :place_of_origin %>
+  </div>
+  <div class="field">
+    <%= f.label :date_of_harvest %><br>
+    <%= f.date_select :date_of_harvest %>
+  </div>
+  <div class="field">
+    <%= f.label :relative_humidity_during_harvest %><br>
+    <%= f.text_field :relative_humidity_during_harvest %>
+  </div>
+  <div class="field">
+    <%= f.label :temperature_during_harvest %><br>
+    <%= f.text_field :temperature_during_harvest %>
+  </div>
+  <div class="field">
+    <%= f.label :pre_treatment %><br>
+    <%= f.text_field :pre_treatment %>
+  </div>
+  <div class="field">
+    <%= f.label :sampling_date %><br>
+    <%= f.date_select :sampling_date %>
+  </div>
+  <div class="field">
+    <%= f.label :m_ph %><br>
+    <%= f.text_field :m_ph %>
+  </div>
+  <div class="field">
+    <%= f.label :m_aw %><br>
+    <%= f.text_field :m_aw %>
+  </div>
+  <div class="field">
+    <%= f.label :humidity_of_matrix %><br>
+    <%= f.text_field :humidity_of_matrix %>
+  </div>
+  <div class="field">
+    <%= f.label :ash %><br>
+    <%= f.text_field :ash %>
+  </div>
+  <div class="field">
+    <%= f.label :sand %><br>
+    <%= f.text_field :sand %>
+  </div>
+  <div class="field">
+    <%= f.label :lipids %><br>
+    <%= f.text_field :lipids %>
+  </div>
+  <div class="field">
+    <%= f.label :further_ingredients %><br>
+    <%= f.text_field :further_ingredients %>
+  </div>
+  <div class="field">
+    <%= f.label :m_comment %><br>
+    <%= f.text_area :m_comment %>
+  </div>
+  <div class="field">
+    <%= f.label :reference_id %><br>
+    <%= f.number_field :reference_id %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,47 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  temperature: MyString
+  temperature_in_degree: 1.5
+  steam: MyString
+  steam_in_percent: 1.5
+  fumigation_gas: MyString
+  fumigation_gas_in_percent: 1.5
+  optical: MyString
+  mechanical: MyString
+  process_type: MyString
+  t_ph: 1.5
+  pressure: 1.5
+  kgy_dose: 1.5
+  t_aw: 1.5
+  water_activity: 1.5
+  other_condition: MyString
+  treat_duration: 1.5
+  treat_duration_unit: MyString
+  t_comment: MyText
+  reference_id: 1
+  user_id: 1
+  matrix_id: 1
+
+two:
+  temperature: MyString
+  temperature_in_degree: 1.5
+  steam: MyString
+  steam_in_percent: 1.5
+  fumigation_gas: MyString
+  fumigation_gas_in_percent: 1.5
+  optical: MyString
+  mechanical: MyString
+  process_type: MyString
+  t_ph: 1.5
+  pressure: 1.5
+  kgy_dose: 1.5
+  t_aw: 1.5
+  water_activity: 1.5
+  other_condition: MyString
+  treat_duration: 1.5
+  treat_duration_unit: MyString
+  t_comment: MyText
+  reference_id: 1
+  user_id: 1
+  matrix_id: 1

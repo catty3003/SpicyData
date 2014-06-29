@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Medium:</strong>
+  <%= @culdetec.medium %>
+</p>
+
+<p>
+  <strong>Agar:</strong>
+  <%= @culdetec.agar %>
+</p>
+
+<p>
+  <strong>Incubation duration:</strong>
+  <%= @culdetec.incubation_duration %>
+</p>
+
+<p>
+  <strong>Incubation duration unit:</strong>
+  <%= @culdetec.incubation_duration_unit %>
+</p>
+
+<p>
+  <strong>Incubation temp:</strong>
+  <%= @culdetec.incubation_temp %>
+</p>
+
+<p>
+  <strong>Sample volume per disc:</strong>
+  <%= @culdetec.sample_volume_per_disc %>
+</p>
+
+<p>
+  <strong>Medium volume per disc:</strong>
+  <%= @culdetec.medium_volume_per_disc %>
+</p>
+
+<p>
+  <strong>Detection:</strong>
+  <%= @culdetec.detection_id %>
+</p>
+
+<%= link_to 'Edit', edit_culdetec_path(@culdetec) %> |
+<%= link_to 'Back', culdetecs_path %>

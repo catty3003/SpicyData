@@ -1,0 +1,47 @@
+<h1>Listing contaminationstatuses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cfu natural contamination</th>
+      <th>Cfu natural contamination unit</th>
+      <th>Matrix</th>
+      <th>Agent</th>
+      <th>Tenacity</th>
+      <th>Treatment</th>
+      <th>Spiking</th>
+      <th>Samplepreparation</th>
+      <th>Detection</th>
+      <th>Reference</th>
+      <th>User</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @contaminationstatuses.each do |contaminationstatus| %>
+      <tr>
+        <td><%= contaminationstatus.cfu_natural_contamination %></td>
+        <td><%= contaminationstatus.cfu_natural_contamination_unit %></td>
+        <td><%= contaminationstatus.matrix_id %></td>
+        <td><%= contaminationstatus.agent_id %></td>
+        <td><%= contaminationstatus.tenacity_id %></td>
+        <td><%= contaminationstatus.treatment_id %></td>
+        <td><%= contaminationstatus.spiking_id %></td>
+        <td><%= contaminationstatus.samplepreparation_id %></td>
+        <td><%= contaminationstatus.detection_id %></td>
+        <td><%= contaminationstatus.reference_id %></td>
+        <td><%= contaminationstatus.user_id %></td>
+        <td><%= link_to 'Show', contaminationstatus %></td>
+        <td><%= link_to 'Edit', edit_contaminationstatus_path(contaminationstatus) %></td>
+        <td><%= link_to 'Destroy', contaminationstatus, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Contaminationstatus', new_contaminationstatus_path %>

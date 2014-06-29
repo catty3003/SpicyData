@@ -1,0 +1,109 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Temperature:</strong>
+  <%= @treatment.temperature %>
+</p>
+
+<p>
+  <strong>Temperature in degree:</strong>
+  <%= @treatment.temperature_in_degree %>
+</p>
+
+<p>
+  <strong>Steam:</strong>
+  <%= @treatment.steam %>
+</p>
+
+<p>
+  <strong>Steam in percent:</strong>
+  <%= @treatment.steam_in_percent %>
+</p>
+
+<p>
+  <strong>Fumigation gas:</strong>
+  <%= @treatment.fumigation_gas %>
+</p>
+
+<p>
+  <strong>Fumigation gas in percent:</strong>
+  <%= @treatment.fumigation_gas_in_percent %>
+</p>
+
+<p>
+  <strong>Optical:</strong>
+  <%= @treatment.optical %>
+</p>
+
+<p>
+  <strong>Mechanical:</strong>
+  <%= @treatment.mechanical %>
+</p>
+
+<p>
+  <strong>Process type:</strong>
+  <%= @treatment.process_type %>
+</p>
+
+<p>
+  <strong>T ph:</strong>
+  <%= @treatment.t_ph %>
+</p>
+
+<p>
+  <strong>Pressure:</strong>
+  <%= @treatment.pressure %>
+</p>
+
+<p>
+  <strong>Kgy dose:</strong>
+  <%= @treatment.kgy_dose %>
+</p>
+
+<p>
+  <strong>T aw:</strong>
+  <%= @treatment.t_aw %>
+</p>
+
+<p>
+  <strong>Water activity:</strong>
+  <%= @treatment.water_activity %>
+</p>
+
+<p>
+  <strong>Other condition:</strong>
+  <%= @treatment.other_condition %>
+</p>
+
+<p>
+  <strong>Treat duration:</strong>
+  <%= @treatment.treat_duration %>
+</p>
+
+<p>
+  <strong>Treat duration unit:</strong>
+  <%= @treatment.treat_duration_unit %>
+</p>
+
+<p>
+  <strong>T comment:</strong>
+  <%= @treatment.t_comment %>
+</p>
+
+<p>
+  <strong>Reference:</strong>
+  <%= @treatment.reference_id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @treatment.user_id %>
+</p>
+
+<p>
+  <strong>Matrix:</strong>
+  <%= @treatment.matrix_id %>
+</p>
+
+<%= link_to 'Edit', edit_treatment_path(@treatment) %> |
+<%= link_to 'Back', treatments_path %>

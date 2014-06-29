@@ -1,0 +1,49 @@
+<%= form_for(@spiking) do |f| %>
+  <% if @spiking.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@spiking.errors.count, "error") %> prohibited this spiking from being saved:</h2>
+
+      <ul>
+      <% @spiking.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :spik_short_name %><br>
+    <%= f.text_field :spik_short_name %>
+  </div>
+  <div class="field">
+    <%= f.label :spik_long_name %><br>
+    <%= f.text_area :spik_long_name %>
+  </div>
+  <div class="field">
+    <%= f.label :spik_process_description %><br>
+    <%= f.text_area :spik_process_description %>
+  </div>
+  <div class="field">
+    <%= f.label :spik_device_needed %><br>
+    <%= f.text_field :spik_device_needed %>
+  </div>
+  <div class="field">
+    <%= f.label :pros %><br>
+    <%= f.text_area :pros %>
+  </div>
+  <div class="field">
+    <%= f.label :cons %><br>
+    <%= f.text_area :cons %>
+  </div>
+  <div class="field">
+    <%= f.label :reference_id %><br>
+    <%= f.number_field :reference_id %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

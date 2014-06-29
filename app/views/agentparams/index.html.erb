@@ -1,0 +1,33 @@
+<h1>Listing agentparams</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Infectious dose</th>
+      <th>Level of infectious dose</th>
+      <th>Infected species</th>
+      <th>Agent</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @agentparams.each do |agentparam| %>
+      <tr>
+        <td><%= agentparam.infectious_dose %></td>
+        <td><%= agentparam.level_of_infectious_dose %></td>
+        <td><%= agentparam.infected_species %></td>
+        <td><%= agentparam.agent_id %></td>
+        <td><%= link_to 'Show', agentparam %></td>
+        <td><%= link_to 'Edit', edit_agentparam_path(agentparam) %></td>
+        <td><%= link_to 'Destroy', agentparam, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Agentparam', new_agentparam_path %>

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cfu_initial: 1
+  cfu_initial_unit: MyString
+  detectability: false
+  cfu_detected: 1
+  cfu_detected_unit: MyString
+  r_comment: MyText
+
+two:
+  cfu_initial: 1
+  cfu_initial_unit: MyString
+  detectability: false
+  cfu_detected: 1
+  cfu_detected_unit: MyString
+  r_comment: MyText

@@ -1,0 +1,2 @@
+module TenacitiesHelper
+end
