@@ -11,6 +11,11 @@
     </div>
   <% end %>
 
+
+<div class="well">          
+  <div class="panel panel-info">
+    <div class="panel-body">
+
   <div class="field">
     <%= f.label :total_sample_number %><br>
     <%= f.number_field :total_sample_number %>
@@ -31,7 +36,12 @@
     <%= f.label :user_id %><br>
     <%= f.number_field :user_id %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+    </div>
   </div>
-<% end %>
+  <div class="actions">
+    <%= f.submit 'Save Tenacity', class: "btn btn-success" %> | | 
+    <%= link_to 'Cancel', tenacities_path, class: "btn btn-danger" %>
+  </div>
+  <% end %>
+</div>
+

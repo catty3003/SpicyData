@@ -11,107 +11,117 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :d_short_name %><br>
-    <%= f.text_field :d_short_name %>
-  </div>
-  <div class="field">
-    <%= f.label :d_long_name %><br>
-    <%= f.text_area :d_long_name %>
-  </div>
-  <div class="field">
-    <%= f.label :d_method_validated_for_condiments %><br>
-    <%= f.text_field :d_method_validated_for_condiments %>
-  </div>
-  <div class="field">
-    <%= f.label :d_process_description %><br>
-    <%= f.text_area :d_process_description %>
-  </div>
-  <div class="field">
-    <%= f.label :d_weight_of_sample %><br>
-    <%= f.text_field :d_weight_of_sample %>
-  </div>
-  <div class="field">
-    <%= f.label :d_weight_of_sample_unit %><br>
-    <%= f.text_field :d_weight_of_sample_unit %>
-  </div>
-  <div class="field">
-    <%= f.label :detection_method_dilution %><br>
-    <%= f.text_field :detection_method_dilution %>
-  </div>
-  <div class="field">
-    <%= f.label :detection_method_type %><br>
-    <%= f.text_field :detection_method_type %>
-  </div>
-  <div class="field">
-    <%= f.label :duration_until_result %><br>
-    <%= f.text_field :duration_until_result %>
-  </div>
-  <div class="field">
-    <%= f.label :duration_until_result_unit %><br>
-    <%= f.text_field :duration_until_result_unit %>
-  </div>
-  <div class="field">
-    <%= f.label :target_gen %><br>
-    <%= f.text_field :target_gen %>
-  </div>
-  <div class="field">
-    <%= f.label :target_protein %><br>
-    <%= f.text_field :target_protein %>
-  </div>
-  <div class="field">
-    <%= f.label :other_characteristic %><br>
-    <%= f.text_area :other_characteristic %>
-  </div>
-  <div class="field">
-    <%= f.label :technique %><br>
-    <%= f.text_field :technique %>
-  </div>
-  <div class="field">
-    <%= f.label :verification %><br>
-    <%= f.text_area :verification %>
-  </div>
-  <div class="field">
-    <%= f.label :interpretation %><br>
-    <%= f.text_area :interpretation %>
-  </div>
-  <div class="field">
-    <%= f.label :d_device_needed %><br>
-    <%= f.text_field :d_device_needed %>
-  </div>
-  <div class="field">
-    <%= f.label :method_for_comparison %><br>
-    <%= f.text_area :method_for_comparison %>
-  </div>
-  <div class="field">
-    <%= f.label :lod %><br>
-    <%= f.text_field :lod %>
-  </div>
-  <div class="field">
-    <%= f.label :sensitivity %><br>
-    <%= f.text_field :sensitivity %>
-  </div>
-  <div class="field">
-    <%= f.label :specifity %><br>
-    <%= f.text_field :specifity %>
-  </div>
-  <div class="field">
-    <%= f.label :reliability_score %><br>
-    <%= f.text_field :reliability_score %>
-  </div>
-  <div class="field">
-    <%= f.label :d_comment %><br>
-    <%= f.text_area :d_comment %>
-  </div>
-  <div class="field">
-    <%= f.label :reference_id %><br>
-    <%= f.number_field :reference_id %>
-  </div>
-  <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.number_field :user_id %>
+
+<div class="well">          
+  <div class="panel panel-info">
+    <div class="panel-body">
+
+      <div class="field">
+        <%= f.label :d_short_name %><br>
+        <%= f.text_field :d_short_name %>
+      </div>
+      <div class="field">
+        <%= f.label :d_long_name %><br>
+        <%= f.text_area :d_long_name %>
+      </div>
+      <div class="field">
+        <%= f.label :d_method_validated_for_condiments %><br>
+        <%= f.text_field :d_method_validated_for_condiments %>
+      </div>
+      <div class="field">
+        <%= f.label :d_process_description %><br>
+        <%= f.text_area :d_process_description %>
+      </div>
+      <div class="field">
+        <%= f.label :d_weight_of_sample %><br>
+        <%= f.text_field :d_weight_of_sample %>
+      </div>
+      <div class="field">
+        <%= f.label :d_weight_of_sample_unit %><br>
+        <%= f.text_field :d_weight_of_sample_unit %>
+      </div>
+      <div class="field">
+        <%= f.label :detection_method_dilution %><br>
+        <%= f.text_field :detection_method_dilution %>
+      </div>
+      <div class="field">
+        <%= f.label :detection_method_type %><br>
+        <%= f.text_field :detection_method_type %>
+      </div>
+      <div class="field">
+        <%= f.label :duration_until_result %><br>
+        <%= f.text_field :duration_until_result %>
+      </div>
+      <div class="field">
+        <%= f.label :duration_until_result_unit %><br>
+        <%= f.text_field :duration_until_result_unit %>
+      </div>
+      <div class="field">
+        <%= f.label :target_gen %><br>
+        <%= f.text_field :target_gen %>
+      </div>
+      <div class="field">
+        <%= f.label :target_protein %><br>
+        <%= f.text_field :target_protein %>
+      </div>
+      <div class="field">
+        <%= f.label :other_characteristic %><br>
+        <%= f.text_area :other_characteristic %>
+      </div>
+      <div class="field">
+        <%= f.label :technique %><br>
+        <%= f.text_field :technique %>
+      </div>
+      <div class="field">
+        <%= f.label :verification %><br>
+        <%= f.text_area :verification %>
+      </div>
+      <div class="field">
+        <%= f.label :interpretation %><br>
+        <%= f.text_area :interpretation %>
+      </div>
+      <div class="field">
+        <%= f.label :d_device_needed %><br>
+        <%= f.text_field :d_device_needed %>
+      </div>
+      <div class="field">
+        <%= f.label :method_for_comparison %><br>
+        <%= f.text_area :method_for_comparison %>
+      </div>
+      <div class="field">
+        <%= f.label :lod %><br>
+        <%= f.text_field :lod %>
+      </div>
+      <div class="field">
+        <%= f.label :sensitivity %><br>
+        <%= f.text_field :sensitivity %>
+      </div>
+      <div class="field">
+        <%= f.label :specifity %><br>
+        <%= f.text_field :specifity %>
+      </div>
+      <div class="field">
+        <%= f.label :reliability_score %><br>
+        <%= f.text_field :reliability_score %>
+      </div>
+      <div class="field">
+        <%= f.label :d_comment %><br>
+        <%= f.text_area :d_comment %>
+      </div>
+      <div class="field">
+        <%= f.label :reference_id %><br>
+        <%= f.number_field :reference_id %>
+      </div>
+      <div class="field">
+        <%= f.label :user_id %><br>
+        <%= f.number_field :user_id %>
+      </div>
+
+    </div>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Save Detection', class: "btn btn-success" %> | | 
+    <%= link_to 'Cancel', detections_path, class: "btn btn-danger" %>
   </div>
-<% end %>
+  <% end %>
+</div>

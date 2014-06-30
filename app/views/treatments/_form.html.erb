@@ -11,91 +11,102 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :temperature %><br>
-    <%= f.text_field :temperature %>
-  </div>
-  <div class="field">
-    <%= f.label :temperature_in_degree %><br>
-    <%= f.text_field :temperature_in_degree %>
-  </div>
-  <div class="field">
-    <%= f.label :steam %><br>
-    <%= f.text_field :steam %>
-  </div>
-  <div class="field">
-    <%= f.label :steam_in_percent %><br>
-    <%= f.text_field :steam_in_percent %>
-  </div>
-  <div class="field">
-    <%= f.label :fumigation_gas %><br>
-    <%= f.text_field :fumigation_gas %>
-  </div>
-  <div class="field">
-    <%= f.label :fumigation_gas_in_percent %><br>
-    <%= f.text_field :fumigation_gas_in_percent %>
-  </div>
-  <div class="field">
-    <%= f.label :optical %><br>
-    <%= f.text_field :optical %>
-  </div>
-  <div class="field">
-    <%= f.label :mechanical %><br>
-    <%= f.text_field :mechanical %>
-  </div>
-  <div class="field">
-    <%= f.label :process_type %><br>
-    <%= f.text_field :process_type %>
-  </div>
-  <div class="field">
-    <%= f.label :t_ph %><br>
-    <%= f.text_field :t_ph %>
-  </div>
-  <div class="field">
-    <%= f.label :pressure %><br>
-    <%= f.text_field :pressure %>
-  </div>
-  <div class="field">
-    <%= f.label :kgy_dose %><br>
-    <%= f.text_field :kgy_dose %>
-  </div>
-  <div class="field">
-    <%= f.label :t_aw %><br>
-    <%= f.text_field :t_aw %>
-  </div>
-  <div class="field">
-    <%= f.label :water_activity %><br>
-    <%= f.text_field :water_activity %>
-  </div>
-  <div class="field">
-    <%= f.label :other_condition %><br>
-    <%= f.text_field :other_condition %>
-  </div>
-  <div class="field">
-    <%= f.label :treat_duration %><br>
-    <%= f.text_field :treat_duration %>
-  </div>
-  <div class="field">
-    <%= f.label :treat_duration_unit %><br>
-    <%= f.text_field :treat_duration_unit %>
-  </div>
-  <div class="field">
-    <%= f.label :t_comment %><br>
-    <%= f.text_area :t_comment %>
-  </div>
-  <div class="field">
-    <%= f.label :reference_id %><br>
-    <%= f.number_field :reference_id %>
-  </div>
-  <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.number_field :user_id %>
-  </div>
-  <div class="field">
-    <%= f.label :matrix_id %><br>
-    <%= f.number_field :matrix_id %>
+
+<div class="well">          
+  <div class="panel panel-info">
+    <div class="panel-body">
+      
+      <div class="field">
+        <%= f.label :temperature %><br>
+        <%= f.text_field :temperature %>
+      </div>
+      <div class="field">
+        <%= f.label :temperature_in_degree %><br>
+        <%= f.text_field :temperature_in_degree %>
+      </div>
+      <div class="field">
+        <%= f.label :steam %><br>
+        <%= f.text_field :steam %>
+      </div>
+      <div class="field">
+        <%= f.label :steam_in_percent %><br>
+        <%= f.text_field :steam_in_percent %>
+      </div>
+      <div class="field">
+        <%= f.label :fumigation_gas %><br>
+        <%= f.text_field :fumigation_gas %>
+      </div>
+      <div class="field">
+        <%= f.label :fumigation_gas_in_percent %><br>
+        <%= f.text_field :fumigation_gas_in_percent %>
+      </div>
+      <div class="field">
+        <%= f.label :optical %><br>
+        <%= f.text_field :optical %>
+      </div>
+      <div class="field">
+        <%= f.label :mechanical %><br>
+        <%= f.text_field :mechanical %>
+      </div>
+      <div class="field">
+        <%= f.label :process_type %><br>
+        <%= f.text_field :process_type %>
+      </div>
+      <div class="field">
+        <%= f.label :t_ph %><br>
+        <%= f.text_field :t_ph %>
+      </div>
+      <div class="field">
+        <%= f.label :pressure %><br>
+        <%= f.text_field :pressure %>
+      </div>
+      <div class="field">
+        <%= f.label :kgy_dose %><br>
+        <%= f.text_field :kgy_dose %>
+      </div>
+      <div class="field">
+        <%= f.label :t_aw %><br>
+        <%= f.text_field :t_aw %>
+      </div>
+      <div class="field">
+        <%= f.label :water_activity %><br>
+        <%= f.text_field :water_activity %>
+      </div>
+      <div class="field">
+        <%= f.label :other_condition %><br>
+        <%= f.text_field :other_condition %>
+      </div>
+      <div class="field">
+        <%= f.label :treat_duration %><br>
+        <%= f.text_field :treat_duration %>
+      </div>
+      <div class="field">
+        <%= f.label :treat_duration_unit %><br>
+        <%= f.text_field :treat_duration_unit %>
+      </div>
+      <div class="field">
+        <%= f.label :t_comment %><br>
+        <%= f.text_area :t_comment %>
+      </div>
+      <div class="field">
+        <%= f.label :reference_id %><br>
+        <%= f.number_field :reference_id %>
+      </div>
+      <div class="field">
+        <%= f.label :user_id %><br>
+        <%= f.number_field :user_id %>
+      </div>
+      <div class="field">
+        <%= f.label :matrix_id %><br>
+        <%= f.number_field :matrix_id %>
+      </div>
+
+    </div>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Save Treatment', class: "btn btn-success" %> | | 
+    <%= link_to 'Cancel', treatments_path, class: "btn btn-danger" %>
   </div>
-<% end %>
+  <% end %>
+</div>
+

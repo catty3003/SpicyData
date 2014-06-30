@@ -11,7 +11,13 @@
     </div>
   <% end %>
 
-  <div class="field">
+
+<div class="well">          
+  <div class="panel panel-info">
+    <div class="panel-body"> 
+
+
+<div class="field">
     <%= f.label :a_common_name %><br>
     <%= f.text_field :a_common_name %>
   </div>
@@ -75,7 +81,12 @@
     <%= f.label :user_id %><br>
     <%= f.number_field :user_id %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+      
+    </div>
   </div>
-<% end %>
+  <div class="actions">
+    <%= f.submit 'Save Agent', class: "btn btn-success" %> | | 
+    <%= link_to 'Cancel', agents_path, class: "btn btn-danger" %>
+  </div>
+  <% end %>
+</div>

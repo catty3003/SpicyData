@@ -11,6 +11,15 @@
     </div>
   <% end %>
 
+<div class="well">          
+  <div class="panel panel-info">
+    <div class="panel-body">  
+
+  <div class="form-group">
+    <%= f.label :"Matrix common name" %><br>
+    <%= f.collection_select :m_common_name , AdminMatrix.order(:name), :name, :name, include_blank: true, class: "form-control" %>
+  </div>
+
   <div class="field">
     <%= f.label :m_common_name %><br>
     <%= f.text_field :m_common_name %>
@@ -25,7 +34,7 @@
   </div>
   <div class="field">
     <%= f.label :other_matrix_name %><br>
-    <%= f.text_field :other_matrix_name %>
+    <%= f.text_field :other_matrix_name, :placeholder=>"if no matrix name above match"   %>
   </div>
   <div class="field">
     <%= f.label :plant_part %><br>
@@ -97,13 +106,18 @@
   </div>
   <div class="field">
     <%= f.label :reference_id %><br>
-    <%= f.number_field :reference_id %>
-  </div>
+    <%= f.select :reference_id, Reference.all.collect {|c| [ [c.first_author_name, c.year, c.title], c.id ] }, { :include_blank => true, :selected => @matrix.reference_id}, class: "form-control" %>
+  </div> 
   <div class="field">
     <%= f.label :user_id %><br>
     <%= f.number_field :user_id %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+
+    </div>
   </div>
-<% end %>
+  <div class="actions">
+    <%= f.submit 'Save Matrix', class: "btn btn-success" %> | | 
+    <%= link_to 'Cancel', matrices_path, class: "btn btn-danger" %>
+  </div>
+  <% end %>
+</div>
