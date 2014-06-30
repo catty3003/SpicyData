@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140629224129) do
+ActiveRecord::Schema.define(version: 20140630002842) do
 
   create_table "admin_matrices", force: true do |t|
     t.string   "name"
@@ -49,6 +49,13 @@ ActiveRecord::Schema.define(version: 20140629224129) do
     t.datetime "updated_at"
   end
 
+  create_table "agents_references", id: false, force: true do |t|
+    t.integer  "agent_id"
+    t.integer  "reference_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "contaminationstatuses", force: true do |t|
     t.float    "cfu_natural_contamination"
     t.string   "cfu_natural_contamination_unit"
@@ -61,6 +68,7 @@ ActiveRecord::Schema.define(version: 20140629224129) do
     t.integer  "detection_id"
     t.integer  "reference_id"
     t.integer  "user_id"
+    t.integer  "result_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

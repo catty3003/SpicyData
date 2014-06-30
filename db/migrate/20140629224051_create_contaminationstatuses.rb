@@ -12,6 +12,7 @@ class CreateContaminationstatuses < ActiveRecord::Migration
       t.integer :detection_id
       t.integer :reference_id
       t.integer :user_id
+      t.integer :result_id
 
       t.timestamps
     end
