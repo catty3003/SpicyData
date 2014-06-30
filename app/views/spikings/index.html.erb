@@ -14,10 +14,12 @@
         </div>
       </div>     
 
-      <div class="col-md-9" id="rightCol"> 
-        
-            <%= render 'tablespikings' %>
+      <div class="col-md-9" id="rightCol">         
+        <%= render 'tablespikings' %>            
+        <br>
+        <%= link_to 'New Spiking', new_spiking_path, class: "btn btn-success"  %>   
       </div>
+
     </div>
   </div>
 </div>

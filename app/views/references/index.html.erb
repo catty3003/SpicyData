@@ -14,10 +14,12 @@
         </div>
       </div>     
 
-      <div class="col-md-9" id="rightCol"> 
-        
-            <%= render 'tablereferences' %>
+      <div class="col-md-9" id="rightCol">     
+        <%= render 'tablereferences' %>                  
+        <br>
+        <%= link_to 'New Reference', new_reference_path, class: "btn btn-success"  %>
       </div>
+      
     </div>
   </div>
 </div>

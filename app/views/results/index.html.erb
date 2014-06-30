@@ -14,10 +14,12 @@
         </div>
       </div>     
 
-      <div class="col-md-9" id="rightCol"> 
-        
-            <%= render 'tableresults' %>
+      <div class="col-md-9" id="rightCol">         
+        <%= render 'tableresults' %>
+        <br>
+        <%= link_to 'New Result', new_result_path, class: "btn btn-success"  %>
       </div>
+      
     </div>
   </div>
 </div>

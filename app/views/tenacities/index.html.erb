@@ -14,10 +14,12 @@
         </div>
       </div>     
 
-      <div class="col-md-9" id="rightCol"> 
-        
-            <%= render 'tabletenacities' %>
+      <div class="col-md-9" id="rightCol">     
+        <%= render 'tabletenacities' %>        
+        <br>
+        <%= link_to 'New Tenacity', new_tenacity_path, class: "btn btn-success"  %>           
       </div>
+      
     </div>
   </div>
 </div>

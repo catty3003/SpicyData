@@ -17,12 +17,12 @@
 
   <div class="form-group">
     <%= f.label :"Matrix common name" %><br>
-    <%= f.collection_select :m_common_name , AdminMatrix.order(:name), :name, :name, include_blank: true, class: "form-control" %>
+    <%= f.collection_select :m_common_name , AdminMatrix.all.order(:name), :name, :name, {include_blank: true}, {class: "form-control"} %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :m_common_name %><br>
-    <%= f.text_field :m_common_name %>
+    <%= f.text_field :m_common_name, class: "form-control" %>
   </div>
   <div class="field">
     <%= f.label :m_genus %><br>

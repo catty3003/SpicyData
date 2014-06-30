@@ -8,8 +8,6 @@ html {
   height: 100%;
 }
 
-
-
 #center{
     display: block;
     margin-left: auto;
@@ -388,6 +386,7 @@ th {
   }
   thead {
     display: table-header-group;
+    position: absolute;
   }
   tr,
   img {
@@ -1575,9 +1574,17 @@ pre code {
   }
 }
 table {
-  max-width: 100%;
+  max-width: none;
   background-color: transparent;
+  height: auto;
 }
+
+.table-scrollable{
+  overflow: auto;
+  max-height: 100vh;
+}
+
+
 th {
   text-align: left;
 }
@@ -5636,7 +5643,7 @@ button.close {
   top: 0;
   left: 0;
   bottom: 0;
-  width: 0%;
+  /*width: 0%;*/
   height: 0%;
   opacity: 0.5;
   filter: alpha(opacity=50);
@@ -5698,9 +5705,9 @@ button.close {
   content: '\203a';
 }
 .carousel-indicators {
-  position: relative;
+  position: absolute;
   bottom: 10px;
-  left: 27%;
+  left: 19%;
   z-index: 15;
   width: 60%;
   margin-left: -30%;

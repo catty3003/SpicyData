@@ -14,10 +14,11 @@
         </div>
       </div>     
 
-      <div class="col-md-9" id="rightCol"> 
-        
-            <%= render 'tablematrices' %>
-      </div>
+      <div class="col-md-9" id="rightCol">         
+        <%= render 'tablematrices' %>
+        <br>
+        <%= link_to 'New Matrix', new_matrix_path, class: "btn btn-success"  %>
+        </div>
     </div>
   </div>
 </div>

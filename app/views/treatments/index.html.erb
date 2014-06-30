@@ -15,10 +15,12 @@
         </div>
       </div>     
 
-      <div class="col-md-9" id="rightCol"> 
-        
-            <%= render 'tabletreatments' %>
+      <div class="col-md-9" id="rightCol">         
+        <%= render 'tabletreatments' %>        
+        <br>
+        <%= link_to 'New Treatment', new_treatment_path, class: "btn btn-success"  %>
       </div>
+      
     </div>
   </div>
 </div>

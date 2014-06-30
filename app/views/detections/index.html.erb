@@ -14,10 +14,11 @@
         </div>
       </div>     
 
-      <div class="col-md-9" id="rightCol"> 
-        
-            <%= render 'tabledetections' %>
+      <div class="col-md-9" id="rightCol">         
+        <%= render 'tabledetections' %> <br>
+        <%= link_to 'New Detection', new_detection_path, class: "btn btn-success"  %>
       </div>
+      
     </div>
   </div>
 </div>
