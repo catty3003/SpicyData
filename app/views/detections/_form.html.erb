@@ -45,8 +45,8 @@
         <%= f.text_field :detection_method_dilution %>
       </div>
       <div class="field">
-        <%= f.label :detection_method_type %><br>
-        <%= f.text_field :detection_method_type %>
+        <%= f.label :"detection_method_type" %><br>
+        <%= f.collection_select :admindetectiontype_id, Admindetectiontype.all.order(:detection_method_type), :id, :detection_method_type, {include_blank: true}, {class: "form-control"} %>
       </div>
       <div class="field">
         <%= f.label :duration_until_result %><br>

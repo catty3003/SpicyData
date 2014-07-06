@@ -28,7 +28,7 @@
 	  <tbody>
 	    <% @references.each do |reference| %>
 	      <tr>
-	        <td width="30%"><h4><%= link_to reference.type_of_literatur, reference_path(reference) %></h4></td>
+	        <td width="30%"><h4><%= link_to reference.adminreferencetype.type_of_literatur, reference_path(reference) if reference.adminreferencetype %></h4></td>
 	        <td><%= reference.first_author_name %></td>
 	        <td><%= reference.year %></td>
 	        <td><%= reference.title %></td>

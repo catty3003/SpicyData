@@ -17,8 +17,8 @@
     <div class="panel-body">
 
       <div class="field">
-        <%= f.label :type_of_literatur %><br>
-        <%= f.text_field :type_of_literatur %>
+        <%= f.label :"type_of_literatur" %><br>
+        <%= f.collection_select :adminreferencetype_id, Adminreferencetype.all.order(:type_of_literatur), :id, :type_of_literatur, {include_blank: true}, {class: "form-control"} %>
       </div>
       <div class="field">
         <%= f.label :first_author_name %><br>

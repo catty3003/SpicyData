@@ -58,7 +58,7 @@
 
               <p>
                 <strong>Detection method type:</strong>
-                <%= @detection.detection_method_type %>
+                <%= @detection.admindetectiontype.detection_method_type if @detection.admindetectiontype %>
               </p>
 
               <p>
@@ -138,7 +138,7 @@
 
               <p>
                 <strong>Reference:</strong>
-                <%= @detection.reference.year %>
+                <%= @detection.reference.first_author_name if @detection.reference %>
               </p>
 
               <p>

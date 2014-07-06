@@ -23,7 +23,7 @@
 
               <p>
                 <strong>Type of literatur:</strong>
-                <%= @reference.type_of_literatur %>
+                <%= @reference.adminreferencetype.type_of_literatur if @reference.adminreferencetype %>
               </p>
 
               <p>

@@ -43,7 +43,7 @@
 		        <td><%= detection.d_weight_of_sample %></td>
 		        <td><%= detection.d_weight_of_sample_unit %></td>
 		        <td><%= detection.detection_method_dilution %></td>
-		        <td><%= detection.detection_method_type %></td>
+		        <td><%= detection.admindetectiontype.detection_method_type if detection.admindetectiontype %></td>
 		        <td><%= detection.duration_until_result %></td>
 		        <td><%= detection.duration_until_result_unit %></td>
 		        <td><%= detection.target_gen %></td>
