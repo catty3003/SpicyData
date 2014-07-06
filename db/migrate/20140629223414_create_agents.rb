@@ -1,7 +1,7 @@
 class CreateAgents < ActiveRecord::Migration
   def change
     create_table :agents do |t|
-      t.string :a_common_name
+      t.integer :adminagentname_id
       t.string :a_family
       t.string :a_genus
       t.string :a_species

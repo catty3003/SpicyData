@@ -1,0 +1,27 @@
+<h1>Listing adminmatrixstorageforms</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Storage form</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @adminmatrixstorageforms.each do |adminmatrixstorageform| %>
+      <tr>
+        <td><%= adminmatrixstorageform.storage_form %></td>
+        <td><%= link_to 'Show', adminmatrixstorageform %></td>
+        <td><%= link_to 'Edit', edit_adminmatrixstorageform_path(adminmatrixstorageform) %></td>
+        <td><%= link_to 'Destroy', adminmatrixstorageform, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Adminmatrixstorageform', new_adminmatrixstorageform_path %>

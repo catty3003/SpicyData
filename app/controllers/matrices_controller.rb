@@ -15,8 +15,6 @@ class MatricesController < ApplicationController
   # GET /matrices/new
   def new
     @matrix = Matrix.new
-    @matrix.agents.build
-    @matrix.contaminationstatuses.build
   end
 
   # GET /matrices/1/edit
@@ -58,7 +56,7 @@ class MatricesController < ApplicationController
   def destroy
     @matrix.destroy
     respond_to do |format|
-      format.html { redirect_to matrices_url }
+      format.html { redirect_to matrices_url, notice: 'Matrix was successfully deleted.'  }
       format.json { head :no_content }
     end
   end
@@ -71,6 +69,6 @@ class MatricesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def matrix_params
-      params.require(:matrix).permit(:m_common_name, :m_genus, :m_species, :other_matrix_name, :plant_part, :storage_form, :product_form, :place_of_origin, :date_of_harvest, :relative_humidity_during_harvest, :temperature_during_harvest, :pre_treatment, :sampling_date, :m_ph, :m_aw, :humidity_of_matrix, :ash, :sand, :lipids, :further_ingredients, :m_comment, :reference_id, :user_id, agents_attributes: [:id, :a_genus, :a_species], contaminationstatuses_attributes: [:id, :cfu_natural_contamination])
+      params.require(:matrix).permit(:adminmatrixname_id, :adminmatrixgenu_id, :adminmatrixspec_id, :other_matrix_name, :adminmatrixplantpart_id, :adminmatrixstorageform_id, :adminmatrixproductform_id, :place_of_origin, :date_of_harvest, :relative_humidity_during_harvest, :temperature_during_harvest, :pre_treatment, :sampling_date, :m_ph, :m_aw, :humidity_of_matrix, :ash, :sand, :lipids, :further_ingredients, :m_comment, :reference_id, :user_id)
     end
 end

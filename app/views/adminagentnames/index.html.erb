@@ -1,0 +1,27 @@
+<h1>Listing adminagentnames</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>A common name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @adminagentnames.each do |adminagentname| %>
+      <tr>
+        <td><%= adminagentname.a_common_name %></td>
+        <td><%= link_to 'Show', adminagentname %></td>
+        <td><%= link_to 'Edit', edit_adminagentname_path(adminagentname) %></td>
+        <td><%= link_to 'Destroy', adminagentname, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Adminagentname', new_adminagentname_path %>

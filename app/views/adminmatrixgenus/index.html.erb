@@ -1,0 +1,27 @@
+<h1>Listing adminmatrixgenus</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>M genus</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @adminmatrixgenus.each do |adminmatrixgenu| %>
+      <tr>
+        <td><%= adminmatrixgenu.m_genus %></td>
+        <td><%= link_to 'Show', adminmatrixgenu %></td>
+        <td><%= link_to 'Edit', edit_adminmatrixgenu_path(adminmatrixgenu) %></td>
+        <td><%= link_to 'Destroy', adminmatrixgenu, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Adminmatrixgenu', new_adminmatrixgenu_path %>

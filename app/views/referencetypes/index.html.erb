@@ -1,0 +1,27 @@
+<h1>Listing referencetypes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type of literatur</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @referencetypes.each do |referencetype| %>
+      <tr>
+        <td><%= referencetype.type_of_literatur %></td>
+        <td><%= link_to 'Show', referencetype %></td>
+        <td><%= link_to 'Edit', edit_referencetype_path(referencetype) %></td>
+        <td><%= link_to 'Destroy', referencetype, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Referencetype', new_referencetype_path %>

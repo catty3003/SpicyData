@@ -1,25 +1,25 @@
 class CreateMatrices < ActiveRecord::Migration
   def change
     create_table :matrices do |t|
-      t.string :m_common_name
-      t.string :m_genus
-      t.string :m_species
+      t.integer :adminmatrixname_id
+      t.integer :adminmatrixgenu_id
+      t.integer :adminmatrixspec_id
       t.string :other_matrix_name
-      t.string :plant_part
-      t.string :storage_form
-      t.string :product_form
+      t.integer :adminmatrixplantpart_id
+      t.integer :adminmatrixstorageform_id
+      t.integer :adminmatrixproductform_id
       t.string :place_of_origin
       t.date :date_of_harvest
-      t.float :relative_humidity_during_harvest
-      t.float :temperature_during_harvest
+      t.decimal :relative_humidity_during_harvest
+      t.decimal :temperature_during_harvest
       t.string :pre_treatment
       t.date :sampling_date
-      t.float :m_ph
-      t.float :m_aw
-      t.float :humidity_of_matrix
-      t.float :ash
-      t.float :sand
-      t.float :lipids
+      t.decimal :m_ph
+      t.decimal :m_aw
+      t.decimal :humidity_of_matrix
+      t.decimal :ash
+      t.decimal :sand
+      t.decimal :lipids
       t.string :further_ingredients
       t.text :m_comment
       t.integer :reference_id

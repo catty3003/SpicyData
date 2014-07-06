@@ -1,0 +1,27 @@
+<h1>Listing adminmatrixspecs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>M species</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @adminmatrixspecs.each do |adminmatrixspec| %>
+      <tr>
+        <td><%= adminmatrixspec.m_species %></td>
+        <td><%= link_to 'Show', adminmatrixspec %></td>
+        <td><%= link_to 'Edit', edit_adminmatrixspec_path(adminmatrixspec) %></td>
+        <td><%= link_to 'Destroy', adminmatrixspec, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Adminmatrixspec', new_adminmatrixspec_path %>

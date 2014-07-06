@@ -17,36 +17,32 @@
 
   <div class="form-group">
     <%= f.label :"Matrix common name" %><br>
-    <%= f.collection_select :m_common_name , AdminMatrix.all.order(:name), :name, :name, {include_blank: true}, {class: "form-control"} %>
+    <%= f.collection_select :adminmatrixname_id, Adminmatrixname.all.order(:m_common_name), :id, :m_common_name, {include_blank: true}, {class: "form-control"} %>
   </div>
 
-  <div class="form-group">
-    <%= f.label :m_common_name %><br>
-    <%= f.text_field :m_common_name, class: "form-control" %>
+  <div class="field">
+    <%= f.label :"Matrix genus" %><br>
+    <%= f.collection_select :adminmatrixgenu_id, Adminmatrixgenu.all.order(:m_genus), :id, :m_genus, {include_blank: true}, {class: "form-control"} %>
   </div>
   <div class="field">
-    <%= f.label :m_genus %><br>
-    <%= f.text_field :m_genus %>
-  </div>
-  <div class="field">
-    <%= f.label :m_species %><br>
-    <%= f.text_field :m_species %>
+    <%= f.label :"Matrix species" %><br>
+    <%= f.collection_select :adminmatrixspec_id, Adminmatrixspec.all.order(:m_species), :id, :m_species, {include_blank: true}, {class: "form-control"} %>
   </div>
   <div class="field">
     <%= f.label :other_matrix_name %><br>
     <%= f.text_field :other_matrix_name, :placeholder=>"if no matrix name above match"   %>
   </div>
   <div class="field">
-    <%= f.label :plant_part %><br>
-    <%= f.text_field :plant_part %>
+    <%= f.label :"Plant part" %><br>
+    <%= f.collection_select :adminmatrixplantpart_id, Adminmatrixplantpart.all.order(:plant_part), :id, :plant_part, {include_blank: true}, {class: "form-control"} %>
   </div>
   <div class="field">
-    <%= f.label :storage_form %><br>
-    <%= f.text_field :storage_form %>
+    <%= f.label :"Storage form" %><br>
+    <%= f.collection_select :adminmatrixstorageform_id, Adminmatrixstorageform.all.order(:storage_form), :id, :storage_form, {include_blank: true}, {class: "form-control"} %>
   </div>
   <div class="field">
-    <%= f.label :product_form %><br>
-    <%= f.text_field :product_form %>
+    <%= f.label :adminmatrixproductform_id %><br>
+    <%= f.collection_select :adminmatrixproductform_id, Adminmatrixproductform.all.order(:product_form), :id, :product_form, {include_blank: true}, {class: "form-control"} %>
   </div>
   <div class="field">
     <%= f.label :place_of_origin %><br>

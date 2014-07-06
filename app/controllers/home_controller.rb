@@ -60,8 +60,5 @@ class HomeController < ApplicationController
     
   end
 
-  def matrixagentcontaminationstatus
-    
-  end
 
 end

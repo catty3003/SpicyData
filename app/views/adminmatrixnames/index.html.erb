@@ -1,0 +1,27 @@
+<h1>Listing adminmatrixnames</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>M common name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @adminmatrixnames.each do |adminmatrixname| %>
+      <tr>
+        <td><%= adminmatrixname.m_common_name %></td>
+        <td><%= link_to 'Show', adminmatrixname %></td>
+        <td><%= link_to 'Edit', edit_adminmatrixname_path(adminmatrixname) %></td>
+        <td><%= link_to 'Destroy', adminmatrixname, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Adminmatrixname', new_adminmatrixname_path %>

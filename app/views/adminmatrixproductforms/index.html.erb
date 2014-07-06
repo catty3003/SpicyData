@@ -1,0 +1,27 @@
+<h1>Listing adminmatrixproductforms</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Product form</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @adminmatrixproductforms.each do |adminmatrixproductform| %>
+      <tr>
+        <td><%= adminmatrixproductform.product_form %></td>
+        <td><%= link_to 'Show', adminmatrixproductform %></td>
+        <td><%= link_to 'Edit', edit_adminmatrixproductform_path(adminmatrixproductform) %></td>
+        <td><%= link_to 'Destroy', adminmatrixproductform, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Adminmatrixproductform', new_adminmatrixproductform_path %>

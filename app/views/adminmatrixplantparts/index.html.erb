@@ -1,0 +1,27 @@
+<h1>Listing adminmatrixplantparts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Plant part</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @adminmatrixplantparts.each do |adminmatrixplantpart| %>
+      <tr>
+        <td><%= adminmatrixplantpart.plant_part %></td>
+        <td><%= link_to 'Show', adminmatrixplantpart %></td>
+        <td><%= link_to 'Edit', edit_adminmatrixplantpart_path(adminmatrixplantpart) %></td>
+        <td><%= link_to 'Destroy', adminmatrixplantpart, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Adminmatrixplantpart', new_adminmatrixplantpart_path %>

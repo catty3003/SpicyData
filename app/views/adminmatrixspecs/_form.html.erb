@@ -1,0 +1,21 @@
+<%= form_for(@adminmatrixspec) do |f| %>
+  <% if @adminmatrixspec.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@adminmatrixspec.errors.count, "error") %> prohibited this adminmatrixspec from being saved:</h2>
+
+      <ul>
+      <% @adminmatrixspec.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :m_species %><br>
+    <%= f.text_field :m_species %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

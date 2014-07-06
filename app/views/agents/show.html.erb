@@ -22,7 +22,7 @@
 
               <p>              
                 <strong>A common name:</strong>
-                <%= @agent.a_common_name %>
+                <%= @agent.adminagentname.a_common_name if @agent.adminagentname %>
               </p>
 
               <p>

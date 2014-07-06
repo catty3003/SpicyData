@@ -1,4 +1,18 @@
 SpicyData::Application.routes.draw do
+  resources :adminmatrixproductforms
+
+  resources :adminmatrixstorageforms
+
+  resources :adminmatrixplantparts
+
+  resources :adminmatrixspecs
+
+  resources :adminmatrixgenus
+
+  resources :adminagentnames
+
+  resources :adminmatrixnames
+
   get "home/index"
   get "home/insertdata"
   get "home/showdata"
@@ -16,7 +30,7 @@ SpicyData::Application.routes.draw do
   get "home/what_info"
   get "home/join_discuss"
   get "home/change_profile"
-  get "home/matrixagentcontaminationstatus"
+
 
   resources :admin_matrices
 

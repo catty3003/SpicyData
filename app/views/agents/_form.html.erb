@@ -18,8 +18,9 @@
 
 
 <div class="field">
-    <%= f.label :a_common_name %><br>
-    <%= f.text_field :a_common_name %>
+    <%= f.label :adminagentname_id %><br>
+    <%= f.collection_select :adminagentname_id, Adminagentname.all.order(:a_common_name), :id, :a_common_name, {include_blank: true}, {class: "form-control"} %>
+  </div>
   </div>
   <div class="field">
     <%= f.label :a_family %><br>

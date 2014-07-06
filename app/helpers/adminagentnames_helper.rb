@@ -1,0 +1,2 @@
+module AdminagentnamesHelper
+end
