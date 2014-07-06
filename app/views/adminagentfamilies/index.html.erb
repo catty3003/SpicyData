@@ -1,0 +1,27 @@
+<h1>Listing adminagentfamilies</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>A family</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @adminagentfamilies.each do |adminagentfamily| %>
+      <tr>
+        <td><%= adminagentfamily.a_family %></td>
+        <td><%= link_to 'Show', adminagentfamily %></td>
+        <td><%= link_to 'Edit', edit_adminagentfamily_path(adminagentfamily) %></td>
+        <td><%= link_to 'Destroy', adminagentfamily, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Adminagentfamily', new_adminagentfamily_path %>

@@ -1,0 +1,27 @@
+<h1>Listing admindetectiontypes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Detection method type</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @admindetectiontypes.each do |admindetectiontype| %>
+      <tr>
+        <td><%= admindetectiontype.detection_method_type %></td>
+        <td><%= link_to 'Show', admindetectiontype %></td>
+        <td><%= link_to 'Edit', edit_admindetectiontype_path(admindetectiontype) %></td>
+        <td><%= link_to 'Destroy', admindetectiontype, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Admindetectiontype', new_admindetectiontype_path %>

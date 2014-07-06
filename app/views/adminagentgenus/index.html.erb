@@ -1,0 +1,27 @@
+<h1>Listing adminagentgenus</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>A genus</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @adminagentgenus.each do |adminagentgenu| %>
+      <tr>
+        <td><%= adminagentgenu.a_genus %></td>
+        <td><%= link_to 'Show', adminagentgenu %></td>
+        <td><%= link_to 'Edit', edit_adminagentgenu_path(adminagentgenu) %></td>
+        <td><%= link_to 'Destroy', adminagentgenu, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Adminagentgenu', new_adminagentgenu_path %>

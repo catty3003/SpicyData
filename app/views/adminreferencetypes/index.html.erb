@@ -1,0 +1,27 @@
+<h1>Listing adminreferencetypes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type of literatur</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @adminreferencetypes.each do |adminreferencetype| %>
+      <tr>
+        <td><%= adminreferencetype.type_of_literatur %></td>
+        <td><%= link_to 'Show', adminreferencetype %></td>
+        <td><%= link_to 'Edit', edit_adminreferencetype_path(adminreferencetype) %></td>
+        <td><%= link_to 'Destroy', adminreferencetype, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Adminreferencetype', new_adminreferencetype_path %>

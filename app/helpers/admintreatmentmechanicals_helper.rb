@@ -1,0 +1,2 @@
+module AdmintreatmentmechanicalsHelper
+end

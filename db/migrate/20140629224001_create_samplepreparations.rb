@@ -5,7 +5,7 @@ class CreateSamplepreparations < ActiveRecord::Migration
       t.text :samprep_long_name
       t.string :samprep_method_validated_for_condiments
       t.text :samprep_process_description
-      t.float :spik_weight_of_sample
+      t.decimal :spik_weight_of_sample
       t.string :spik_weight_of_sample_unit
       t.string :dilution_fuid
       t.string :first_dilution_ratio
@@ -19,7 +19,7 @@ class CreateSamplepreparations < ActiveRecord::Migration
       t.string :applied_kit
       t.string :other_samprep_method_type
       t.string :samprep_method_type_details_text
-      t.float :samprep_duration
+      t.decimal :samprep_duration
       t.string :samprep_duration_unit
       t.text :samprep_comment
       t.integer :reference_id

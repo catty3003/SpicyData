@@ -1,0 +1,21 @@
+<%= form_for(@adminagentfamily) do |f| %>
+  <% if @adminagentfamily.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@adminagentfamily.errors.count, "error") %> prohibited this adminagentfamily from being saved:</h2>
+
+      <ul>
+      <% @adminagentfamily.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :a_family %><br>
+    <%= f.text_field :a_family %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

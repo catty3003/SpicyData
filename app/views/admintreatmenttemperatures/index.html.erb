@@ -1,0 +1,27 @@
+<h1>Listing admintreatmenttemperatures</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Temperature</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @admintreatmenttemperatures.each do |admintreatmenttemperature| %>
+      <tr>
+        <td><%= admintreatmenttemperature.temperature %></td>
+        <td><%= link_to 'Show', admintreatmenttemperature %></td>
+        <td><%= link_to 'Edit', edit_admintreatmenttemperature_path(admintreatmenttemperature) %></td>
+        <td><%= link_to 'Destroy', admintreatmenttemperature, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Admintreatmenttemperature', new_admintreatmenttemperature_path %>

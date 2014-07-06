@@ -1,7 +1,7 @@
 class CreateReferences < ActiveRecord::Migration
   def change
     create_table :references do |t|
-      t.string :type_of_literatur
+      t.integer :adminreferencetype_id
       t.string :first_author_name
       t.integer :year
       t.string :title

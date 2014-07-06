@@ -17,40 +17,40 @@
     <div class="panel-body">
       
       <div class="field">
-        <%= f.label :temperature %><br>
-        <%= f.text_field :temperature %>
+        <%= f.label :"Temperature treatment" %><br>
+        <%= f.collection_select :admintreatmenttemperature_id, Admintreatmenttemperature.all.order(:temperature), :id, :temperature, {include_blank: true}, {class: "form-control"} %>
       </div>
       <div class="field">
-        <%= f.label :temperature_in_degree %><br>
+        <%= f.label :"Temperature (°C)"%><br>
         <%= f.text_field :temperature_in_degree %>
       </div>
       <div class="field">
-        <%= f.label :steam %><br>
-        <%= f.text_field :steam %>
+        <%= f.label :"Steam treatment" %><br>
+        <%= f.collection_select :admintreatmentsteam_id, Admintreatmentsteam.all.order(:steam), :id, :steam, {include_blank: true}, {class: "form-control"} %>
       </div>
       <div class="field">
-        <%= f.label :steam_in_percent %><br>
+        <%= f.label :"Steam (%)" %><br>
         <%= f.text_field :steam_in_percent %>
       </div>
       <div class="field">
-        <%= f.label :fumigation_gas %><br>
-        <%= f.text_field :fumigation_gas %>
+        <%= f.label :"Treatment wiht fumigation_gas" %><br>
+        <%= f.collection_select :admintreatmentfumigation_id, Admintreatmentfumigation.all.order(:fumigation_gas), :id, :fumigation_gas, {include_blank: true}, {class: "form-control"} %>
       </div>
       <div class="field">
-        <%= f.label :fumigation_gas_in_percent %><br>
+        <%= f.label :"Fumigation gas (%)"%><br>
         <%= f.text_field :fumigation_gas_in_percent %>
       </div>
       <div class="field">
-        <%= f.label :optical %><br>
-        <%= f.text_field :optical %>
+        <%= f.label :"Optical treatment" %><br>
+        <%= f.collection_select :admintreatmentoptical_id, Admintreatmentoptical.all.order(:optical), :id, :optical, {include_blank: true}, {class: "form-control"} %>
       </div>
       <div class="field">
-        <%= f.label :mechanical %><br>
-        <%= f.text_field :mechanical %>
+        <%= f.label :"Mechanical treatment" %><br>
+        <%= f.collection_select :admintreatmentmechanical_id, Admintreatmentmechanical.all.order(:mechanical), :id, :mechanical, {include_blank: true}, {class: "form-control"} %>
       </div>
       <div class="field">
-        <%= f.label :process_type %><br>
-        <%= f.text_field :process_type %>
+        <%= f.label :"Process type" %><br>
+        <%= f.collection_select :admintreatmentprocesstype_id, Admintreatmentprocesstype.all.order(:process_type), :id, :process_type, {include_blank: true}, {class: "form-control"} %>
       </div>
       <div class="field">
         <%= f.label :t_ph %><br>

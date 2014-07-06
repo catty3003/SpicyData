@@ -4,7 +4,7 @@
 
 
       <div class="page-header">          
-        <h1>Editing Agent <%= @agent.a_genus %> <%= @agent.a_species %></h1>
+        <h1>Editing Agent <%= @agent.adminagentgenu.a_genus if @agent.adminagentgenu%> <%= @agent.adminagentspec.a_species if @agent.adminagentspec%></h1>
       </div>
 
 		  <div class="col-md-3" id="leftCol">

@@ -1,0 +1,21 @@
+<%= form_for(@admindetectiontype) do |f| %>
+  <% if @admindetectiontype.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@admindetectiontype.errors.count, "error") %> prohibited this admindetectiontype from being saved:</h2>
+
+      <ul>
+      <% @admindetectiontype.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :detection_method_type %><br>
+    <%= f.text_field :detection_method_type %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

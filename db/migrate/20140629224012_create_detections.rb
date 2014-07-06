@@ -5,11 +5,11 @@ class CreateDetections < ActiveRecord::Migration
       t.text :d_long_name
       t.string :d_method_validated_for_condiments
       t.text :d_process_description
-      t.float :d_weight_of_sample
+      t.decimal :d_weight_of_sample
       t.string :d_weight_of_sample_unit
       t.string :detection_method_dilution
-      t.string :detection_method_type
-      t.float :duration_until_result
+      t.integer :admindetectiontype_id
+      t.decimal :duration_until_result
       t.string :duration_until_result_unit
       t.string :target_gen
       t.string :target_protein

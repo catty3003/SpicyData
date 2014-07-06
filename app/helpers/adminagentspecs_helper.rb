@@ -1,0 +1,2 @@
+module AdminagentspecsHelper
+end

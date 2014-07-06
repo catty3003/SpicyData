@@ -1,0 +1,27 @@
+<h1>Listing admintreatmentfumigations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fumigation gas</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @admintreatmentfumigations.each do |admintreatmentfumigation| %>
+      <tr>
+        <td><%= admintreatmentfumigation.fumigation_gas %></td>
+        <td><%= link_to 'Show', admintreatmentfumigation %></td>
+        <td><%= link_to 'Edit', edit_admintreatmentfumigation_path(admintreatmentfumigation) %></td>
+        <td><%= link_to 'Destroy', admintreatmentfumigation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Admintreatmentfumigation', new_admintreatmentfumigation_path %>

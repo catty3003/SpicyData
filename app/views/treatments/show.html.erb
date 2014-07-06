@@ -22,7 +22,7 @@
 
               <p>
                 <strong>Temperature:</strong>
-                <%= @treatment.temperature %>
+                <%= @treatment.admintreatmenttemperature.temperature if @treatment.admintreatmenttemperature %>
               </p>
 
               <p>
@@ -32,7 +32,7 @@
 
               <p>
                 <strong>Steam:</strong>
-                <%= @treatment.steam %>
+                <%= @treatment.admintreatmentsteam.steam if @treatment.admintreatmentsteam %>
               </p>
 
               <p>
@@ -42,7 +42,7 @@
 
               <p>
                 <strong>Fumigation gas:</strong>
-                <%= @treatment.fumigation_gas %>
+                <%= @treatment.admintreatmentfumigation.fumigation_gas if @treatment.admintreatmentfumigation %>
               </p>
 
               <p>
@@ -52,17 +52,17 @@
 
               <p>
                 <strong>Optical:</strong>
-                <%= @treatment.optical %>
+                <%= @treatment.admintreatmentoptical.optical if @treatment.admintreatmentoptical %>
               </p>
 
               <p>
                 <strong>Mechanical:</strong>
-                <%= @treatment.mechanical %>
+                <%= @treatment.admintreatmentmechanical.mechanical if @treatment.admintreatmentmechanical %>
               </p>
 
               <p>
                 <strong>Process type:</strong>
-                <%= @treatment.process_type %>
+                <%= @treatment.admintreatmentprocesstype.process_type if @treatment.admintreatmentprocesstype %>
               </p>
 
               <p>
@@ -112,7 +112,7 @@
 
               <p>
                 <strong>Reference:</strong>
-                <%= @treatment.reference.year %>
+                <%= @treatment.reference.year if @treatment.reference %>
               </p>
 
               <p>

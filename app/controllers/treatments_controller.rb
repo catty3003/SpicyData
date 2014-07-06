@@ -69,6 +69,6 @@ class TreatmentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def treatment_params
-      params.require(:treatment).permit(:temperature, :temperature_in_degree, :steam, :steam_in_percent, :fumigation_gas, :fumigation_gas_in_percent, :optical, :mechanical, :process_type, :t_ph, :pressure, :kgy_dose, :t_aw, :water_activity, :other_condition, :treat_duration, :treat_duration_unit, :t_comment, :reference_id, :user_id, :matrix_id)
+      params.require(:treatment).permit(:admintreatmenttemperature_id, :temperature_in_degree, :admintreatmentsteam_id, :steam_in_percent, :admintreatmentfumigation_id, :fumigation_gas_in_percent, :admintreatmentoptical_id, :admintreatmentmechanical_id, :admintreatmentprocesstype_id, :t_ph, :pressure, :kgy_dose, :t_aw, :water_activity, :other_condition, :treat_duration, :treat_duration_unit, :t_comment, :reference_id, :user_id, :matrix_id)
     end
 end

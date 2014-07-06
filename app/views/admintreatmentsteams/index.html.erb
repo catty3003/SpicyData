@@ -1,0 +1,27 @@
+<h1>Listing admintreatmentsteams</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Steam</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @admintreatmentsteams.each do |admintreatmentsteam| %>
+      <tr>
+        <td><%= admintreatmentsteam.steam %></td>
+        <td><%= link_to 'Show', admintreatmentsteam %></td>
+        <td><%= link_to 'Edit', edit_admintreatmentsteam_path(admintreatmentsteam) %></td>
+        <td><%= link_to 'Destroy', admintreatmentsteam, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Admintreatmentsteam', new_admintreatmentsteam_path %>

@@ -1,7 +1,7 @@
 class CreateContaminationstatuses < ActiveRecord::Migration
   def change
     create_table :contaminationstatuses do |t|
-      t.float :cfu_natural_contamination
+      t.decimal :cfu_natural_contamination
       t.string :cfu_natural_contamination_unit
       t.integer :matrix_id
       t.integer :agent_id

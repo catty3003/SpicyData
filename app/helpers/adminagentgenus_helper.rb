@@ -1,0 +1,2 @@
+module AdminagentgenusHelper
+end

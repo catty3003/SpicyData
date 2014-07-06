@@ -1,0 +1,21 @@
+<%= form_for(@admintreatmentoptical) do |f| %>
+  <% if @admintreatmentoptical.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@admintreatmentoptical.errors.count, "error") %> prohibited this admintreatmentoptical from being saved:</h2>
+
+      <ul>
+      <% @admintreatmentoptical.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :optical %><br>
+    <%= f.text_field :optical %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,2 @@
+module AdmintreatmenttemperaturesHelper
+end

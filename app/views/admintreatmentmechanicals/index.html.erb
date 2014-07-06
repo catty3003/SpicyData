@@ -1,0 +1,27 @@
+<h1>Listing admintreatmentmechanicals</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Mechanical</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @admintreatmentmechanicals.each do |admintreatmentmechanical| %>
+      <tr>
+        <td><%= admintreatmentmechanical.mechanical %></td>
+        <td><%= link_to 'Show', admintreatmentmechanical %></td>
+        <td><%= link_to 'Edit', edit_admintreatmentmechanical_path(admintreatmentmechanical) %></td>
+        <td><%= link_to 'Destroy', admintreatmentmechanical, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Admintreatmentmechanical', new_admintreatmentmechanical_path %>

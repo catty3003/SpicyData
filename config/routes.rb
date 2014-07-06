@@ -1,4 +1,26 @@
 SpicyData::Application.routes.draw do
+  resources :admintreatmentopticals
+
+  resources :adminreferencetypes
+
+  resources :admindetectiontypes
+
+  resources :admintreatmentprocesstypes
+
+  resources :admintreatmentmechanicals
+
+  resources :admintreatmentfumigations
+
+  resources :admintreatmentsteams
+
+  resources :admintreatmenttemperatures
+
+  resources :adminagentspecs
+
+  resources :adminagentgenus
+
+  resources :adminagentfamilies
+
   resources :adminmatrixproductforms
 
   resources :adminmatrixstorageforms

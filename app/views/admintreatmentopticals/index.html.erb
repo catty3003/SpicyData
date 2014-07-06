@@ -1,0 +1,27 @@
+<h1>Listing admintreatmentopticals</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Optical</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @admintreatmentopticals.each do |admintreatmentoptical| %>
+      <tr>
+        <td><%= admintreatmentoptical.optical %></td>
+        <td><%= link_to 'Show', admintreatmentoptical %></td>
+        <td><%= link_to 'Edit', edit_admintreatmentoptical_path(admintreatmentoptical) %></td>
+        <td><%= link_to 'Destroy', admintreatmentoptical, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Admintreatmentoptical', new_admintreatmentoptical_path %>

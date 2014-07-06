@@ -1,0 +1,21 @@
+<%= form_for(@admintreatmentfumigation) do |f| %>
+  <% if @admintreatmentfumigation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@admintreatmentfumigation.errors.count, "error") %> prohibited this admintreatmentfumigation from being saved:</h2>
+
+      <ul>
+      <% @admintreatmentfumigation.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :fumigation_gas %><br>
+    <%= f.text_field :fumigation_gas %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,27 @@
+<h1>Listing admintreatmentprocesstypes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Process type</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @admintreatmentprocesstypes.each do |admintreatmentprocesstype| %>
+      <tr>
+        <td><%= admintreatmentprocesstype.process_type %></td>
+        <td><%= link_to 'Show', admintreatmentprocesstype %></td>
+        <td><%= link_to 'Edit', edit_admintreatmentprocesstype_path(admintreatmentprocesstype) %></td>
+        <td><%= link_to 'Destroy', admintreatmentprocesstype, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Admintreatmentprocesstype', new_admintreatmentprocesstype_path %>

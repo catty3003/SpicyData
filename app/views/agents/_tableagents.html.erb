@@ -27,9 +27,9 @@
 	    <% @agents.each do |agent| %>
 	      <tr>
 	        <td width="30%"><h4><%= link_to agent.adminagentname.a_common_name, agent_path(agent) if agent.adminagentname %></h4></td>
-	        <td><%= agent.a_family %></td>
-	        <td><%= agent.a_genus %></td>
-	        <td><%= agent.a_species %></td>
+	        <td><%= agent.adminagentfamily.a_family if agent.adminagentfamily %></td>
+	        <td><%= agent.adminagentgenu.a_genus if agent.adminagentgenu %></td>
+	        <td><%= agent.adminagentspec.a_species if agent.adminagentspec %></td>
 	        <td><%= agent.subspecies %></td>
 	        <td><%= agent.serovar %></td>
 	        <td><%= agent.other_agent_name %></td>

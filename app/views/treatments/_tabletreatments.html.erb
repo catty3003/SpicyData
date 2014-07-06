@@ -32,15 +32,15 @@
       <tbody>
         <% @treatments.each do |treatment| %>
           <tr>
-            <td width="30%"><h4><%= link_to treatment.temperature, treatment_path(treatment) %></h4></td>
+            <td width="30%"><h4><%= link_to treatment.admintreatmenttemperature.temperature, treatment_path(treatment) if treatment.admintreatmenttemperature %></h4></td>
             <td><%= treatment.temperature_in_degree %></td>
-            <td><%= treatment.steam %></td>
+            <td><%= treatment.admintreatmentsteam.steam if treatment.admintreatmentsteam %></td>
             <td><%= treatment.steam_in_percent %></td>
-            <td><%= treatment.fumigation_gas %></td>
+            <td><%= treatment.admintreatmentfumigation.fumigation_gas if treatment.admintreatmentfumigation %></td>
             <td><%= treatment.fumigation_gas_in_percent %></td>
-            <td><%= treatment.optical %></td>
-            <td><%= treatment.mechanical %></td>
-            <td><%= treatment.process_type %></td>
+            <td><%= treatment.admintreatmentoptical.optical if treatment.admintreatmentoptical %></td>
+            <td><%= treatment.admintreatmentmechanical.mechanical if treatment.admintreatmentmechanical %></td>
+            <td><%= treatment.admintreatmentprocesstype.process_type if treatment.admintreatmentprocesstype %></td>
             <td><%= treatment.t_ph %></td>
             <td><%= treatment.pressure %></td>
             <td><%= treatment.kgy_dose %></td>

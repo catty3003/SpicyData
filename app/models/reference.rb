@@ -7,4 +7,5 @@ class Reference < ActiveRecord::Base
 	has_many :detections
 	has_many :tenacities
 	has_many :contaminationstatuses
+	belongs_to :adminreferencetype 
 end
