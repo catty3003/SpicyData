@@ -52,6 +52,7 @@ SpicyData::Application.routes.draw do
   get "home/what_info"
   get "home/join_discuss"
   get "home/change_profile"
+  get "home/admin"
 
 
   resources :admin_matrices

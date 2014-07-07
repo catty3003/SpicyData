@@ -1,11 +1,58 @@
-<h3>Administrator</h3>
+<h3>Insert new Template</h3>  
 <div class="panel panel-info">
   <div class="panel-heading">
-    <h3 class="panel-title">Basics</h3>
+    <h3 class="panel-title">Agent</h3>
   </div>
   <div class="panel-body"> 
     <ul class="nav nav-sidebar">
-      <li class="active"><%= link_to "Matrices", new_admin_matrix_path %></li>
+      <li class="active"><%= link_to "Agent common name",  new_adminagentname_path  %></li>
+      <li class="active"><%= link_to "Agent family",  new_adminagentfamily_path  %></li>
+      <li class="active"><%= link_to "Agent genus",  new_adminagentgenu_path  %></li>
+      <li class="active"><%= link_to "Agent species",  new_adminagentspec_path  %></li>    	
+    </ul>
+  </div> 
+</div>
+
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title">Matrix</h3>
+  </div>
+  <div class="panel-body"> 
+    <ul class="nav nav-sidebar">
+      <li class="active"><%= link_to "Matrix common name",  new_adminmatrixname_path  %></li>
+      <li class="active"><%= link_to "Matrix genus",  new_adminmatrixgenu_path  %></li>
+      <li class="active"><%= link_to "Matrix species",  new_adminmatrixspec_path  %></li>
+      <li class="active"><%= link_to "Plant part",  new_adminmatrixplantpart_path  %></li>
+      <li class="active"><%= link_to "Product form",  new_adminmatrixproductform_path  %></li>      
+      <li class="active"><%= link_to "Storage form",  new_adminmatrixstorageform_path  %></li>      
+    </ul>
+  </div> 
+</div>
+
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title">Treatmet</h3>
+  </div>
+  <div class="panel-body"> 
+    <ul class="nav nav-sidebar">
+      <li class="active"><%= link_to "Fumigation Treatment",  new_admintreatmentfumigation_path  %></li>
+      <li class="active"><%= link_to "Mechanical Treatment",  new_admintreatmentmechanical_path  %></li>
+      <li class="active"><%= link_to "Optical Treatment",  new_admintreatmentoptical_path  %></li>
+      <li class="active"><%= link_to "Steam Treatment",  new_admintreatmentsteam_path  %></li>    	
+      <li class="active"><%= link_to "Temperature Treatment",  new_admintreatmenttemperature_path  %></li>
+      <li class="active"><%= link_to "Treatment process type",  new_admintreatmentprocesstype_path  %></li>
+    </ul>
+  </div> 
+</div>
+
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title">Other</h3>
+  </div>
+  <div class="panel-body"> 
+    <ul class="nav nav-sidebar">
+      <li class="active"><%= link_to "Detection method type",  new_admindetectiontype_path  %></li>    	
+      <li class="active"><%= link_to "Reference type of literature",  new_adminreferencetype_path  %></li>
     </ul>
   </div> 
 </div>

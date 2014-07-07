@@ -60,5 +60,9 @@ class HomeController < ApplicationController
     
   end
 
+  def admin
+    
+  end
+
 
 end
