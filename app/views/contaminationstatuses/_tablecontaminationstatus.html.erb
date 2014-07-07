@@ -2,17 +2,165 @@
   <table class="table table-striped table-bordered table-hover ">
   	<thead>
       <tr>
+        <th colspan="3"><h3>Contaminationstatus</h3></th>
+        <th colspan="22"><h3>Matrix</h3></th>
+        <th colspan="15"><h3>Agent</h3></th>
+        <th colspan="4"><h3>Tenacity</h3></th>
+        <th colspan="19"><h3>Treatment</h3></th>
+        <th colspan="7"><h3>Spiking</h3></th>
+        <th colspan="22"><h3>Samplepreparation</h3></th>
+        <th colspan="24"><h3>Detection</h3></th>
+        <th colspan="7"><h3>Result (other than Tenacity)</h3></th>        
+        <th colspan="9"><h3>Reference</h3></th>
+        <th colspan="2"><h3>User</h3></th>
+        <th colspan="2"><h3>Functions</h3></th>        
+      </tr>
+      <tr>
+        <th>Contamination status ID</th>
         <th>Cfu natural contamination</th>
         <th>Cfu natural contamination unit</th>
-        <th>Matrix</th>
-        <th>Agent</th>
-        <th>Tenacity</th>
-        <th>Treatment</th>
-        <th>Spiking</th>
-        <th>Samplepreparation</th>
-        <th>Detection</th>
-        <th>Reference</th>
-        <th>User</th>
+
+        <th>Matrix ID</th>
+          <th>Matrix common name</th>
+          <th>Matrixatrix genus</th>
+          <th>Matrix species</th>
+          <th>Other matrix name</th>
+          <th>Plant part</th>
+          <th>Storage form</th>
+          <th>Product form</th>
+          <th>Place of origin</th>
+          <th>Date of harvest</th>
+          <th>Relative humidity during harvest</th>
+          <th>Temperature during harvest</th>
+          <th>Pre treatment</th>
+          <th>Sampling date</th>
+          <th>Matrixatrix pH</th>
+          <th>Matrix available water</th>
+          <th>Humidity of matrix</th>
+          <th>Ash (%)</th>
+          <th>Sand (%)</th>
+          <th>Lipids (%)</th>
+          <th>Further ingredients</th>
+          <th>Matrix comment</th>
+
+        <th>Agent ID</th>
+          <th>Agent common name</th>
+          <th>Agent family</th>
+          <th>Agent genus</th>
+          <th>Agent species</th>
+          <th>Subspecies</th>
+          <th>Serovar</th>
+          <th>Other agent name</th>
+          <th>Reference number</th>
+          <th>Rate of illness (%)</th>
+          <th>Morbidity (%)</th>
+          <th>Mortality (%)</th>
+          <th>Isolation source</th>
+          <th>Natural occurence</th>
+          <th>Agent comment</th>
+
+        <th>Tenacity ID</th>
+          <th>Total sample number</th>
+          <th>Inoculum concentration initial</th>
+          <th>Concentration unit</th>
+
+        <th>Treatment ID</th>
+          <th>Temperature treatment</th>
+          <th>Temperature (°C)</th>
+          <th>Steam treatment</th>
+          <th>Steam (°C)</th>
+          <th>Treatment wiht fumigation gas</th>
+          <th>Fumigation (°C)</th>
+          <th>Optical treatment</th>
+          <th>Mechanical treatment</th>
+          <th>Process type</th>
+          <th>Treatment ph</th>
+          <th>Pressure</th>
+          <th>Kgy dose</th>
+          <th>Treatment available water</th>
+          <th>Treatment water activity</th>
+          <th>Other condition</th>
+          <th>Treatment duration</th>
+          <th>Treatment duration unit</th>
+          <th>Treatment comment</th>
+
+        <th>Spiking ID</th>
+          <th>Spiking short name</th>
+          <th>Spiking long name</th>
+          <th>Spiking process description</th>
+          <th>Spiking device needed</th>
+          <th>Pros</th>
+          <th>Cons</th>
+
+        <th>Samplepreparation ID</th>
+          <th>Sampreparationaration short name</th>
+          <th>Sampreparation long name</th>
+          <th>Sampreparation method validated for condiments</th>
+          <th>Sampreparation process description</th>
+          <th>Sampreparation weight of sample</th>
+          <th>Sampreparation weight of sample unit</th>
+          <th>Dilution fluid</th>
+          <th>First dilution ratio</th>
+          <th>Homogenize with</th>
+          <th>Enrichment</th>
+          <th>DNA extraction</th>
+          <th>RNA extraction</th>
+          <th>Protein extraction</th>
+          <th>Homogenizing method</th>
+          <th>Cell lysis</th>
+          <th>Applied kit</th>
+          <th>Other Sampreparation method type</th>
+          <th>Sampreparation method type details text</th>
+          <th>Sampreparation duration</th>
+          <th>Sampreparation duration unit</th>
+          <th>Sampreparation comment</th>
+
+        <th>Detection ID</th>
+          <th>Detection short name</th>
+          <th>Detection long name</th>
+          <th>Detection method validated for condiments</th>
+          <th>Detection process description</th>
+          <th>Detection weight of sample</th>
+          <th>Detection weight of sample unit</th>
+          <th>Detection method dilution</th>
+          <th>Detection method type</th>
+          <th>Duration until result</th>
+          <th>Duration until result unit</th>
+          <th>Target gen</th>
+          <th>Target protein</th>
+          <th>Other characteristic</th>
+          <th>Technique</th>
+          <th>Verification</th>
+          <th>Interpretation</th>
+          <th>Detection device needed</th>
+          <th>Method for comparison</th>
+          <th>LOD</th>
+          <th>Sensitivity (%)</th>
+          <th>Specifity (%)</th>
+          <th>Reliability score</th>
+          <th>Detection comment</th>
+
+        <th>Result ID</th>
+          <th>Cfu initial</th>
+          <th>Cfu initial unit</th>
+          <th>Detectability</th>
+          <th>Cfu detected</th>
+          <th>Cfu detected unit</th>
+          <th>Result comment</th>
+
+        <th>Reference ID</th>
+          <th>Type of literatur</th>
+          <th>First author name</th>
+          <th>Year</th>
+          <th>Title</th>
+          <th>Journal</th>
+          <th>Volume</th>
+          <th>Page</th>
+          <th>Link</th>                   
+
+        <th>User name</th>
+        <th>User institution</th>        
+
         <th></th>
         <th></th>
       </tr>
@@ -21,20 +169,154 @@
     <tbody>
       <% @contaminationstatuses.each do |contaminationstatus| %>
         <tr>
-          <td width="30%"><h4><%= link_to contaminationstatus.cfu_natural_contamination, contaminationstatus_path(contaminationstatus) %></h4></td>
-          <td><%= contaminationstatus.cfu_natural_contamination_unit %></td>
-          <td><%= contaminationstatus.matrix_id %></td>
-          <td><%= contaminationstatus.agent_id %></td>
-          <td><%= contaminationstatus.tenacity_id %></td>
-          <td><%= contaminationstatus.treatment_id %></td>
-          <td><%= contaminationstatus.spiking_id %></td>
-          <td><%= contaminationstatus.samplepreparation_id %></td>
-          <td><%= contaminationstatus.detection_id %></td>
-          <td><%= contaminationstatus.result_id %></td>
-          <td><%= contaminationstatus.reference_id %></td>
+          <td><%= link_to contaminationstatus.id, contaminationstatus_path(contaminationstatus) %></td>
+            <td><%= contaminationstatus.cfu_natural_contamination %></td>
+            <td><%= contaminationstatus.cfu_natural_contamination_unit %></td>
+
+          <td><%= link_to contaminationstatus.matrix_id, matrix_path(id: contaminationstatus.matrix.id)  %></td>
+            <td><%= link_to contaminationstatus.matrix.adminmatrixname.m_common_name, matrix_path(id: contaminationstatus.matrix.id)  if contaminationstatus.matrix.adminmatrixname  %></td>
+            <td><%= contaminationstatus.matrix.adminmatrixgenu.m_genus if contaminationstatus.matrix.adminmatrixgenu %></td>
+            <td><%= contaminationstatus.matrix.adminmatrixspec.m_species if contaminationstatus.matrix.adminmatrixspec %></td>
+            <td><%= contaminationstatus.matrix.other_matrix_name %></td>
+            <td><%= contaminationstatus.matrix.adminmatrixplantpart.plant_part if contaminationstatus.matrix.adminmatrixplantpart %></td>
+            <td><%= contaminationstatus.matrix.adminmatrixstorageform.storage_form if contaminationstatus.matrix.adminmatrixstorageform %></td>
+            <td><%= contaminationstatus.matrix.adminmatrixproductform.product_form if contaminationstatus.matrix.adminmatrixproductform %></td>
+            <td><%= contaminationstatus.matrix.place_of_origin %></td>
+            <td><%= contaminationstatus.matrix.date_of_harvest %></td>
+            <td><%= contaminationstatus.matrix.relative_humidity_during_harvest %></td>
+            <td><%= contaminationstatus.matrix.temperature_during_harvest %></td>
+            <td><%= contaminationstatus.matrix.pre_treatment %></td>
+            <td><%= contaminationstatus.matrix.sampling_date %></td>
+            <td><%= contaminationstatus.matrix.m_ph %></td>
+            <td><%= contaminationstatus.matrix.m_aw %></td>
+            <td><%= contaminationstatus.matrix.humidity_of_matrix %></td>
+            <td><%= contaminationstatus.matrix.ash %></td>
+            <td><%= contaminationstatus.matrix.sand %></td>
+            <td><%= contaminationstatus.matrix.lipids %></td>
+            <td><%= contaminationstatus.matrix.further_ingredients %></td>
+            <td><%= contaminationstatus.matrix.m_comment %></td>
+
+          <td><%= link_to contaminationstatus.agent_id, agent_path(id: contaminationstatus.agent.id) if contaminationstatus.agent%></td>
+            <td><%= link_to contaminationstatus.agent.adminagentname.a_common_name, agent_path(id: contaminationstatus.agent.id) if contaminationstatus.agent.adminagentname %></td>
+            <td><%= contaminationstatus.agent.adminagentfamily.a_family if contaminationstatus.agent.adminagentfamily %></td>
+            <td><%= contaminationstatus.agent.adminagentgenu.a_genus if contaminationstatus.agent.adminagentgenu %></td>
+            <td><%= contaminationstatus.agent.adminagentspec.a_species if contaminationstatus.agent.adminagentspec %></td>
+            <td><%= contaminationstatus.agent.subspecies %></td>
+            <td><%= contaminationstatus.agent.serovar %></td>
+            <td><%= contaminationstatus.agent.other_agent_name %></td>
+            <td><%= contaminationstatus.agent.ref_number %></td>
+            <td><%= contaminationstatus.agent.rate_of_illness %></td>
+            <td><%= contaminationstatus.agent.morbidity %></td>
+            <td><%= contaminationstatus.agent.mortality %></td>
+            <td><%= contaminationstatus.agent.isolation_source %></td>
+            <td><%= contaminationstatus.agent.natural_occurence %></td>
+            <td><%= contaminationstatus.agent.a_comment %></td>
+
+          <td><%= link_to contaminationstatus.tenacity_id, tenacity_path(id: contaminationstatus.tenacity.id) %></td>
+            <td><%= contaminationstatus.tenacity.total_sample_number %></td>
+            <td><%= contaminationstatus.tenacity.inoculum_concentration_initial %></td>
+            <td><%= contaminationstatus.tenacity.i_concentration_unit %></td>
+
+          <td><%= link_to contaminationstatus.treatment_id, treatment_path(id: contaminationstatus.treatment.id) %></td>
+            <td><%= contaminationstatus.treatment.admintreatmenttemperature.temperature if contaminationstatus.treatment.admintreatmenttemperature %></td>
+            <td><%= contaminationstatus.treatment.temperature_in_degree %></td>
+            <td><%= contaminationstatus.treatment.admintreatmentsteam.steam if contaminationstatus.treatment.admintreatmentsteam %></td>
+            <td><%= contaminationstatus.treatment.steam_in_percent %></td>
+            <td><%= contaminationstatus.treatment.admintreatmentfumigation.fumigation_gas if contaminationstatus.treatment.admintreatmentfumigation %></td>
+            <td><%= contaminationstatus.treatment.fumigation_gas_in_percent %></td>
+            <td><%= contaminationstatus.treatment.admintreatmentoptical.optical if contaminationstatus.treatment.admintreatmentoptical %></td>
+            <td><%= contaminationstatus.treatment.admintreatmentmechanical.mechanical if contaminationstatus.treatment.admintreatmentmechanical %></td>
+            <td><%= contaminationstatus.treatment.admintreatmentprocesstype.process_type if contaminationstatus.treatment.admintreatmentprocesstype %></td>
+            <td><%= contaminationstatus.treatment.t_ph %></td>
+            <td><%= contaminationstatus.treatment.pressure %></td>
+            <td><%= contaminationstatus.treatment.kgy_dose %></td>
+            <td><%= contaminationstatus.treatment.t_aw %></td>
+            <td><%= contaminationstatus.treatment.water_activity %></td>
+            <td><%= contaminationstatus.treatment.other_condition %></td>
+            <td><%= contaminationstatus.treatment.treat_duration %></td>
+            <td><%= contaminationstatus.treatment.treat_duration_unit %></td>
+            <td><%= contaminationstatus.treatment.t_comment %></td>
+
+          <td><%= link_to contaminationstatus.spiking_id, spiking_path(id: contaminationstatus.spiking.id) %></td>
+            <td><%= contaminationstatus.spiking.spik_short_name %></td>
+            <td><%= contaminationstatus.spiking.spik_long_name %></td>
+            <td><%= contaminationstatus.spiking.spik_process_description %></td>
+            <td><%= contaminationstatus.spiking.spik_device_needed %></td>
+            <td><%= contaminationstatus.spiking.pros %></td>
+            <td><%= contaminationstatus.spiking.cons %></td>
+
+          <td><%= link_to contaminationstatus.samplepreparation_id, samplepreparation_path(id: contaminationstatus.samplepreparation.id)  %></td>
+            <td><%= contaminationstatus.samplepreparation.samprep_short_name%></td>
+            <td><%= contaminationstatus.samplepreparation.samprep_long_name %></td>
+            <td><%= contaminationstatus.samplepreparation.samprep_method_validated_for_condiments %></td>
+            <td><%= contaminationstatus.samplepreparation.samprep_process_description %></td>
+            <td><%= contaminationstatus.samplepreparation.spik_weight_of_sample %></td>
+            <td><%= contaminationstatus.samplepreparation.spik_weight_of_sample_unit %></td>
+            <td><%= contaminationstatus.samplepreparation.dilution_fuid %></td>
+            <td><%= contaminationstatus.samplepreparation.first_dilution_ratio %></td>
+            <td><%= contaminationstatus.samplepreparation.homogenize_with %></td>
+            <td><%= contaminationstatus.samplepreparation.enrichment %></td>
+            <td><%= contaminationstatus.samplepreparation.dna_extraction %></td>
+            <td><%= contaminationstatus.samplepreparation.rna_extraction %></td>
+            <td><%= contaminationstatus.samplepreparation.protein_extraction %></td>
+            <td><%= contaminationstatus.samplepreparation.homogenizing_method %></td>
+            <td><%= contaminationstatus.samplepreparation.cell_lysis %></td>
+            <td><%= contaminationstatus.samplepreparation.applied_kit %></td>
+            <td><%= contaminationstatus.samplepreparation.other_samprep_method_type %></td>
+            <td><%= contaminationstatus.samplepreparation.samprep_method_type_details_text %></td>
+            <td><%= contaminationstatus.samplepreparation.samprep_duration %></td>
+            <td><%= contaminationstatus.samplepreparation.samprep_duration_unit %></td>
+            <td><%= contaminationstatus.samplepreparation.samprep_comment %></td>
+
+          <td><%= link_to contaminationstatus.detection_id, detection_path(id: contaminationstatus.detection.id)  %></td>
+            <td><%= contaminationstatus.detection.d_short_name%></td>
+            <td><%= contaminationstatus.detection.d_long_name %></td>
+            <td><%= contaminationstatus.detection.d_method_validated_for_condiments %></td>
+            <td><%= contaminationstatus.detection.d_process_description %></td>
+            <td><%= contaminationstatus.detection.d_weight_of_sample %></td>
+            <td><%= contaminationstatus.detection.d_weight_of_sample_unit %></td>
+            <td><%= contaminationstatus.detection.detection_method_dilution %></td>
+            <td><%= contaminationstatus.detection.admindetectiontype.detection_method_type if contaminationstatus.detection.admindetectiontype %></td>
+            <td><%= contaminationstatus.detection.duration_until_result %></td>
+            <td><%= contaminationstatus.detection.duration_until_result_unit %></td>
+            <td><%= contaminationstatus.detection.target_gen %></td>
+            <td><%= contaminationstatus.detection.target_protein %></td>
+            <td><%= contaminationstatus.detection.other_characteristic %></td>
+            <td><%= contaminationstatus.detection.technique %></td>
+            <td><%= contaminationstatus.detection.verification %></td>
+            <td><%= contaminationstatus.detection.interpretation %></td>
+            <td><%= contaminationstatus.detection.d_device_needed %></td>
+            <td><%= contaminationstatus.detection.method_for_comparison %></td>
+            <td><%= contaminationstatus.detection.lod %></td>
+            <td><%= contaminationstatus.detection.sensitivity %></td>
+            <td><%= contaminationstatus.detection.specifity %></td>
+            <td><%= contaminationstatus.detection.reliability_score %></td>
+            <td><%= contaminationstatus.detection.d_comment %></td>
+
+          <td><%= link_to contaminationstatus.result_id, result_path(id: contaminationstatus.result.id)  %></td>
+            <td><%= contaminationstatus.result.cfu_initial%></td>
+            <td><%= contaminationstatus.result.cfu_initial_unit %></td>
+            <td><%= contaminationstatus.result.detectability %></td>
+            <td><%= contaminationstatus.result.cfu_detected %></td>
+            <td><%= contaminationstatus.result.cfu_detected_unit %></td>
+            <td><%= contaminationstatus.result.r_comment %></td>
+
+          <td><%= link_to contaminationstatus.reference_id, reference_path(id: contaminationstatus.reference.id) %></td>
+            <td><%= contaminationstatus.reference.adminreferencetype.type_of_literatur if contaminationstatus.reference.adminreferencetype %></td>
+            <td><%= contaminationstatus.reference.first_author_name %></td>
+            <td><%= contaminationstatus.reference.year %></td>
+            <td><%= contaminationstatus.reference.title %></td>
+            <td><%= contaminationstatus.reference.journal %></td>
+            <td><%= contaminationstatus.reference.volume %></td>
+            <td><%= contaminationstatus.reference.page_from %> - <%= contaminationstatus.reference.page_to %></td>
+            <td><%= contaminationstatus.reference.link %></td>
+
           <td><%= contaminationstatus.user_id %></td>
+          <td><%= contaminationstatus.user_id %></td>
+
           <td><%= link_to 'Show', contaminationstatus, class: "btn btn-info btn-sm" %></td>
-          <td><%= link_to 'Edit', edit_contaminationstatus_path(contaminationstatus), class: "btn btn-warning btn-sm" %></td>          
+          <td><%= link_to 'Edit', edit_contaminationstatus_path(contaminationstatus), class: "btn btn-warning btn-sm" %></td>
+        </tr>          
       <% end %>
     </tbody>
   </table>

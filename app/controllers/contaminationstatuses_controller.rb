@@ -5,6 +5,16 @@ class ContaminationstatusesController < ApplicationController
   # GET /contaminationstatuses.json
   def index
     @contaminationstatuses = Contaminationstatus.all
+    
+    @matrices = Matrix.all 
+    @agents =Agent.all 
+    @detections = Detection.all
+    @references = Reference.all
+    @results = Result.all
+    @samplepreparations = Samplepreparation.all
+    @spikings = Spiking.all
+    @tenacities = Tenacity.all
+    @treatments = Treatment.all
   end
 
   # GET /contaminationstatuses/1
