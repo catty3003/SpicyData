@@ -30,7 +30,7 @@
   </div>
   <div class="field">
     <%= f.label :other_matrix_name %><br>
-    <%= f.text_field :other_matrix_name, :placeholder=>"if no matrix name above match"   %>
+    <%= f.text_field :other_matrix_name, :placeholder=>"if no matrix name above match, otherwise: n.a.", class: "form-control"  %>
   </div>
   <div class="field">
     <%= f.label :"Plant part" %><br>
@@ -46,59 +46,59 @@
   </div>
   <div class="field">
     <%= f.label :place_of_origin %><br>
-    <%= f.text_field :place_of_origin %>
+    <%= f.text_field :place_of_origin, class: "form-control" %>
   </div>
   <div class="field">
     <%= f.label :date_of_harvest %><br>
-    <%= f.date_select :date_of_harvest %>
+    <%= f.date_select :date_of_harvest, class: "form-control" %>
   </div>
   <div class="field">
-    <%= f.label :relative_humidity_during_harvest %><br>
-    <%= f.text_field :relative_humidity_during_harvest %>
+    <%= f.label :"relative_humidity_during_harvest (%)" %><br>
+    <%= f.text_field :relative_humidity_during_harvest, class: "form-control" %>
   </div>
   <div class="field">
-    <%= f.label :temperature_during_harvest %><br>
-    <%= f.text_field :temperature_during_harvest %>
+    <%= f.label :"temperature_during_harvest (°C)" %><br>
+    <%= f.text_field :temperature_during_harvest, class: "form-control" %>
   </div>
   <div class="field">
-    <%= f.label :pre_treatment %><br>
-    <%= f.text_field :pre_treatment %>
+    <%= f.label :"pre-treatment" %><br>
+    <%= f.text_field :pre_treatment, :placeholder=>"if unkown: n.a." , class: "form-control"%>
   </div>
   <div class="field">
     <%= f.label :sampling_date %><br>
-    <%= f.date_select :sampling_date %>
+    <%= f.date_select :sampling_date, class: "form-control" %>
   </div>
   <div class="field">
-    <%= f.label :m_ph %><br>
-    <%= f.text_field :m_ph %>
+    <%= f.label :'Matrix PH-value' %><br>
+    <%= f.text_field :m_ph, class: "form-control" %>
   </div>
   <div class="field">
-    <%= f.label :m_aw %><br>
-    <%= f.text_field :m_aw %>
+    <%= f.label :"Initial matrix available water" %><br>
+    <%= f.text_field :m_aw, class: "form-control" %>
   </div>
   <div class="field">
-    <%= f.label :humidity_of_matrix %><br>
-    <%= f.text_field :humidity_of_matrix %>
+    <%= f.label :"humidity_of_matrix (%)" %><br>
+    <%= f.text_field :humidity_of_matrix, class: "form-control" %>
   </div>
   <div class="field">
-    <%= f.label :ash %><br>
-    <%= f.text_field :ash %>
+    <%= f.label :"ash (%)" %><br>
+    <%= f.text_field :ash, class: "form-control" %>
   </div>
   <div class="field">
-    <%= f.label :sand %><br>
-    <%= f.text_field :sand %>
+    <%= f.label :"sand (%)" %><br>
+    <%= f.text_field :sand, class: "form-control" %>
   </div>
   <div class="field">
-    <%= f.label :lipids %><br>
-    <%= f.text_field :lipids %>
+    <%= f.label :"lipids (%)" %><br>
+    <%= f.text_field :lipids, class: "form-control" %>
   </div>
   <div class="field">
     <%= f.label :further_ingredients %><br>
-    <%= f.text_field :further_ingredients %>
+    <%= f.text_field :further_ingredients, class: "form-control" %>
   </div>
   <div class="field">
-    <%= f.label :m_comment %><br>
-    <%= f.text_area :m_comment %>
+    <%= f.label :"Matrix comment" %><br>
+    <%= f.text_area :m_comment, class: "form-control" %>
   </div>
   <div class="field">
     <%= f.label :reference_id %><br>
@@ -106,7 +106,7 @@
   </div> 
   <div class="field">
     <%= f.label :user_id %><br>
-    <%= f.number_field :user_id %>
+    <%= f.number_field :user_id, class: "form-control" %>
   </div>
 
     </div>

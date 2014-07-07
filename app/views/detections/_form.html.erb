@@ -17,32 +17,36 @@
     <div class="panel-body">
 
       <div class="field">
-        <%= f.label :d_short_name %><br>
-        <%= f.text_field :d_short_name %>
+        <%= f.label :"detection_short_name" %><br>
+        <%= f.text_field :d_short_name, class: "form-control" %>
       </div>
       <div class="field">
-        <%= f.label :d_long_name %><br>
-        <%= f.text_area :d_long_name %>
+        <%= f.label :"detection_long_name" %><br>
+        <%= f.text_area :d_long_name, class: "form-control" %>
       </div>
       <div class="field">
-        <%= f.label :d_method_validated_for_condiments %><br>
-        <%= f.text_field :d_method_validated_for_condiments %>
+        <%= f.label :"detection_method_validated_for_condiments" %><br>        
+        <%= radio_button_tag :detection_method_validated_for_condiments, "Yes"  %> <%= f.label :detection_method_validated_for_condiments, "Yes" %>
+        <%= radio_button_tag :detection_method_validated_for_condiments, "No"  %> <%= f.label :detection_method_validated_for_condiments, "No" %>
+        <%= radio_button_tag :detection_method_validated_for_condiments, "Unknown"  %> <%= f.label :detection_method_validated_for_condiments, "Unknown" %>          
       </div>
       <div class="field">
-        <%= f.label :d_process_description %><br>
-        <%= f.text_area :d_process_description %>
+        <%= f.label :"detection_process_description" %><br>
+        <%= f.text_area :d_process_description, class: "form-control" %>
       </div>
       <div class="field">
-        <%= f.label :d_weight_of_sample %><br>
-        <%= f.text_field :d_weight_of_sample %>
+        <%= f.label :"detection_weight_of_sample" %><br>
+        <%= f.text_field :d_weight_of_sample, class: "form-control" %>
       </div>
       <div class="field">
-        <%= f.label :d_weight_of_sample_unit %><br>
-        <%= f.text_field :d_weight_of_sample_unit %>
+        <%= f.label :"detection_weight_of_sample_unit" %><br>
+        <%= radio_button_tag :d_weight_of_sample_unit, "Milligramm"  %> <%= f.label :d_weight_of_sample_unit, "Milligramm" %>
+        <%= radio_button_tag :d_weight_of_sample_unit, "Gramm"  %> <%= f.label :d_weight_of_sample_unit, "Gramm" %>
+        <%= radio_button_tag :d_weight_of_sample_unit, "Kilogramm"  %> <%= f.label :d_weight_of_sample_unit, "Kilogramm" %> 
       </div>
       <div class="field">
         <%= f.label :detection_method_dilution %><br>
-        <%= f.text_field :detection_method_dilution %>
+        <%= f.text_field :detection_method_dilution, class: "form-control" %>
       </div>
       <div class="field">
         <%= f.label :"detection_method_type" %><br>
@@ -50,71 +54,75 @@
       </div>
       <div class="field">
         <%= f.label :duration_until_result %><br>
-        <%= f.text_field :duration_until_result %>
+        <%= f.text_field :duration_until_result, class: "form-control" %>        
       </div>
       <div class="field">
         <%= f.label :duration_until_result_unit %><br>
-        <%= f.text_field :duration_until_result_unit %>
+        <%= radio_button_tag :duration_until_result_unit, "seconds"  %> <%= f.label :duration_until_result_unit, "seconds" %>
+        <%= radio_button_tag :duration_until_result_unit, "minutes"  %> <%= f.label :duration_until_result_unit, "mminutes" %>
+        <%= radio_button_tag :duration_until_result_unit, "hours"  %> <%= f.label :duration_until_result_unit, "hours" %> 
+        <%= radio_button_tag :duration_until_result_unit, "days"  %> <%= f.label :duration_until_result_unit, "days" %> 
+        <%= radio_button_tag :duration_until_result_unit, "months"  %> <%= f.label :duration_until_result_unit, "months" %> 
       </div>
       <div class="field">
         <%= f.label :target_gen %><br>
-        <%= f.text_field :target_gen %>
+        <%= f.text_field :target_gen, class: "form-control" %>
       </div>
       <div class="field">
         <%= f.label :target_protein %><br>
-        <%= f.text_field :target_protein %>
+        <%= f.text_field :target_protein, class: "form-control" %>
       </div>
       <div class="field">
         <%= f.label :other_characteristic %><br>
-        <%= f.text_area :other_characteristic %>
+        <%= f.text_area :other_characteristic, class: "form-control" %>
       </div>
       <div class="field">
         <%= f.label :technique %><br>
-        <%= f.text_field :technique %>
+        <%= f.text_field :technique, class: "form-control" %>
       </div>
       <div class="field">
         <%= f.label :verification %><br>
-        <%= f.text_area :verification %>
+        <%= f.text_area :verification, :placeholder=>"e.g. cultural method type: how should colonies look like? how to verificate them? ", class: "form-control" %>
       </div>
       <div class="field">
         <%= f.label :interpretation %><br>
-        <%= f.text_area :interpretation %>
+        <%= f.text_area :interpretation, :placeholder=>"e.g. cultural method type: what means when haemolysis is negative od positive?", class: "form-control" %>
       </div>
       <div class="field">
-        <%= f.label :d_device_needed %><br>
-        <%= f.text_field :d_device_needed %>
+        <%= f.label :"detection_device_needed" %><br>
+        <%= f.text_field :d_device_needed, class: "form-control" %>
       </div>
       <div class="field">
         <%= f.label :method_for_comparison %><br>
-        <%= f.text_area :method_for_comparison %>
+        <%= f.text_area :method_for_comparison, class: "form-control" %>
       </div>
       <div class="field">
-        <%= f.label :lod %><br>
-        <%= f.text_field :lod %>
+        <%= f.label :"LOD" %><br>
+        <%= f.text_field :lod, class: "form-control" %>
       </div>
       <div class="field">
-        <%= f.label :sensitivity %><br>
-        <%= f.text_field :sensitivity %>
+        <%= f.label :"sensitivity (%)" %><br>
+        <%= f.text_field :sensitivity, class: "form-control" %>
       </div>
       <div class="field">
-        <%= f.label :specifity %><br>
-        <%= f.text_field :specifity %>
+        <%= f.label :"specifity (%)" %><br>
+        <%= f.text_field :specifity, class: "form-control" %>
       </div>
       <div class="field">
         <%= f.label :reliability_score %><br>
-        <%= f.text_field :reliability_score %>
+        <%= f.select :reliability_score, ["Green", "Yellow", "Red"], {:include_blank => true}, class: "form-control"  %>
       </div>
       <div class="field">
-        <%= f.label :d_comment %><br>
-        <%= f.text_area :d_comment %>
+        <%= f.label :"detection_comment" %><br>
+        <%= f.text_area :d_comment, class: "form-control" %>
       </div>
       <div class="field">
         <%= f.label :reference_id %><br>
-        <%= f.number_field :reference_id %>
+        <%= f.select :reference_id, Reference.all.order(:first_author_name, :year).collect {|c| [ [c.first_author_name, c.year, c.title], c.id ] }, { :include_blank => true, :selected => @detection.reference_id}, class: "form-control" %>
       </div>
       <div class="field">
         <%= f.label :user_id %><br>
-        <%= f.number_field :user_id %>
+        <%= f.number_field :user_id, class: "form-control" %>
       </div>
 
     </div>

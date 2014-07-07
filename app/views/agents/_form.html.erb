@@ -36,51 +36,51 @@
   </div>
   <div class="field">
     <%= f.label :subspecies %><br>
-    <%= f.text_field :subspecies %>
+    <%= f.text_field :subspecies, class: "form-control" %>
   </div>
   <div class="field">
     <%= f.label :serovar %><br>
-    <%= f.text_field :serovar %>
+    <%= f.text_field :serovar, class: "form-control" %>
   </div>
   <div class="field">
     <%= f.label :other_agent_name %><br>
-    <%= f.text_field :other_agent_name, :placeholder=>"if no agent name above match"  %>
+    <%= f.text_field :other_agent_name, :placeholder=>"if no agent name above match", class: "form-control"  %>
   </div>
   <div class="field">
-    <%= f.label :ref_number %><br>
-    <%= f.text_field :ref_number %>
+    <%= f.label :"Reference number" %><br>
+    <%= f.text_field :ref_number, :placeholder=>"e.g. ATCC 10832", class: "form-control" %>
   </div>
   <div class="field">
-    <%= f.label :rate_of_illness %><br>
-    <%= f.text_field :rate_of_illness %>
+    <%= f.label :"rate_of_illness (%)" %><br>
+    <%= f.text_field :rate_of_illness, class: "form-control" %>
   </div>
   <div class="field">
-    <%= f.label :morbidity %><br>
-    <%= f.text_field :morbidity %>
+    <%= f.label :"morbidity (%)" %><br>
+    <%= f.text_field :morbidity, class: "form-control" %>
   </div>
   <div class="field">
-    <%= f.label :mortality %><br>
-    <%= f.text_field :mortality %>
+    <%= f.label :"mortality (%)" %><br>
+    <%= f.text_field :mortality, class: "form-control" %>
   </div>
   <div class="field">
     <%= f.label :isolation_source %><br>
-    <%= f.text_field :isolation_source %>
+    <%= f.text_field :isolation_source, class: "form-control" %>
   </div>
   <div class="field">
     <%= f.label :natural_occurence %><br>
-    <%= f.text_field :natural_occurence %>
+    <%= f.text_field :natural_occurence, class: "form-control" %>
   </div>
   <div class="field">
-    <%= f.label :a_comment %><br>
-    <%= f.text_area :a_comment %>
+    <%= f.label :"Agent comment" %><br>
+    <%= f.text_area :a_comment, class: "form-control" %>
   </div>
   <div class="field">
     <%= f.label :reference_id %><br>
-    <%= f.number_field :reference_id %>
+    <%= f.select :reference_id, Reference.all.order(:first_author_name, :year).collect {|c| [ [c.first_author_name, c.year, c.title], c.id ] }, { :include_blank => true, :selected => @agent.reference_id}, class: "form-control" %>
   </div>
   <div class="field">
     <%= f.label :user_id %><br>
-    <%= f.number_field :user_id %>
+    <%= f.number_field :user_id, class: "form-control" %>
   </div>
       
     </div>

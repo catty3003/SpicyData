@@ -22,71 +22,82 @@
       </div>
       <div class="field">
         <%= f.label :first_author_name %><br>
-        <%= f.text_field :first_author_name %>
+        <%= f.text_field :first_author_name, class: "form-control" %>
       </div>
       <div class="field">
         <%= f.label :year %><br>
-        <%= f.number_field :year %>
+        <%= f.number_field :year, class: "form-control" %>
       </div>
       <div class="field">
         <%= f.label :title %><br>
-        <%= f.text_field :title %>
+        <%= f.text_field :title, class: "form-control" %>
       </div>
       <div class="field">
         <%= f.label :journal %><br>
-        <%= f.text_field :journal %>
+        <%= f.text_field :journal, class: "form-control" %>
       </div>
       <div class="field">
         <%= f.label :volume %><br>
-        <%= f.number_field :volume %>
+        <%= f.number_field :volume, class: "form-control" %>
       </div>
       <div class="field">
         <%= f.label :page_from %><br>
-        <%= f.text_field :page_from %>
+        <%= f.text_field :page_from, class: "form-control" %>
       </div>
       <div class="field">
         <%= f.label :page_to %><br>
-        <%= f.text_field :page_to %>
+        <%= f.text_field :page_to, class: "form-control" %>
       </div>
       <div class="field">
         <%= f.label :link %><br>
-        <%= f.text_field :link %>
+        <%= f.text_field :link, class: "form-control" %>
       </div>
+      <div class="row">
+        <div class="panel panel-info">
+          <div class="panel-body">
+            <h3>This Reference include inforations about: </h3>
+            <div class="col-md-3">              
+              <div class="field">
+                <%= f.check_box :matrix %> 
+                <%= f.label :matrix %>
+              </div>
+              <div class="field">
+                <%= f.check_box :agent %>
+                <%= f.label :agent %>
+              </div>
+              <div class="field">
+                <%= f.check_box :tenacity %>
+                <%= f.label :tenacity %>        
+              </div>              
+            </div>          
+            <div class="col-md-3">
+              <div class="field">
+                <%= f.check_box :sample_prep %>
+                <%= f.label :"Sample preparation" %>
+              </div>
+              <div class="field">
+                <%= f.check_box :detection %>
+                <%= f.label :detection %>
+              </div>
+              <div class="field">
+                <%= f.check_box :spiking %>
+                <%= f.label :spiking %>
+              </div>
+              <div class="field">
+                <%= f.check_box :treatment %>
+                <%= f.label :treatment %>
+              </div>
+            </div>
+          </div>
+        </div> 
+      </div>    
       <div class="field">
-        <%= f.label :matrix %><br>
-        <%= f.text_field :matrix %>
-      </div>
-      <div class="field">
-        <%= f.label :agent %><br>
-        <%= f.text_field :agent %>
-      </div>
-      <div class="field">
-        <%= f.label :spiking %><br>
-        <%= f.text_field :spiking %>
-      </div>
-      <div class="field">
-        <%= f.label :treatment %><br>
-        <%= f.text_field :treatment %>
-      </div>
-      <div class="field">
-        <%= f.label :sample_prep %><br>
-        <%= f.text_field :sample_prep %>
-      </div>
-      <div class="field">
-        <%= f.label :detection %><br>
-        <%= f.text_field :detection %>
-      </div>
-      <div class="field">
-        <%= f.label :tenacity %><br>
-        <%= f.text_field :tenacity %>
-      </div>
-      <div class="field">
-        <%= f.label :r_comment %><br>
-        <%= f.text_area :r_comment %>
+        <%= f.label :"Reference comment" %><br>
+        <%= f.text_area :r_comment, class: "form-control" %>
       </div>
       <div class="field">
         <%= f.label :user_id %><br>
-        <%= f.number_field :user_id %>
+        <%= f.number_field :user_id , class: "form-control"%>
       </div>
 
 

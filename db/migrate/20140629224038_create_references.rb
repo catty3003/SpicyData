@@ -7,16 +7,16 @@ class CreateReferences < ActiveRecord::Migration
       t.string :title
       t.string :journal
       t.integer :volume
-      t.string :page_from
-      t.string :page_to
+      t.integer :page_from
+      t.integer :page_to
       t.string :link
-      t.string :matrix
-      t.string :agent
-      t.string :spiking
-      t.string :treatment
-      t.string :sample_prep
-      t.string :detection
-      t.string :tenacity
+      t.boolean :matrix
+      t.boolean :agent
+      t.boolean :spiking
+      t.boolean :treatment
+      t.boolean :sample_prep
+      t.boolean :detection
+      t.boolean :tenacity
       t.text :r_comment
       t.integer :user_id
 
