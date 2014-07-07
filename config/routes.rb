@@ -55,8 +55,6 @@ SpicyData::Application.routes.draw do
   get "home/admin"
 
 
-  resources :admin_matrices
-
   resources :results
 
   resources :contaminationstatuses
