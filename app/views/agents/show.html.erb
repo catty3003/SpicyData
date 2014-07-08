@@ -100,9 +100,26 @@
                 <%= @agent.user_id %>
               </p>
 
+              <!-- Agentparam einbinden -->
+              <p><strong> exposure to hazard</strong></p>
+              <% @agent.agentparams.order(:infected_species).each do |p| %>
+                <ul>
+                  <li>
+                    <strong>Infected species:</strong>
+                    <%= p.infected_species if p.infected_species %>
+                  </li>
+                  <li>
+                    <strong>Infectious dose:</strong>
+                    <%= p.infectious_dose if p.infectious_dose %>
+                  </li>
+                  <li>
+                    <strong>Level of infectious dose:</strong>
+                    <%= p.level_of_infectious_dose if p.level_of_infectious_dose %>
+                  </li>                  
+                </ul>
+              <% end %>
 
             </div>
-
           </div>    
           <%= link_to 'Edit Agent', edit_agent_path(@agent), class: "btn btn-warning btn-sm" %> |  | 
           <%= link_to 'Delete', @agent, class: "btn btn-danger btn-sm", method: :delete, data: { confirm: 'Are you sure?' } %> | 

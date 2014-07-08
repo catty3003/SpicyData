@@ -9,7 +9,8 @@ class Agent < ActiveRecord::Base
 	belongs_to :adminagentspec 
 
   accepts_nested_attributes_for :agentparams, 
-           :reject_if => :all_blank, 
-           :allow_destroy => true  
+  		allow_destroy: true, 
+      :reject_if => :all_blank
+            
 
 end

@@ -85,6 +85,10 @@
 
 
       <%= f.fields_for :agentparams do |i| %>
+        <div calss="form-group">
+          <%= i.check_box :_destroy %>
+          <%= i.label :_destroy, "Remove exposure to hazard attributes" %>
+        </div>
         <div class="field">
           <%= i.label :infectious_dose %><br>
           <%= i.text_field :infectious_dose, class: "form-control" %>
