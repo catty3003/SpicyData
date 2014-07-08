@@ -118,7 +118,7 @@
       </div>
       <div class="field">
         <%= f.label :reference_id %><br>
-        <%= f.select :reference_id, Reference.all.order(:first_author_name, :year).collect {|c| [ [c.first_author_name, c.year, c.title], c.id ] }, { :include_blank => true, :selected => @detection.reference_id}, class: "form-control" %>
+        <%= f.select :reference_id, Reference.all.order(:first_author_name, :year).collect {|c| [ c.full_ref, c.id ] }, { :include_blank => true, :selected => @detection.reference_id}, class: "form-control" %>
       </div>
       <div class="field">
         <%= f.label :user_id %><br>

@@ -90,7 +90,7 @@
       </div>
       <div class="field">
         <%= f.label :reference_id %><br>
-        <%= f.number_field :reference_id %>
+        <%= f.select :reference_id, Reference.all.order(:first_author_name, :year).collect {|c| [ c.full_ref, c.id ] }, { :include_blank => true, :selected => @treatment.reference_id}, class: "form-control" %>
       </div>
       <div class="field">
         <%= f.label :user_id %><br>
