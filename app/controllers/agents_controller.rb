@@ -15,6 +15,7 @@ class AgentsController < ApplicationController
   # GET /agents/new
   def new
     @agent = Agent.new
+    @agent.agentparams.build
   end
 
   # GET /agents/1/edit
@@ -69,6 +70,6 @@ class AgentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def agent_params
-      params.require(:agent).permit(:adminagentname_id, :adminagentfamily_id, :adminagentgenu_id, :adminagentspec_id, :subspecies, :serovar, :other_agent_name, :ref_number, :rate_of_illness, :morbidity, :mortality, :isolation_source, :natural_occurence, :a_comment, :reference_id, :user_id)
+      params.require(:agent).permit(:adminagentname_id, :adminagentfamily_id, :adminagentgenu_id, :adminagentspec_id, :subspecies, :serovar, :other_agent_name, :ref_number, :rate_of_illness, :morbidity, :mortality, :isolation_source, :natural_occurence, :a_comment, :reference_id, :user_id, agentparams_attributes: [:id, :infectious_dose, :level_of_infectious_dose, :infected_species])
     end
 end
