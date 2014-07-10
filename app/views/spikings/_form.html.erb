@@ -40,6 +40,9 @@
         <%= f.label :cons %><br>
         <%= f.text_area :cons %>
       </div>
+      <%= f.fields_for :spikingparams do |builder| %>
+        <%= render 'spikingparam_fields', f: builder %>
+      <% end %>      
       <div class="field">
         <%= f.label :reference_id %><br>
         <%= f.select :reference_id, Reference.all.order(:first_author_name, :year).collect {|c| [ c.full_ref, c.id ] }, { :include_blank => true, :selected => @spiking.reference_id}, class: "form-control" %>

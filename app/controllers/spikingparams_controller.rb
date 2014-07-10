@@ -69,6 +69,6 @@ class SpikingparamsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def spikingparam_params
-      params.require(:spikingparam).permit(:spik_weight_of_sample, :spik_weight_of_sample_unit, :cfu_of_inoculum_per_ml, :cfu_per_gram_spice_spiked, :carrier_substance, :carrier_fluid, :spik_duration, :spik_duration_unit, :spik_comment)
+      params.require(:spikingparam).permit(:spik_weight_of_sample, :spik_weight_of_sample_unit, :cfu_of_inoculum_per_ml, :cfu_per_gram_spice_spiked, :carrier_substance, :carrier_fluid, :spik_duration, :spik_duration_unit, :spik_comment, :spiking_id)
     end
 end

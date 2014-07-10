@@ -15,10 +15,12 @@ class TenacitiesController < ApplicationController
   # GET /tenacities/new
   def new
     @tenacity = Tenacity.new
+    2.times {@tenacity.tenacityparams.build}    
   end
 
   # GET /tenacities/1/edit
   def edit
+    @tenacity.tenacityparams.build
   end
 
   # POST /tenacities
@@ -69,6 +71,6 @@ class TenacitiesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def tenacity_params
-      params.require(:tenacity).permit(:total_sample_number, :inoculum_concentration_initial, :i_concentration_unit, :reference_id, :user_id)
+      params.require(:tenacity).permit(:total_sample_number, :inoculum_concentration_initial, :i_concentration_unit, :reference_id, :user_id, tenacityparams_attributes: [:id, :tena_duration, :tena_duration_unit, :final_concentration, :f_concentration_unit, :decimal_reduction, :tena_comment, :_destroy])
     end
 end

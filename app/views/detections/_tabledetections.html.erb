@@ -17,6 +17,13 @@
 		      <th>Target protein</th>
 		      <th>Other characteristic</th>
 		      <th>Technique</th>
+		      <th>Medium</th>
+		      <th>Agar</th>
+		      <th>Incubation duration</th>
+		      <th>Incubation duration unit</th>
+		      <th>Incubation temp</th>
+		      <th>Sample volume per disc</th>
+		      <th>Medium volume per disc</th>
 		      <th>Verification</th>
 		      <th>Interpretation</th>
 		      <th>Detection device needed</th>
@@ -50,6 +57,55 @@
 		        <td><%= detection.target_protein %></td>
 		        <td><%= detection.other_characteristic %></td>
 		        <td><%= detection.technique %></td>
+		        <td>
+		        	<% detection.culdetecs.each do |p| %>
+		            <ul>
+		              <li><%= p.medium %></li>
+		            </ul>
+	            <% end %>            
+		        </td>
+		        <td>
+		        	<% detection.culdetecs.each do |p| %>
+		            <ul>
+		              <li><%= p.agar %></li>
+		            </ul>
+	            <% end %>            
+		        </td>
+		        <td>
+		        	<% detection.culdetecs.each do |p| %>
+		            <ul>
+		              <li><%= p.incubation_duration %></li>
+		            </ul>
+	            <% end %>            
+		        </td>
+		        <td>
+		        	<% detection.culdetecs.each do |p| %>
+		            <ul>
+		              <li><%= p.incubation_duration_unit %></li>
+		            </ul>
+	            <% end %>            
+		        </td>
+		        <td>
+		        	<% detection.culdetecs.each do |p| %>
+		            <ul>
+		              <li><%= p.incubation_temp %></li>
+		            </ul>
+	            <% end %>            
+		        </td>
+		        <td>
+		        	<% detection.culdetecs.each do |p| %>
+		            <ul>
+		              <li><%= p.sample_volume_per_disc %></li>
+		            </ul>
+	            <% end %>            
+		        </td>
+		        <td>
+		        	<% detection.culdetecs.each do |p| %>
+		            <ul>
+		              <li><%= p.medium_volume_per_disc %></li>
+		            </ul>
+	            <% end %>            
+		        </td>
 		        <td><%= detection.verification %></td>
 		        <td><%= detection.interpretation %></td>
 		        <td><%= detection.d_device_needed %></td>

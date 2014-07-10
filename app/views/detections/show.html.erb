@@ -90,6 +90,36 @@
                 <strong>Technique:</strong>
                 <%= @detection.technique %>
               </p>
+                            <!-- culdetec einbinden -->
+              <p><strong> cultural detection parameter: </strong></p>
+              <% @detection.culdetecs.each do |p| %>
+                <ul>
+                  <li>
+                    <strong>Medium:</strong>
+                    <%= p.medium if p.medium %>
+                  </li>
+                  <li>
+                    <strong>Agar:</strong>
+                    <%= p.agar if p.agar %>
+                  </li>
+                  <li>
+                    <strong>Incubation duration:</strong>
+                    <%= p.incubation_duration if p.incubation_duration %> <%= p.incubation_duration_unit if p.incubation_duration_unit %>
+                  </li>  
+                  <li>
+                    <strong>Incubation temperature (°C):</strong>
+                    <%= p.incubation_temp if p.incubation_temp %>
+                  </li> 
+                  <li>
+                    <strong>Sample volume per disc:</strong>
+                    <%= p.sample_volume_per_disc if p.sample_volume_per_disc %>
+                  </li>
+                  <li>
+                    <strong>Medium volume per disc:</strong>
+                    <%= p.medium_volume_per_disc if p.medium_volume_per_disc %>
+                  </li>                                                    
+                </ul>
+              <% end %>
 
               <p>
                 <strong>Verification:</strong>

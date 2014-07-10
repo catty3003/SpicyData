@@ -1,0 +1,39 @@
+<h1>Listing tenacityparams</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tena duration</th>
+      <th>Tena duration unit</th>
+      <th>Final concentration</th>
+      <th>F concentration unit</th>
+      <th>Decimal reduction</th>
+      <th>Tena comment</th>
+      <th>Tenacity</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tenacityparams.each do |tenacityparam| %>
+      <tr>
+        <td><%= tenacityparam.tena_duration %></td>
+        <td><%= tenacityparam.tena_duration_unit %></td>
+        <td><%= tenacityparam.final_concentration %></td>
+        <td><%= tenacityparam.f_concentration_unit %></td>
+        <td><%= tenacityparam.decimal_reduction %></td>
+        <td><%= tenacityparam.tena_comment %></td>
+        <td><%= tenacityparam.tenacity_id %></td>
+        <td><%= link_to 'Show', tenacityparam %></td>
+        <td><%= link_to 'Edit', edit_tenacityparam_path(tenacityparam) %></td>
+        <td><%= link_to 'Destroy', tenacityparam, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tenacityparam', new_tenacityparam_path %>

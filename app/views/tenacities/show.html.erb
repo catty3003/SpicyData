@@ -35,6 +35,29 @@
                 <%= @tenacity.i_concentration_unit %>
               </p>
 
+              <!-- tenacityparam einbinden -->
+              <p><strong>Tenacity parameter: </strong></p>
+              <% @tenacity.tenacityparams.each do |p| %>
+                <ul>
+                  <li>
+                    <strong>Tenacity duration:</strong>
+                    <%= p.tena_duration if p.tena_duration %> <%= p.tena_duration_unit if p.tena_duration_unit %>
+                  </li>
+                  <li>
+                    <strong>Final concentration:</strong>
+                    <%= p.final_concentration if p.final_concentration %> <%= p.f_concentration_unit if p.f_concentration_unit %>
+                  </li>
+                  <li>
+                    <strong>Decimal reduction:</strong>
+                    <%= p.decimal_reduction if p.decimal_reduction %>
+                  </li>   
+                  <li>
+                    <strong>Tenacity Comment:</strong>
+                    <%= p.tena_comment if p.tena_comment %>
+                  </li>                               
+                </ul>
+              <% end %>
+
               <p>
                 <strong>Reference:</strong>
                 <%= @tenacity.reference %>

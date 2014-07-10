@@ -15,10 +15,12 @@ class SpikingsController < ApplicationController
   # GET /spikings/new
   def new
     @spiking = Spiking.new
+    2.times {@spiking.spikingparams.build}
   end
 
   # GET /spikings/1/edit
   def edit
+    @spiking.spikingparams.build
   end
 
   # POST /spikings
@@ -69,6 +71,6 @@ class SpikingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def spiking_params
-      params.require(:spiking).permit(:spik_short_name, :spik_long_name, :spik_process_description, :spik_device_needed, :pros, :cons, :reference_id, :user_id)
+      params.require(:spiking).permit(:spik_short_name, :spik_long_name, :spik_process_description, :spik_device_needed, :pros, :cons, :reference_id, :user_id, spikingparams_attributes: [:id,:spik_weight_of_sample, :spik_weight_of_sample_unit, :cfu_of_inoculum_per_ml, :cfu_per_gram_spice_spiked, :carrier_substance, :carrier_fluid, :spik_duration, :spik_duration_unit, :spik_comment, :_destroy])
     end
 end

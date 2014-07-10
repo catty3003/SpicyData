@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class TenacityrerultTest < ActiveSupport::TestCase
+class TenacityparamTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

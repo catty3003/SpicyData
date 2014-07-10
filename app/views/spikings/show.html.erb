@@ -49,6 +49,40 @@
                 <strong>Cons:</strong>
                 <%= @spiking.cons %>
               </p>
+              <!-- Spikingparam einbinden -->
+              <p><strong>Spiking parameter: </strong></p>
+              <% @spiking.spikingparams.each do |p| %>
+                <ul>
+                  <li>
+                    <strong>Spiking weight of samle:</strong>
+                    <%= p.spik_weight_of_sample if p.spik_weight_of_sample %> <%= p.spik_weight_of_sample_unit if p.spik_weight_of_sample_unit %>
+                  </li>
+                  <li>
+                    <strong>CfU/ml of inoculum:</strong>
+                    <%= p.cfu_of_inoculum_per_ml if p.cfu_of_inoculum_per_ml %>
+                  </li>
+                  <li>
+                    <strong>CfU/g Spice spiked:</strong>
+                    <%= p.cfu_per_gram_spice_spiked if p.cfu_per_gram_spice_spiked %>
+                  </li>   
+                  <li>
+                    <strong>Carrier Substance:</strong>
+                    <%= p.carrier_substance if p.carrier_substance %>
+                  </li>
+                  <li>
+                    <strong>Carrier Fluid:</strong>
+                    <%= p.carrier_fluid if p.carrier_fluid %>
+                  </li>
+                  <li>
+                    <strong>Spiking duration:</strong>
+                    <%= p.spik_duration if p.spik_duration %> <%= p.spik_duration_unit if p.spik_duration_unit %>
+                  </li>
+                  <li>
+                    <strong>Spiking comment:</strong>
+                    <%= p.spik_comment if p.spik_comment %>
+                  </li>                                 
+                </ul>
+              <% end %>
 
               <p>
                 <strong>Reference:</strong>

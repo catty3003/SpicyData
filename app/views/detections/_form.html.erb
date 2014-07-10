@@ -80,6 +80,11 @@
         <%= f.label :technique %><br>
         <%= f.text_field :technique, class: "form-control" %>
       </div>
+
+      <%= f.fields_for :culdetecs do |builder| %>
+        <%= render 'culdetec_fields', f: builder %>
+      <% end %>
+
       <div class="field">
         <%= f.label :verification %><br>
         <%= f.text_area :verification, :placeholder=>"e.g. cultural method type: how should colonies look like? how to verificate them? ", class: "form-control" %>

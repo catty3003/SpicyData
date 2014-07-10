@@ -1,4 +1,8 @@
 SpicyData::Application.routes.draw do
+  resources :tenacities
+
+  resources :tenacityparams
+
   resources :admintreatmentopticals
 
   resources :adminreferencetypes
@@ -72,10 +76,6 @@ SpicyData::Application.routes.draw do
   resources :spikings
 
   resources :treatments
-
-  resources :tenacityrerults
-
-  resources :tenacities
 
   resources :agentparams
 

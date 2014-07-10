@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140706191713) do
+ActiveRecord::Schema.define(version: 20140710214358) do
 
   create_table "adminagentfamilies", force: true do |t|
     t.string   "a_family"
@@ -318,6 +318,7 @@ ActiveRecord::Schema.define(version: 20140706191713) do
     t.decimal  "spik_duration"
     t.string   "spik_duration_unit"
     t.text     "spik_comment"
+    t.integer  "spiking_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -337,7 +338,7 @@ ActiveRecord::Schema.define(version: 20140706191713) do
 
   create_table "tenacities", force: true do |t|
     t.integer  "total_sample_number"
-    t.integer  "inoculum_concentration_initial"
+    t.decimal  "inoculum_concentration_initial"
     t.string   "i_concentration_unit"
     t.integer  "reference_id"
     t.integer  "user_id"
@@ -345,12 +346,12 @@ ActiveRecord::Schema.define(version: 20140706191713) do
     t.datetime "updated_at"
   end
 
-  create_table "tenacityrerults", force: true do |t|
-    t.decimal  "tena_duration"
+  create_table "tenacityparams", force: true do |t|
+    t.float    "tena_duration"
     t.string   "tena_duration_unit"
     t.integer  "final_concentration"
     t.string   "f_concentration_unit"
-    t.decimal  "decimal_reduction"
+    t.float    "decimal_reduction"
     t.text     "tena_comment"
     t.integer  "tenacity_id"
     t.datetime "created_at"

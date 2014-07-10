@@ -10,6 +10,7 @@ class CreateSpikingparams < ActiveRecord::Migration
       t.decimal :spik_duration
       t.string :spik_duration_unit
       t.text :spik_comment
+      t.integer :spiking_id
 
       t.timestamps
     end

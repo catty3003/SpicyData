@@ -1,10 +1,10 @@
-<%= form_for(@tenacityrerult) do |f| %>
-  <% if @tenacityrerult.errors.any? %>
+<%= form_for(@tenacityparam) do |f| %>
+  <% if @tenacityparam.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@tenacityrerult.errors.count, "error") %> prohibited this tenacityrerult from being saved:</h2>
+      <h2><%= pluralize(@tenacityparam.errors.count, "error") %> prohibited this tenacityparam from being saved:</h2>
 
       <ul>
-      <% @tenacityrerult.errors.full_messages.each do |msg| %>
+      <% @tenacityparam.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>

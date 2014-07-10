@@ -15,7 +15,7 @@ class AgentsController < ApplicationController
   # GET /agents/new
   def new
     @agent = Agent.new
-    @agent.agentparams.build
+    2.times {@agent.agentparams.build}
   end
 
   # GET /agents/1/edit
@@ -52,6 +52,7 @@ class AgentsController < ApplicationController
       end
     end
   end
+  
 
   # DELETE /agents/1
   # DELETE /agents/1.json

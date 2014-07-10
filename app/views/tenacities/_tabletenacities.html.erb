@@ -5,6 +5,12 @@
 	      <th>Total sample number</th>
 	      <th>Inoculum concentration initial</th>
 	      <th>Concentration unit</th>
+	      <th>Tena duration</th>
+	      <th>Tena duration unit</th>
+	      <th>Final concentration</th>
+	      <th>F concentration unit</th>
+	      <th>Decimal reduction</th>
+	      <th>Tena comment</th>	      
 	      <th>Reference</th>
 	      <th>User</th>
 	      <th></th>
@@ -18,6 +24,48 @@
 	        <td width="30%"><h4><%= link_to tenacity.total_sample_number, tenacity_path(tenacity) %></h4></td>
 	        <td><%= tenacity.inoculum_concentration_initial %></td>
 	        <td><%= tenacity.i_concentration_unit %></td>
+	        <td>
+	        	<% tenacity.tenacityparams.each do |p| %>
+	            <ul>
+	              <li><%= p.tena_duration  if p.tena_duration  %></li>
+	            </ul>
+            <% end %>            
+	        </td>
+	        <td>
+	        	<% tenacity.tenacityparams.each do |p| %>
+	            <ul>
+	              <li><%= p.tena_duration_unit  if p.tena_duration_unit  %></li>
+	            </ul>
+            <% end %>            
+	        </td>
+	        <td>
+	        	<% tenacity.tenacityparams.each do |p| %>
+	            <ul>
+	              <li><%= p.final_concentration  if p.final_concentration  %></li>
+	            </ul>
+            <% end %>            
+	        </td>
+	        <td>
+	        	<% tenacity.tenacityparams.each do |p| %>
+	            <ul>
+	              <li><%= p.f_concentration_unit  if p.f_concentration_unit  %></li>
+	            </ul>
+            <% end %>            
+	        </td>
+					<td>
+	        	<% tenacity.tenacityparams.each do |p| %>
+	            <ul>
+	              <li><%= p.decimal_reduction  if p.decimal_reduction  %></li>
+	            </ul>
+            <% end %>            
+	        </td>
+	        <td>
+	        	<% tenacity.tenacityparams.each do |p| %>
+	            <ul>
+	              <li><%= p.tena_comment  if p.tena_comment  %></li>
+	            </ul>
+            <% end %>            
+	        </td>        
 	        <td><%= tenacity.reference_id %></td>
 	        <td><%= tenacity.user_id %></td>
 	        <td><%= link_to 'Show', tenacity, class: "btn btn-info btn-sm" %></td>

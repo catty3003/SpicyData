@@ -15,6 +15,9 @@
 	      <th>Mortality (%)</th>
 	      <th>Isolation source</th>
 	      <th>Natural occurence</th>
+	      <th>Infected species</th>	
+		    <th>Infectious dose</th>
+	      <th>Level of infectious dose</th>
 	      <th>Agent comment</th>
 	      <th>Reference</th>
 	      <th>User</th>
@@ -39,6 +42,27 @@
 	        <td><%= agent.mortality %></td>
 	        <td><%= agent.isolation_source %></td>
 	        <td><%= agent.natural_occurence %></td>
+	        <td>
+	        	<% agent.agentparams.order(:infected_species).each do |p| %>
+	            <ul>
+	              <li><%= p.infected_species if p.infected_species %></li>
+	            </ul>
+            <% end %>            
+	        </td>
+	        <td>
+	        	<% agent.agentparams.order(:infected_species).each do |p| %>
+	        		<ul>
+              	<li><%= p.infectious_dose if p.infectious_dose %></li> 
+              </ul>
+            <% end %>            
+	        </td>
+	        <td>
+	        	<% agent.agentparams.order(:infected_species).each do |p| %>
+	        		<ul>
+              	<li><%= p.level_of_infectious_dose if p.level_of_infectious_dose %></li> 
+              </ul>
+            <% end %>            
+	        </td>	        
 	        <td><%= agent.a_comment %></td>
 	        <td><%= agent.reference_id %></td>
 	        <td><%= agent.user_id %></td>

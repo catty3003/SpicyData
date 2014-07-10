@@ -15,95 +15,10 @@
 <div class="well">          
   <div class="panel panel-info">
     <div class="panel-body"> 
-
-
-      <div class="field">
-        <%= f.label :"agent common name" %><br>
-        <%= f.collection_select :adminagentname_id, Adminagentname.all.order(:a_common_name), :id, :a_common_name, {include_blank: true}, {class: "form-control"} %>
-      </div>
-
-      <div class="field">
-        <%= f.label :"agent family" %><br>
-        <%= f.collection_select :adminagentfamily_id, Adminagentfamily.all.order(:a_family), :id, :a_family, {include_blank: true}, {class: "form-control"} %>
-      </div>
-      <div class="field">
-        <%= f.label :"agent genus" %><br>
-        <%= f.collection_select :adminagentgenu_id, Adminagentgenu.all.order(:a_genus), :id, :a_genus, {include_blank: true}, {class: "form-control"} %>
-      </div>
-      <div class="field">
-        <%= f.label :"agent species" %><br>
-        <%= f.collection_select :adminagentspec_id, Adminagentspec.all.order(:a_species), :id, :a_species, {include_blank: true}, {class: "form-control"} %>
-      </div>
-      <div class="field">
-        <%= f.label :subspecies %><br>
-        <%= f.text_field :subspecies, class: "form-control" %>
-      </div>
-      <div class="field">
-        <%= f.label :serovar %><br>
-        <%= f.text_field :serovar, class: "form-control" %>
-      </div>
-      <div class="field">
-        <%= f.label :other_agent_name %><br>
-        <%= f.text_field :other_agent_name, :placeholder=>"if no agent name above match", class: "form-control"  %>
-      </div>
-      <div class="field">
-        <%= f.label :"Reference number" %><br>
-        <%= f.text_field :ref_number, :placeholder=>"e.g. ATCC 10832", class: "form-control" %>
-      </div>
-      <div class="field">
-        <%= f.label :"rate_of_illness (%)" %><br>
-        <%= f.text_field :rate_of_illness, class: "form-control" %>
-      </div>
-      <div class="field">
-        <%= f.label :"morbidity (%)" %><br>
-        <%= f.text_field :morbidity, class: "form-control" %>
-      </div>
-      <div class="field">
-        <%= f.label :"mortality (%)" %><br>
-        <%= f.text_field :mortality, class: "form-control" %>
-      </div>
-      <div class="field">
-        <%= f.label :isolation_source %><br>
-        <%= f.text_field :isolation_source, class: "form-control" %>
-      </div>
-      <div class="field">
-        <%= f.label :natural_occurence %><br>
-        <%= f.text_field :natural_occurence, class: "form-control" %>
-      </div>
-      <div class="field">
-        <%= f.label :"Agent comment" %><br>
-        <%= f.text_area :a_comment, class: "form-control" %>
-      </div>
-      <div class="field">
-        <%= f.label :reference_id %><br>
-        <%= f.select :reference_id, Reference.all.order(:first_author_name, :year).collect {|c| [ c.full_ref, c.id ] }, { :include_blank => true, :selected => @agent.reference_id}, class: "form-control" %>
-      </div>
-      <div class="field">
-        <%= f.label :user_id %><br>
-        <%= f.number_field :user_id, class: "form-control" %>
-      </div>
-
-
-      <%= f.fields_for :agentparams do |i| %>
-        <div calss="form-group">
-          <%= i.check_box :_destroy %>
-          <%= i.label :_destroy, "Remove exposure to hazard attributes" %>
-        </div>
-        <div class="field">
-          <%= i.label :infectious_dose %><br>
-          <%= i.text_field :infectious_dose, class: "form-control" %>
-        </div>
-        <div class="field">
-          <%= i.label :level_of_infectious_dose %><br>
-          <%= i.text_field :level_of_infectious_dose, class: "form-control" %>
-        </div>
-        <div class="field">
-          <%= i.label :infected_species %><br>
-          <%= i.text_field :infected_species, class: "form-control" %>
-        </div>
+      <%= render 'form_agent', f: f %>
+      <%= f.fields_for :agentparams do |builder| %>
+        <%= render 'agentparam_fields', f: builder %>
       <% end %>
-
-      
     </div>
   </div>
   <div class="actions">

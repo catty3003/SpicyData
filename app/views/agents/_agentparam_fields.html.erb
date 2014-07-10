@@ -1,0 +1,16 @@
+  <div class="form-group">
+    <%= f.check_box :_destroy %>
+    <%= f.label :_destroy, "Remove these exposure to hazard attribute fields." %>
+  </div>
+  <div class="field">
+    <%= f.label :infectious_dose %><br>
+    <%= f.text_field :infectious_dose, class: "form-control" %>
+  </div>
+  <div class="field">
+    <%= f.label :level_of_infectious_dose %><br>
+    <%= f.text_field :level_of_infectious_dose, class: "form-control" %>
+  </div>
+  <div class="field">
+    <%= f.label :infected_species %><br>
+    <%= f.text_field :infected_species, class: "form-control" %>
+  </div>
