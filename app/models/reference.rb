@@ -1,12 +1,12 @@
 class Reference < ActiveRecord::Base
 	has_and_belongs_to_many :agents
-	has_many :matrices
-	has_many :treatments
-	has_many :spikings
-	has_many :samplepreparations
-	has_many :detections
-	has_many :tenacities
-	has_many :contaminationstatuses
+	has_many :matrices, dependent: :nullify
+	has_many :treatments, dependent: :nullify
+	has_many :spikings, dependent: :nullify
+	has_many :samplepreparations, dependent: :nullify
+	has_many :detections, dependent: :nullify
+	has_many :tenacities, dependent: :nullify
+	has_many :contaminationstatuses, dependent: :nullify
 	belongs_to :adminreferencetype 
 
 	def full_ref

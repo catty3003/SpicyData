@@ -1,7 +1,7 @@
 class Matrix < ActiveRecord::Base
-	has_many :contaminationstatuses
+	has_many :contaminationstatuses, dependent: :nullify
 	belongs_to :reference
-  has_many :agents, through: :contaminationstatuses
+  has_many :agents, through: :contaminationstatuses, dependent: :nullify
   belongs_to :adminmatrixname 
   belongs_to :adminmatrixgenu 
   belongs_to :adminmatrixspec 

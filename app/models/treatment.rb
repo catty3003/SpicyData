@@ -1,7 +1,7 @@
 class Treatment < ActiveRecord::Base
 	belongs_to :matrices
 	belongs_to :reference
-	has_many :contaminationstatuses
+	has_many :contaminationstatuses, dependent: :nullify
 	belongs_to :admintreatmenttemperature 
 	belongs_to :admintreatmentsteam 
 	belongs_to :admintreatmentfumigation 
