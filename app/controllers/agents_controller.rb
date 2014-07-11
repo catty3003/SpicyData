@@ -1,3 +1,4 @@
+require 'csv'
 class AgentsController < ApplicationController
   before_action :set_agent, only: [:show, :edit, :update, :destroy]
 
@@ -5,6 +6,11 @@ class AgentsController < ApplicationController
   # GET /agents.json
   def index
     @agents = Agent.all
+    respond_to do |format|
+      format.html
+      format.csv { send_data @agents.to_csv }
+      format.xls { send_data @agents.to_csv(col_sep: "\t") }
+    end
   end
 
   # GET /agents/1
