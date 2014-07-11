@@ -12,5 +12,13 @@ class Agent < ActiveRecord::Base
   		allow_destroy: true, 
       :reject_if => :all_blank
             
+  def self.to_csv(options = {})
+    CSV.generate(options) do |csv|
+      csv << column_names
+      all.each do |agent|
+        csv << agent.attributes.values_at(*column_names)
+      end
+    end
+  end
 
 end
