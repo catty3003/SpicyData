@@ -15,8 +15,8 @@
       </div>     
 
       <div class="col-md-9" id="rightCol"> 
-        <%= link_to 'Export XLS', url_for(:format => 'xls') %>
-        <%= link_to 'Export CSV', url_for(:format => 'csv') %>
+        <%= link_to 'Export XLS', url_for(:format => 'xls'), class: "btn btn-success btn-sm" %> ||
+        <%= link_to 'Export CSV', url_for(:format => 'csv'), class: "btn btn-success btn-sm" %> <br><br>
 
         <%= render 'tableagents' %> <br>
         <%= link_to 'New Agent', new_agent_path, class: "btn btn-success " %>

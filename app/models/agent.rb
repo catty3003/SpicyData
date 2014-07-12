@@ -21,4 +21,5 @@ class Agent < ActiveRecord::Base
     end
   end
 
+
 end
