@@ -124,7 +124,7 @@
           <%= link_to 'Edit Agent', edit_agent_path(@agent), class: "btn btn-warning btn-sm" %> | 
 
           <% if params[:clone] == "attributes" %>
-            Title
+            
           <% else %>
             <%= link_to "Duplicate", agent_path(clone: "attributes"), class: "btn btn-success btn-sm"  %>
           <% end %> | 

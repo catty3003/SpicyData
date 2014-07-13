@@ -86,7 +86,7 @@
               <%= link_to 'Edit', edit_contaminationstatus_path(@contaminationstatus), class: "btn btn-warning btn-sm" %> | 
 
               <% if params[:clone] == "attributes" %>
-                Title
+              
               <% else %>
                 <%= link_to "Duplicate", contaminationstatus_path(clone: "attributes"), class: "btn btn-success btn-sm"  %>
               <% end %>  |
