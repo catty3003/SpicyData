@@ -58,8 +58,6 @@ SpicyData::Application.routes.draw do
   get "home/change_profile"
   get "home/admin"
 
-  get "agents/clone"
-
 
   resources :results
 

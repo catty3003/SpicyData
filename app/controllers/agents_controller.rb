@@ -1,5 +1,5 @@
 class AgentsController < ApplicationController
-  before_action :set_agent, only: [:show, :edit, :update, :destroy]
+  before_action :set_agent, only: [:show, :edit, :update, :destroy, :clone]
 
   # GET /agents
   # GET /agents.json
@@ -15,6 +15,14 @@ class AgentsController < ApplicationController
   # GET /agents/1
   # GET /agents/1.json
   def show
+    if params[:clone]
+      @agent=@agent.dupli
+
+      respond_to do |format|
+        format.html { render action: "new", notice: 'agent was successfully cloned.' }
+      end
+      else
+    end
   end
 
   # GET /agents/new
@@ -68,15 +76,6 @@ class AgentsController < ApplicationController
       format.json { head :no_content }
     end
   end
-
-def clone
-  @agent = Agent.find_by(params[:id])
-  @agent=@agent.dup
-
-  respond_to do |format|
-    format.html { render action: "new", notice: 'agent was successfully cloned.' }
-  end
-end
 
   private
     # Use callbacks to share common setup or constraints between actions.
