@@ -11,5 +11,11 @@ class Contaminationstatus < ActiveRecord::Base
 
 	accepts_nested_attributes_for :agent, 
                                 :reject_if => :all_blank
-       
+ 
+  def dupli
+    self.dup
+   #self.agentparams=agentparams
+    
+  end
+
 end

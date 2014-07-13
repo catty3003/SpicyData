@@ -20,9 +20,11 @@ class Agent < ActiveRecord::Base
       end
     end
   end
-  
+
   def dupli
     self.dup
+   #self.agentparams=agentparams
+    
   end
 
 end

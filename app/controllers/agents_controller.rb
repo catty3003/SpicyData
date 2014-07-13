@@ -16,7 +16,8 @@ class AgentsController < ApplicationController
   # GET /agents/1.json
   def show
     if params[:clone]
-      @agent=@agent.dupli
+      @agent = @agent.dupli 
+
 
       respond_to do |format|
         format.html { render action: "new", notice: 'agent was successfully cloned.' }

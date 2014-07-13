@@ -20,6 +20,15 @@ class ContaminationstatusesController < ApplicationController
   # GET /contaminationstatuses/1
   # GET /contaminationstatuses/1.json
   def show
+    if params[:clone]
+      @contaminationstatus = @contaminationstatus.dupli 
+
+
+      respond_to do |format|
+        format.html { render action: "new", notice: 'agent was successfully cloned.' }
+      end
+      else
+    end    
   end
 
   # GET /contaminationstatuses/new
