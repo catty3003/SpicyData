@@ -1,4 +1,4 @@
-<%= form_for(@detection) do |f| %>
+<%= nested_form_for(@detection) do |f| %>
   <% if @detection.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@detection.errors.count, "error") %> prohibited this detection from being saved:</h2>
@@ -84,6 +84,7 @@
       <%= f.fields_for :culdetecs do |builder| %>
         <%= render 'culdetec_fields', f: builder %>
       <% end %>
+      <p><%= f.link_to_add "Add more cultural detection parameter fields.", :culdetecs, class: "btn btn-success btn-sm" %></p>
 
       <div class="field">
         <%= f.label :verification %><br>

@@ -1,4 +1,4 @@
-<%= form_for(@tenacity) do |f| %>
+<%= nested_form_for(@tenacity) do |f| %>
   <% if @tenacity.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@tenacity.errors.count, "error") %> prohibited this tenacity from being saved:</h2>
@@ -32,6 +32,8 @@
   <%= f.fields_for :tenacityparams do |builder| %>
     <%= render 'tenacityparam_fields', f: builder %>
   <% end %>
+  <p><%= f.link_to_add "Add more Tenacity parameter fields.", :tenacityparams, class: "btn btn-success btn-sm" %></p>
+
   <div class="field">
     <%= f.label :reference_id %><br>
     <%= f.select :reference_id, Reference.all.order(:first_author_name, :year).collect {|c| [ c.full_ref, c.id ] }, { :include_blank => true, :selected => @tenacity.reference_id}, class: "form-control" %>

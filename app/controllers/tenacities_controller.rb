@@ -15,12 +15,11 @@ class TenacitiesController < ApplicationController
   # GET /tenacities/new
   def new
     @tenacity = Tenacity.new
-    2.times {@tenacity.tenacityparams.build}    
+    @tenacity.tenacityparams.build  
   end
 
   # GET /tenacities/1/edit
   def edit
-    @tenacity.tenacityparams.build
   end
 
   # POST /tenacities

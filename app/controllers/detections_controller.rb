@@ -15,12 +15,11 @@ class DetectionsController < ApplicationController
   # GET /detections/new
   def new
     @detection = Detection.new
-    2.times {@detection.culdetecs.build}
+    @detection.culdetecs.build
   end
 
   # GET /detections/1/edit
   def edit
-    @detection.culdetecs.build
   end
 
   # POST /detections

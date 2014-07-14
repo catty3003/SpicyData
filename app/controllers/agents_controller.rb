@@ -29,12 +29,11 @@ class AgentsController < ApplicationController
   # GET /agents/new
   def new
     @agent = Agent.new
-    2.times {@agent.agentparams.build}
+    @agent.agentparams.build
   end
 
   # GET /agents/1/edit
   def edit
-    @agent.agentparams.build
   end
 
   # POST /agents

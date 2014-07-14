@@ -15,12 +15,11 @@ class SpikingsController < ApplicationController
   # GET /spikings/new
   def new
     @spiking = Spiking.new
-    2.times {@spiking.spikingparams.build}
+    @spiking.spikingparams.build
   end
 
   # GET /spikings/1/edit
   def edit
-    @spiking.spikingparams.build
   end
 
   # POST /spikings

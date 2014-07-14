@@ -1,6 +1,5 @@
   <div class="form-group">
-    <%= f.check_box :_destroy %>
-    <%= f.label :_destroy, "Remove these exposure to hazard attribute fields." %>
+    <%= f.link_to_remove "Remove these exposure to hazard attribute fields.", class: "btn btn-danger btn-sm" %>
   </div>
   <div class="field">
     <%= f.label :infectious_dose %><br>

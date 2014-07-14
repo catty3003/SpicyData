@@ -1,4 +1,4 @@
-<%= form_for(@spiking) do |f| %>
+<%= nested_form_for(@spiking) do |f| %>
   <% if @spiking.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@spiking.errors.count, "error") %> prohibited this spiking from being saved:</h2>
@@ -40,9 +40,12 @@
         <%= f.label :cons %><br>
         <%= f.text_area :cons %>
       </div>
+
       <%= f.fields_for :spikingparams do |builder| %>
         <%= render 'spikingparam_fields', f: builder %>
-      <% end %>      
+      <% end %>   
+      <p><%= f.link_to_add "Add more Spiking parameter fields.", :spikingparams, class: "btn btn-success btn-sm" %></p>
+
       <div class="field">
         <%= f.label :reference_id %><br>
         <%= f.select :reference_id, Reference.all.order(:first_author_name, :year).collect {|c| [ c.full_ref, c.id ] }, { :include_blank => true, :selected => @spiking.reference_id}, class: "form-control" %>
