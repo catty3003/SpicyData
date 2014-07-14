@@ -22,9 +22,7 @@ class Agent < ActiveRecord::Base
   end
 
   def dupli
-    self.dup
-   #self.agentparams=agentparams
-    
+    agent = self.deep_clone :include => :agentparams
   end
 
 end
