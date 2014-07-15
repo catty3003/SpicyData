@@ -13,9 +13,7 @@ class Contaminationstatus < ActiveRecord::Base
                                 :reject_if => :all_blank
  
   def dupli
-    self.dup
-   #self.agentparams=agentparams
-    
+    self.dup    
   end
 
 end

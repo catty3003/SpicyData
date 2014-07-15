@@ -8,4 +8,9 @@ class Treatment < ActiveRecord::Base
 	belongs_to :admintreatmentoptical 
 	belongs_to :admintreatmentmechanical 
 	belongs_to :admintreatmentprocesstype 
+
+  def full_treat
+    "ID: " + self.id.to_s + ". " + self.t_comment
+  end
+
 end

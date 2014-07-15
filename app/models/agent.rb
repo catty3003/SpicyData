@@ -1,6 +1,6 @@
 class Agent < ActiveRecord::Base
 	has_many :agentparams, dependent: :delete_all
-	has_and_belongs_to_many :references
+	belongs_to  :reference
 	has_many :contaminationstatuses, dependent: :nullify
 	has_many :matrices, through: :contaminationstatuses, dependent: :nullify
 	belongs_to :adminagentname 
@@ -23,6 +23,10 @@ class Agent < ActiveRecord::Base
 
   def dupli
     agent = self.deep_clone :include => :agentparams
+  end
+
+  def full_agent
+    "ID: " + self.id.to_s + ". "+ self.adminagentname.a_common_name + ": " + self.adminagentgenu.a_genus + " " + self.adminagentspec.a_species
   end
 
 end

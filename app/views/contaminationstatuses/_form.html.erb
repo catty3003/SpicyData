@@ -22,42 +22,45 @@
       </div>
       <div class="field">
         <%= f.label :cfu_natural_contamination_unit %><br>
-        <%= radio_button_tag :cfu_natural_contamination_unit, "CfU/Gramm"  %> <%= f.label :cfu_natural_contamination_unit, "CfU/Gramm" %>
-        <%= radio_button_tag :cfu_natural_contamination_unit, "CfU/Milliliter"  %> <%= f.label :cfu_natural_contamination_unit, "CfU/Milliliter" %>
+        <%= f.radio_button :cfu_natural_contamination_unit, "CfU/Gramm"  %> <%= f.label :cfu_natural_contamination_unit, "CfU/Gramm" %>
+        <%= f.radio_button :cfu_natural_contamination_unit, "CfU/Milliliter"  %> <%= f.label :cfu_natural_contamination_unit, "CfU/Milliliter" %>
       </div>
-      <div class="field">
-        <%= f.label :matrix_id %><br>
-        <%= f.select :matrix_id, Matrix.all.order(:id).collect {|c| [ [c.id], c.id ] }, { :include_blank => true, :selected => @contaminationstatus.matrix_id}, class: "form-control" %>
-      </div>
-      <div class="field">
-        <%= f.label :agent_id %><br>
-        <%= f.select :agent_id, Agent.all.order(:id).collect {|c| [ [c.id], c.id ] }, { :include_blank => true, :selected => @contaminationstatus.agent_id}, class: "form-control" %>
-      </div>
-      <div class="field">
-        <%= f.label :tenacity_id %><br>
-        <%= f.select :tenacity_id, Tenacity.all.order(:id).collect {|c| [ [c.id], c.id ] }, { :include_blank => true, :selected => @contaminationstatus.tenacity_id}, class: "form-control" %>
-      </div>
-      <div class="field">
-        <%= f.label :treatment_id %><br>
-        <%= f.select :treatment_id, Treatment.all.order(:id).collect {|c| [ [c.id], c.id ] }, { :include_blank => true, :selected => @contaminationstatus.treatment_id}, class: "form-control" %>
-      </div>
-      <div class="field">
-        <%= f.label :spiking_id %><br>
-        <%= f.select :spiking_id, Spiking.all.order(:id).collect {|c| [ [c.id], c.id ] }, { :include_blank => true, :selected => @contaminationstatus.spiking_id}, class: "form-control" %>
-      </div>
-      <div class="field">
-        <%= f.label :samplepreparation_id %><br>
-        <%= f.select :samplepreparation_id, Samplepreparation.all.order(:id).collect {|c| [ [c.id], c.id ] }, { :include_blank => true, :selected => @contaminationstatus.samplepreparation_id}, class: "form-control" %>
-      </div>
-      <div class="field">
-        <%= f.label :detection_id %><br>
-        <%= f.select :detection_id, Detection.all.order(:id).collect {|c| [ [c.id], c.id ] }, { :include_blank => true, :selected => @contaminationstatus.detection_id}, class: "form-control" %>
-      </div>
+
       <div class="field">
         <%= f.label :reference_id %><br>
         <%= f.select :reference_id, Reference.all.order(:first_author_name, :year).collect {|c| [ c.full_ref, c.id ] }, { :include_blank => true, :selected => @contaminationstatus.reference_id}, class: "form-control" %>
       </div>
 
+      <div class="field">
+        <%= f.label :matrix_id %><br>
+        <%= f.select :matrix_id, Matrix.all.order(:id).collect {|c| [c.full_matrix, c.id ] }, { :include_blank => true, :selected => @contaminationstatus.matrix_id}, class: "form-control" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :agent_id %><br>
+        <%= f.select :agent_id, Agent.all.order(:id).collect {|c| [ c.full_agent, c.id ] }, { :include_blank => true, :selected => @contaminationstatus.agent_id}, class: "form-control" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :tenacity_id %><br>
+        <%= f.select :tenacity_id, Tenacity.all.order(:id).collect {|c| [ c.full_tena, c.id ] }, { :include_blank => true, :selected => @contaminationstatus.tenacity_id}, class: "form-control" %>
+      </div>
+      <div class="field">
+        <%= f.label :treatment_id %><br>
+        <%= f.select :treatment_id, Treatment.all.order(:id).collect {|c| [c.full_treat, c.id ] }, { :include_blank => true, :selected => @contaminationstatus.treatment_id}, class: "form-control" %>
+      </div>
+      <div class="field">
+        <%= f.label :spiking_id %><br>
+        <%= f.select :spiking_id, Spiking.all.order(:id).collect {|c| [ c.full_spik, c.id ] }, { :include_blank => true, :selected => @contaminationstatus.spiking_id}, class: "form-control" %>
+      </div>
+      <div class="field">
+        <%= f.label :samplepreparation_id %><br>
+        <%= f.select :samplepreparation_id, Samplepreparation.all.order(:id).collect {|c| [ c.full_sampleprep, c.id ] }, { :include_blank => true, :selected => @contaminationstatus.samplepreparation_id}, class: "form-control" %>
+      </div>
+      <div class="field">
+        <%= f.label :detection_id %><br>
+        <%= f.select :detection_id, Detection.all.order(:id).collect {|c| [ c.full_detec, c.id ] }, { :include_blank => true, :selected => @contaminationstatus.detection_id}, class: "form-control" %>
+      </div>
 
       <div class="field">
         <%= f.label :user_id %><br>
@@ -65,7 +68,7 @@
       </div>
         <div class="field">
         <%= f.label :result_id %><br>
-        <%= f.select :result_id, Result.all.order(:id).collect {|c| [ [c.id], c.id ] }, { :include_blank => true, :selected => @contaminationstatus.result_id}, class: "form-control" %>
+        <%= f.select :result_id, Result.all.order(:id).collect {|c| [ c.full_res, c.id ] }, { :include_blank => true, :selected => @contaminationstatus.result_id}, class: "form-control" %>
       </div>
 
 

@@ -44,4 +44,4 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 gem 'deep_cloneable', '~> 2.0.0'
-gem "nested_form"
+gem 'nested_form'

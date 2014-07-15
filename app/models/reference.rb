@@ -1,5 +1,5 @@
 class Reference < ActiveRecord::Base
-	has_and_belongs_to_many :agents
+	has_many :agents
 	has_many :matrices, dependent: :nullify
 	has_many :treatments, dependent: :nullify
 	has_many :spikings, dependent: :nullify
@@ -10,6 +10,7 @@ class Reference < ActiveRecord::Base
 	belongs_to :adminreferencetype 
 
 	def full_ref
-    self.id.to_s + ". " + self.first_author_name + " (" + self.year.to_s + "): " + self.title
+    "ID: " + self.id.to_s + ". " + self.first_author_name + " (" + self.year.to_s + "): " + self.title
   end
+  
 end

@@ -7,4 +7,9 @@ class Detection < ActiveRecord::Base
 	  accepts_nested_attributes_for :culdetecs, 
   		allow_destroy: true, 
       :reject_if => :all_blank
+
+  def full_detec
+    "ID: " + self.id.to_s + ". "+ self.d_short_name 
+  end
+
 end

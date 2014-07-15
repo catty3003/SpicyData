@@ -7,4 +7,8 @@ class Spiking < ActiveRecord::Base
   		allow_destroy: true, 
       :reject_if => :all_blank
 
+  def full_spik
+    "ID: " + self.spik_short_name
+  end
+
 end

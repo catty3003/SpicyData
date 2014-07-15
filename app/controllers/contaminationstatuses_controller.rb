@@ -34,6 +34,13 @@ class ContaminationstatusesController < ApplicationController
   # GET /contaminationstatuses/new
   def new
     @contaminationstatus = Contaminationstatus.new
+
+    @references = Reference.all
+    @references_for_dropdown = []
+    @references.each do |i|
+      @references_for_dropdown = @references_for_dropdown << [i.first_author_name,i.id]
+    end
+        
   end
 
   # GET /contaminationstatuses/1/edit

@@ -7,4 +7,9 @@ class Tenacity < ActiveRecord::Base
   		allow_destroy: true, 
       :reject_if => :all_blank
 
+  def full_tena
+    "ID: " + self.id.to_s + ". CfU initial inoculum: "+ self.inoculum_concentration_initial.to_s + " " + self.i_concentration_unit 
+  end
+
 end
+

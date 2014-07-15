@@ -22,8 +22,8 @@
       </div>
       <div class="field">
         <%= f.label :cfu_initial_unit %><br>
-        <%= radio_button_tag :cfu_initial_unit, "CfU/Gramm"  %> <%= f.label :cfu_initial_unit, "CfU/Gramm" %>
-        <%= radio_button_tag :cfu_initial_unit, "CfU/Milliliter"  %> <%= f.label :cfu_initial_unit, "CfU/Milliliter" %>
+        <%= f.radio_button :cfu_initial_unit, "CfU/Gramm"  %> <%= f.label :cfu_initial_unit, "CfU/Gramm" %>
+        <%= f.radio_button :cfu_initial_unit, "CfU/Milliliter"  %> <%= f.label :cfu_initial_unit, "CfU/Milliliter" %>
       </div>
       <div class="field">
         <%= f.label :detectability %><br>
@@ -35,8 +35,8 @@
       </div>
       <div class="field">
         <%= f.label :cfu_detected_unit %><br>
-        <%= radio_button_tag :cfu_detected_unit, "CfU/Gramm"  %> <%= f.label :cfu_detected_unit, "CfU/Gramm" %>
-        <%= radio_button_tag :cfu_detected_unit, "CfU/Milliliter"  %> <%= f.label :cfu_detected_unit, "CfU/Milliliter" %>
+        <%= f.radio_button :cfu_detected_unit, "CfU/Gramm"  %> <%= f.label :cfu_detected_unit, "CfU/Gramm" %>
+        <%= f.radio_button :cfu_detected_unit, "CfU/Milliliter"  %> <%= f.label :cfu_detected_unit, "CfU/Milliliter" %>
       </div>
       <div class="field">
         <%= f.label :"Result comment" %><br>

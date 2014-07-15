@@ -9,4 +9,8 @@ class Matrix < ActiveRecord::Base
   belongs_to :adminmatrixstorageform 
   belongs_to :adminmatrixproductform 
 
+  def full_matrix
+    "ID: " + self.id.to_s + ". "+ self.adminmatrixname.m_common_name + ": " + self.adminmatrixgenu.m_genus + " " + self.adminmatrixspec.m_species
+  end
+
 end

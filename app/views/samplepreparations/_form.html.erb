@@ -26,9 +26,9 @@
   </div>
   <div class="field">
     <%= f.label :samprep_method_validated_for_condiments %><br>
-    <%= radio_button_tag :samprep_method_validated_for_condiments, "Yes"  %> <%= f.label :samprep_method_validated_for_condiments, "Yes" %>
-    <%= radio_button_tag :samprep_method_validated_for_condiments, "No"  %> <%= f.label :samprep_method_validated_for_condiments, "No" %>
-    <%= radio_button_tag :samprep_method_validated_for_condiments, "Unknown"  %> <%= f.label :samprep_method_validated_for_condiments, "Unknown" %> 
+    <%= f.radio_button :samprep_method_validated_for_condiments, "Yes"  %> <%= f.label :samprep_method_validated_for_condiments, "Yes" %>
+    <%= f.radio_button :samprep_method_validated_for_condiments, "No"  %> <%= f.label :samprep_method_validated_for_condiments, "No" %>
+    <%= f.radio_button :samprep_method_validated_for_condiments, "Unknown"  %> <%= f.label :samprep_method_validated_for_condiments, "Unknown" %> 
   </div>
   <div class="field">
     <%= f.label :samprep_process_description %><br>
@@ -40,9 +40,9 @@
   </div>
   <div class="field">
     <%= f.label :"Sampreparation_weight_of_sample_unit" %><br>
-    <%= radio_button_tag :spik_weight_of_sample_unit, "Milligramm"  %> <%= f.label :spik_weight_of_sample_unit, "Milligramm" %>
-    <%= radio_button_tag :spik_weight_of_sample_unit, "Gramm"  %> <%= f.label :spik_weight_of_sample_unit, "Gramm" %>
-    <%= radio_button_tag :spik_weight_of_sample_unit, "Kilogramm"  %> <%= f.label :spik_weight_of_sample_unit, "Kilogramm" %> 
+    <%= f.radio_button :spik_weight_of_sample_unit, "Milligramm"  %> <%= f.label :spik_weight_of_sample_unit, "Milligramm" %>
+    <%= f.radio_button :spik_weight_of_sample_unit, "Gramm"  %> <%= f.label :spik_weight_of_sample_unit, "Gramm" %>
+    <%= f.radio_button :spik_weight_of_sample_unit, "Kilogramm"  %> <%= f.label :spik_weight_of_sample_unit, "Kilogramm" %> 
   </div>
   <div class="field">
     <%= f.label :"Dilution fluid" %><br>
@@ -59,33 +59,33 @@
   <div class ="well">
     <div class="field">
       <%= f.label :enrichment %><br>
-      <%= radio_button_tag :enrichment, "Yes"  %> <%= f.label :enrichment, "Yes" %>
-      <%= radio_button_tag :enrichment, "No"  %> <%= f.label :enrichment, "No" %>
-      <%= radio_button_tag :enrichment, "Other"  %> <%= f.label :enrichment, "Other" %> 
+      <%= f.radio_button :enrichment, "Yes"  %> <%= f.label :enrichment, "Yes" %>
+      <%= f.radio_button :enrichment, "No"  %> <%= f.label :enrichment, "No" %>
+      <%= f.radio_button :enrichment, "Other"  %> <%= f.label :enrichment, "Other" %> 
     </div>
     <div class="field">
       <%= f.label :"DNA extraction" %><br>
-      <%= radio_button_tag :dna_extraction, "Yes"  %> <%= f.label :dna_extraction, "Yes" %>
-      <%= radio_button_tag :dna_extraction, "No"  %> <%= f.label :dna_extraction, "No" %>
-      <%= radio_button_tag :dna_extraction, "Other"  %> <%= f.label :dna_extraction, "Other" %>
+      <%= f.radio_button :dna_extraction, "Yes"  %> <%= f.label :dna_extraction, "Yes" %>
+      <%= f.radio_button :dna_extraction, "No"  %> <%= f.label :dna_extraction, "No" %>
+      <%= f.radio_button :dna_extraction, "Other"  %> <%= f.label :dna_extraction, "Other" %>
     </div>
     <div class="field">
       <%= f.label :"RNA extraction" %><br>
-      <%= radio_button_tag :rna_extraction, "Yes"  %> <%= f.label :rna_extraction, "Yes" %>
-      <%= radio_button_tag :rna_extraction, "No"  %> <%= f.label :rna_extraction, "No" %>
-      <%= radio_button_tag :rna_extraction, "Other"  %> <%= f.label :rna_extraction, "Other" %>
+      <%= f.radio_button :rna_extraction, "Yes"  %> <%= f.label :rna_extraction, "Yes" %>
+      <%= f.radio_button :rna_extraction, "No"  %> <%= f.label :rna_extraction, "No" %>
+      <%= f.radio_button :rna_extraction, "Other"  %> <%= f.label :rna_extraction, "Other" %>
     </div>
     <div class="field">
       <%= f.label :protein_extraction %><br>
-      <%= radio_button_tag :protein_extraction, "Yes"  %> <%= f.label :protein_extraction, "Yes" %>
-      <%= radio_button_tag :protein_extraction, "No"  %> <%= f.label :protein_extraction, "No" %>
-      <%= radio_button_tag :protein_extraction, "Other"  %> <%= f.label :protein_extraction, "Other" %>
+      <%= f.radio_button :protein_extraction, "Yes"  %> <%= f.label :protein_extraction, "Yes" %>
+      <%= f.radio_button :protein_extraction, "No"  %> <%= f.label :protein_extraction, "No" %>
+      <%= f.radio_button :protein_extraction, "Other"  %> <%= f.label :protein_extraction, "Other" %>
     </div>
     <div class="field">
       <%= f.label :homogenizing_method %><br>
-      <%= radio_button_tag :homogenizing_method, "Yes"  %> <%= f.label :homogenizing_method, "Yes" %>
-      <%= radio_button_tag :homogenizing_method, "No"  %> <%= f.label :homogenizing_method, "No" %>
-      <%= radio_button_tag :homogenizing_method, "Other"  %> <%= f.label :homogenizing_method, "Other" %>
+      <%= f.radio_button :homogenizing_method, "Yes"  %> <%= f.label :homogenizing_method, "Yes" %>
+      <%= f.radio_button :homogenizing_method, "No"  %> <%= f.label :homogenizing_method, "No" %>
+      <%= f.radio_button :homogenizing_method, "Other"  %> <%= f.label :homogenizing_method, "Other" %>
     </div>
     <div class="field">
       <%= f.label :cell_lysis %><br>
@@ -106,9 +106,9 @@
   </div>
   <div class="field">
     <%= f.label :"Sample preparation duration" %><br>
-    <%= radio_button_tag :samprep_duration_unit, "seconds"  %> <%= f.label :samprep_duration_unit, "seconds" %>
-    <%= radio_button_tag :samprep_duration_unit, "minutes"  %> <%= f.label :samprep_duration_unit, "mminutes" %>
-    <%= radio_button_tag :samprep_duration_unit, "hours"  %> <%= f.label :samprep_duration_unit, "hours" %> <br>
+    <%= f.radio_button :samprep_duration_unit, "seconds"  %> <%= f.label :samprep_duration_unit, "seconds" %>
+    <%= f.radio_button :samprep_duration_unit, "minutes"  %> <%= f.label :samprep_duration_unit, "mminutes" %>
+    <%= f.radio_button :samprep_duration_unit, "hours"  %> <%= f.label :samprep_duration_unit, "hours" %> <br>
     <%= f.text_field :samprep_duration, class: "form-control" %>
   </div>
   <div class="field">

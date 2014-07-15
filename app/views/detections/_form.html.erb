@@ -24,11 +24,12 @@
         <%= f.label :"detection_long_name" %><br>
         <%= f.text_area :d_long_name, class: "form-control" %>
       </div>
+
       <div class="field">
-        <%= f.label :"detection_method_validated_for_condiments" %><br>        
-        <%= radio_button_tag :detection_method_validated_for_condiments, "Yes"  %> <%= f.label :detection_method_validated_for_condiments, "Yes" %>
-        <%= radio_button_tag :detection_method_validated_for_condiments, "No"  %> <%= f.label :detection_method_validated_for_condiments, "No" %>
-        <%= radio_button_tag :detection_method_validated_for_condiments, "Unknown"  %> <%= f.label :detection_method_validated_for_condiments, "Unknown" %>          
+        <%= f.label :"detection_method_validated_for_condiments" %><br>    
+        <%= f.radio_button :d_method_validated_for_condiments, "Yes"  %> <%= f.label :d_method_validated_for_condiments, "Yes" %>
+        <%= f.radio_button :d_method_validated_for_condiments, "No"  %> <%= f.label :d_method_validated_for_condiments, "No" %>
+        <%= f.radio_button :d_method_validated_for_condiments, "Unknown"  %> <%= f.label :d_method_validated_for_condiments, "Unknown" %>          
       </div>
       <div class="field">
         <%= f.label :"detection_process_description" %><br>
@@ -40,9 +41,9 @@
       </div>
       <div class="field">
         <%= f.label :"detection_weight_of_sample_unit" %><br>
-        <%= radio_button_tag :d_weight_of_sample_unit, "Milligramm"  %> <%= f.label :d_weight_of_sample_unit, "Milligramm" %>
-        <%= radio_button_tag :d_weight_of_sample_unit, "Gramm"  %> <%= f.label :d_weight_of_sample_unit, "Gramm" %>
-        <%= radio_button_tag :d_weight_of_sample_unit, "Kilogramm"  %> <%= f.label :d_weight_of_sample_unit, "Kilogramm" %> 
+        <%= f.radio_button :d_weight_of_sample_unit, "Milligramm"  %> <%= f.label :d_weight_of_sample_unit, "Milligramm" %>
+        <%= f.radio_button :d_weight_of_sample_unit, "Gramm"  %> <%= f.label :d_weight_of_sample_unit, "Gramm" %>
+        <%= f.radio_button :d_weight_of_sample_unit, "Kilogramm"  %> <%= f.label :d_weight_of_sample_unit, "Kilogramm" %> 
       </div>
       <div class="field">
         <%= f.label :detection_method_dilution %><br>
@@ -58,11 +59,11 @@
       </div>
       <div class="field">
         <%= f.label :duration_until_result_unit %><br>
-        <%= radio_button_tag :duration_until_result_unit, "seconds"  %> <%= f.label :duration_until_result_unit, "seconds" %>
-        <%= radio_button_tag :duration_until_result_unit, "minutes"  %> <%= f.label :duration_until_result_unit, "mminutes" %>
-        <%= radio_button_tag :duration_until_result_unit, "hours"  %> <%= f.label :duration_until_result_unit, "hours" %> 
-        <%= radio_button_tag :duration_until_result_unit, "days"  %> <%= f.label :duration_until_result_unit, "days" %> 
-        <%= radio_button_tag :duration_until_result_unit, "months"  %> <%= f.label :duration_until_result_unit, "months" %> 
+        <%= f.radio_button :duration_until_result_unit, "seconds"  %> <%= f.label :duration_until_result_unit, "seconds" %>
+        <%= f.radio_button :duration_until_result_unit, "minutes"  %> <%= f.label :duration_until_result_unit, "mminutes" %>
+        <%= f.radio_button :duration_until_result_unit, "hours"  %> <%= f.label :duration_until_result_unit, "hours" %> 
+        <%= f.radio_button :duration_until_result_unit, "days"  %> <%= f.label :duration_until_result_unit, "days" %> 
+        <%= f.radio_button :duration_until_result_unit, "months"  %> <%= f.label :duration_until_result_unit, "months" %> 
       </div>
       <div class="field">
         <%= f.label :target_gen %><br>
