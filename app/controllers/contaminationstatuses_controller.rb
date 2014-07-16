@@ -6,15 +6,70 @@ class ContaminationstatusesController < ApplicationController
   def index
     @contaminationstatuses = Contaminationstatus.all
     
-    @matrices = Matrix.all 
-    @agents =Agent.all 
-    @detections = Detection.all
+    respond_to do |format|
+      format.html
+      format.csv { send_data @agents.to_csv }
+      format.xls
+    end
+
+    
     @references = Reference.all
-    @results = Result.all
-    @samplepreparations = Samplepreparation.all
+    @references_for_dropdown = []
+    @references.each do |i|
+      @references_for_dropdown << [i.full_ref, i.id]
+    end
+
+    @matrices = Matrix.all
+    @matrices_for_dropdown = []
+    @matrices.each do |i|
+      # class of dependent option must be equal to id of parent one
+      @matrices_for_dropdown << [i.full_matrix, i.id, {class: i.reference.id}]
+    end
+
+    @agents = Agent.all
+    @agents_for_dropdown = []
+    @agents.each do |i|
+      # class of dependent option must be equal to id of parent one
+      @agents_for_dropdown << [i.full_agent, i.id, {class: i.reference.id}]
+    end
+
     @spikings = Spiking.all
-    @tenacities = Tenacity.all
+    @spikings_for_dropdown = []
+    @spikings.each do |i|
+      # class of dependent option must be equal to id of parent one
+      @spikings_for_dropdown << [i.full_spik, i.id, {class: i.reference.id}]
+    end
+
     @treatments = Treatment.all
+    @treatments_for_dropdown = []
+    @treatments.each do |i|
+      # class of dependent option must be equal to id of parent one
+      @treatments_for_dropdown << [i.full_treat, i.id, {class: i.reference.id}]
+    end
+
+    @samplepreparations = Samplepreparation.all
+    @samplepreparations_for_dropdown = []
+    @samplepreparations.each do |i|
+      # class of dependent option must be equal to id of parent one
+      @samplepreparations_for_dropdown << [i.full_sampleprep, i.id, {class: i.reference.id}]
+    end
+
+    @detections = Detection.all
+    @detections_for_dropdown = []
+    @detections.each do |i|
+      # class of dependent option must be equal to id of parent one
+      @detections_for_dropdown << [i.full_detec, i.id, {class: i.reference.id}]
+    end
+
+    @tenacities = Tenacity.all
+    @tenacities_for_dropdown = []
+    @tenacities.each do |i|
+      # class of dependent option must be equal to id of parent one
+      @tenacities_for_dropdown << [i.full_tena, i.id, {class: i.reference.id}]
+    end
+
+    @results = Result.all
+
   end
 
   # GET /contaminationstatuses/1
