@@ -1,0 +1,8 @@
+<div class="center hero-unit">
+  <h3>Welcome to the Ruby on Rails Chained Select App</h3>
+  <div class="row selects-row">
+  <%= select("reference", "first_author_name", options_for_select(@references_for_dropdown), {prompt: 'Select Room'}, {class: 'chained-select'}) %>
+  <%= select("matrix", "place_of_origin", options_for_select(@matrices_for_dropdown), {prompt: 'Select Device'}, {class: 'chained-select'}) %>
+  </div>
+</div> 
+
