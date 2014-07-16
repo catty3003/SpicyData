@@ -57,6 +57,8 @@ SpicyData::Application.routes.draw do
   get "home/join_discuss"
   get "home/change_profile"
   get "home/admin"
+  
+  get "contaminationstatuses/clone"
 
 
   resources :results

@@ -80,10 +80,14 @@ class ContaminationstatusesController < ApplicationController
 
 
       respond_to do |format|
-        format.html { render action: "new", notice: 'agent was successfully cloned.' }
+        format.html { render action: "clone", notice: 'agent was successfully cloned.' }
       end
       else
     end    
+  end
+
+  def clone
+    @contaminationstatus = Contaminationstatus.new
   end
 
   # GET /contaminationstatuses/new
