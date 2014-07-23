@@ -1,8 +1,8 @@
 == SPICY DATA
 
 Diese Applikation wurde mit Ruby on Rails 4.0.3 implementiert.
-Die Anwendung wurde in Zusammenarbeit mit dem BFR - Bundesinstitut für Risikobewertung, erstellt. 
-Sie soll im Rahmen des EU-Projekts SPICED die Gefahren-Erkennung für den Bereich der Gewürze und Bakterien erleichtern. 
+Die Anwendung wurde in Zusammenarbeit mit dem BFR - Bundesinstitut für Risikobewertung, erstellt. Dies erfolgte innerhalb des Moduls Projekt Software Engineering an der HWR-Berlin erstellt. 
+Die Anwendung soll im Rahmen des EU-Projekts SPICED die Gefahren-Erkennung für den Bereich der Gewürze und Bakterien erleichtern. 
 Dazu wurde ein bereits existierendes EXCEL-Datensammlung strukturell in die APP intrigiert und eine passende Such- und Einfüge-Option erstellt. Des weiteren wird der Zeit noch an der Umsetzung einer Nachrichten Option innerhalb der Applikation gearbeitet. 
 Um die genannten Optionen nutzen zu können muss eine Autorisierung erfolgen, diese wurde umgesetzt mit Ruby gems ( u.a. "cancan" & "devise").
 Aktuell ist die Applikation nur Lokal zu erreichen (http://localhost:3000/), nach Beendigung des Projekts für den Prototyp der "SPICED Datenbank" wird sie über den Server des BFRs aufrufbar sein können.
