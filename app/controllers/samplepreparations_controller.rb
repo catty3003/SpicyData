@@ -1,6 +1,6 @@
 class SamplepreparationsController < ApplicationController
   before_action :set_samplepreparation, only: [:show, :edit, :update, :destroy]
-
+  before_filter :authenticate_user!, :except => [:some_action_without_auth]
   # GET /samplepreparations
   # GET /samplepreparations.json
   def index

@@ -1,6 +1,6 @@
 class SpikingparamsController < ApplicationController
   before_action :set_spikingparam, only: [:show, :edit, :update, :destroy]
-
+  before_filter :authenticate_user!, :except => [:some_action_without_auth]
   # GET /spikingparams
   # GET /spikingparams.json
   def index

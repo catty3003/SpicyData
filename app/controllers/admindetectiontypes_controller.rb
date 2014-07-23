@@ -1,6 +1,6 @@
 class AdmindetectiontypesController < ApplicationController
   before_action :set_admindetectiontype, only: [:show, :edit, :update, :destroy]
-
+  before_filter :authenticate_user!, :except => [:some_action_without_auth]
   # GET /admindetectiontypes
   # GET /admindetectiontypes.json
   def index

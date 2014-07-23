@@ -1,6 +1,6 @@
 class ContaminationstatusesController < ApplicationController
   before_action :set_contaminationstatus, only: [:show, :edit, :update, :destroy]
-
+  before_filter :authenticate_user!, :except => [:some_action_without_auth]
   # GET /contaminationstatuses
   # GET /contaminationstatuses.json
   def index

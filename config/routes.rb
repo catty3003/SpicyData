@@ -1,4 +1,5 @@
 SpicyData::Application.routes.draw do
+  devise_for :users
   resources :tenacities
 
   resources :tenacityparams

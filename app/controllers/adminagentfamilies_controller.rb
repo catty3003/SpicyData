@@ -1,6 +1,6 @@
 class AdminagentfamiliesController < ApplicationController
   before_action :set_adminagentfamily, only: [:show, :edit, :update, :destroy]
-
+  before_filter :authenticate_user!, :except => [:some_action_without_auth]
   # GET /adminagentfamilies
   # GET /adminagentfamilies.json
   def index

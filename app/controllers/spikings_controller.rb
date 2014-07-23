@@ -1,6 +1,6 @@
 class SpikingsController < ApplicationController
   before_action :set_spiking, only: [:show, :edit, :update, :destroy]
-
+  before_filter :authenticate_user!, :except => [:some_action_without_auth]
   # GET /spikings
   # GET /spikings.json
   def index

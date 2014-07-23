@@ -1,6 +1,6 @@
 class AdminagentspecsController < ApplicationController
   before_action :set_adminagentspec, only: [:show, :edit, :update, :destroy]
-
+  before_filter :authenticate_user!, :except => [:some_action_without_auth]
   # GET /adminagentspecs
   # GET /adminagentspecs.json
   def index

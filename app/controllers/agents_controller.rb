@@ -1,6 +1,6 @@
 class AgentsController < ApplicationController
   before_action :set_agent, only: [:show, :edit, :update, :destroy, :clone]
-
+  before_filter :authenticate_user!, :except => [:some_action_without_auth]
   # GET /agents
   # GET /agents.json
   def index

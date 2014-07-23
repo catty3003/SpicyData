@@ -1,6 +1,6 @@
 class TenacitiesController < ApplicationController
   before_action :set_tenacity, only: [:show, :edit, :update, :destroy]
-
+  before_filter :authenticate_user!, :except => [:some_action_without_auth]
   # GET /tenacities
   # GET /tenacities.json
   def index

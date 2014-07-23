@@ -1,6 +1,6 @@
 class AdmintreatmentmechanicalsController < ApplicationController
   before_action :set_admintreatmentmechanical, only: [:show, :edit, :update, :destroy]
-
+  before_filter :authenticate_user!, :except => [:some_action_without_auth]
   # GET /admintreatmentmechanicals
   # GET /admintreatmentmechanicals.json
   def index
