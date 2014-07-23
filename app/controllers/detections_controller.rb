@@ -5,6 +5,11 @@ class DetectionsController < ApplicationController
   # GET /detections.json
   def index
     @detections = Detection.all
+    respond_to do |format|
+      format.html
+      format.csv { send_data @detections.to_csv }
+      format.xls
+    end
   end
 
   # GET /detections/1
