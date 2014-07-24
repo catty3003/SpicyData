@@ -43,7 +43,7 @@ class DetectionsController < ApplicationController
   # POST /detections
   # POST /detections.json
   def create
-    @detection = Detection.new(detection_params)
+    @detection = current_user.detections.new(detection_params)
 
     respond_to do |format|
       if @detection.save

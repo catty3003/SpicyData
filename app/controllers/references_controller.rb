@@ -43,7 +43,7 @@ class ReferencesController < ApplicationController
   # POST /references
   # POST /references.json
   def create
-    @reference = Reference.new(reference_params)
+    @reference = current_user.references.new(reference_params)
 
     respond_to do |format|
       if @reference.save

@@ -1,5 +1,5 @@
 class Reference < ActiveRecord::Base
-	has_many :agents
+	has_many :agents, dependent: :nullify
 	has_many :matrices, dependent: :nullify
 	has_many :treatments, dependent: :nullify
 	has_many :spikings, dependent: :nullify
@@ -8,6 +8,7 @@ class Reference < ActiveRecord::Base
 	has_many :tenacities, dependent: :nullify
 	has_many :contaminationstatuses, dependent: :nullify
 	belongs_to :adminreferencetype 
+  belongs_to :user
 
 	def full_ref
     "ID: " + self.id.to_s + ". " + self.first_author_name + " (" + self.year.to_s + "): " + self.title

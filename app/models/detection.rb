@@ -3,6 +3,7 @@ class Detection < ActiveRecord::Base
 	has_many :contaminationstatuses, dependent: :nullify
 	has_many :culdetecs, dependent: :delete_all
 	belongs_to :admindetectiontype 
+  belongs_to :user
 
 	  accepts_nested_attributes_for :culdetecs, 
   		allow_destroy: true, 

@@ -2,6 +2,7 @@ class Tenacity < ActiveRecord::Base
 	belongs_to :reference
 	has_many :tenacityparams, dependent: :delete_all
 	has_many :contaminationstatuses, dependent: :nullify
+  belongs_to :user
 
   accepts_nested_attributes_for :tenacityparams, 
   		allow_destroy: true, 

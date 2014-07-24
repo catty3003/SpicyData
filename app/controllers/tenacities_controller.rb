@@ -43,7 +43,7 @@ class TenacitiesController < ApplicationController
   # POST /tenacities
   # POST /tenacities.json
   def create
-    @tenacity = Tenacity.new(tenacity_params)
+    @tenacity = current_user.tenacities.new(tenacity_params)
 
     respond_to do |format|
       if @tenacity.save

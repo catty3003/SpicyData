@@ -42,7 +42,7 @@ class MatricesController < ApplicationController
   # POST /matrices
   # POST /matrices.json
   def create
-    @matrix = Matrix.new(matrix_params)
+    @matrix = current_user.matrices.new(matrix_params)
 
     respond_to do |format|
       if @matrix.save

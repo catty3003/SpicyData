@@ -221,7 +221,8 @@ class ContaminationstatusesController < ApplicationController
   # POST /contaminationstatuses
   # POST /contaminationstatuses.json
   def create
-    @contaminationstatus = Contaminationstatus.new(contaminationstatus_params)
+    @contaminationstatus = current_user.contaminationstatuses.new(contaminationstatus_params)
+
 
     respond_to do |format|
       if @contaminationstatus.save

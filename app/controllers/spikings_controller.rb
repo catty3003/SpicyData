@@ -43,7 +43,7 @@ class SpikingsController < ApplicationController
   # POST /spikings
   # POST /spikings.json
   def create
-    @spiking = Spiking.new(spiking_params)
+    @spiking = current_user.spikings.new(spiking_params)
 
     respond_to do |format|
       if @spiking.save

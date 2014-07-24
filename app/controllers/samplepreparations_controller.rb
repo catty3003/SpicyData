@@ -42,7 +42,7 @@ class SamplepreparationsController < ApplicationController
   # POST /samplepreparations
   # POST /samplepreparations.json
   def create
-    @samplepreparation = Samplepreparation.new(samplepreparation_params)
+    @samplepreparation = current_user.samplepreparation.new(samplepreparation_params)
 
     respond_to do |format|
       if @samplepreparation.save

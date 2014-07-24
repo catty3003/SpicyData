@@ -1,6 +1,7 @@
 class Samplepreparation < ActiveRecord::Base
 	belongs_to :reference
 	has_many :contaminationstatuses, dependent: :nullify
+  belongs_to :user
 
   def full_sampleprep
     "ID: " + self.samprep_short_name
