@@ -7,6 +7,14 @@ class Agent < ActiveRecord::Base
 	belongs_to :adminagentfamily 
 	belongs_to :adminagentgenu 
 	belongs_to :adminagentspec 
+  validates :adminagentname_id, :adminagentfamily_id, :adminagentgenu_id, :adminagentspec_id, :numericality => { :greater_than => 0 }, presence: true
+  validates :subspecies, :serovar, :other_agent_name, :ref_number, presence: true
+  validates :rate_of_illness, :numericality => { :less_than_or_equal_to => 100 }, presence: true
+  validates :morbidity, :numericality => { :less_than_or_equal_to => 100 }, presence: true
+  validates :mortality, :numericality => { :less_than_or_equal_to => 100 }, presence: true
+  validates :isolation_source, :natural_occurence, :a_comment, presence: true
+  validates :reference_id, :user_id, :numericality => { :greater_than => 0 }, presence: true
+ 
 
   accepts_nested_attributes_for :agentparams, 
   		allow_destroy: true, 
