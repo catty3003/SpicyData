@@ -1,0 +1,27 @@
+  <table border="1">
+  	<thead>
+	    <tr>
+	      <th>Cfu initial</th>
+	      <th>Cfu initial unit</th>
+	      <th>Detectability</th>
+	      <th>Cfu detected</th>
+	      <th>Cfu detected unit</th>
+	      <th>Result comment</th>
+	      <th></th>
+	      <th></th>
+	    </tr>
+	  </thead>
+
+	  <tbody>
+	    <% @results.each do |result| %>
+	      <tr>
+	        <td><h4><%= link_to result.cfu_initial, result_path(result) %></h4></td>
+	        <td><%= result.cfu_initial_unit %></td>
+	        <td><%= result.detectability %></td>
+	        <td><%= result.cfu_detected %></td>
+	        <td><%= result.cfu_detected_unit %></td>
+	        <td><%= result.r_comment %></td>
+	      </tr>
+	    <% end %>
+	  </tbody>
+	</table>

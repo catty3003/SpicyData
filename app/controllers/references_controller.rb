@@ -4,12 +4,31 @@ class ReferencesController < ApplicationController
   # GET /references
   # GET /references.json
   def index
-    @references = Reference.all
+    #@references = Reference.all
+
+    @search = Reference.search(params[:q])
+    @references = @search.result
+    @search.build_condition 
+
+    respond_to do |format|
+      format.html
+      format.csv { send_data @references.to_csv }
+      format.xls
+    end    
   end
 
   # GET /references/1
   # GET /references/1.json
   def show
+    if params[:clone]
+      @reference = @reference.dupli
+
+
+      respond_to do |format|
+        format.html { render action: "new", notice: 'reference was successfully cloned.' }
+      end
+      else
+    end
   end
 
   # GET /references/new
@@ -24,7 +43,7 @@ class ReferencesController < ApplicationController
   # POST /references
   # POST /references.json
   def create
-    @reference = Reference.new(reference_params)
+    @reference = current_user.references.new(reference_params)
 
     respond_to do |format|
       if @reference.save

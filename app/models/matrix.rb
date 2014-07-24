@@ -12,9 +12,23 @@ class Matrix < ActiveRecord::Base
   validates :adminmatrixname_id, :adminmatrixgenu_id, :adminmatrixspec_id, :adminmatrixplantpart_id, :adminmatrixstorageform_id, :adminmatrixproductform_id, 
             :reference_id, :user_id, :numericality => { :greater_than => 0 }, presence: true
   validates :m_ph, :m_aw, :humidity_of_matrix, :ash, :sand, :lipids, :numericality => { :less_than_or_equal_to => 100 }, presence: true
+  belongs_to :user
 
   def full_matrix
     "ID: " + self.id.to_s + ". "+ self.adminmatrixname.m_common_name + ": " + self.adminmatrixgenu.m_genus + " " + self.adminmatrixspec.m_species
+  end
+
+  def self.to_csv(options = {})
+    CSV.generate(options) do |csv|
+      csv << column_names
+      all.each do |matrix|
+        csv << matrix.attributes.values_at(*column_names)
+      end
+    end
+  end
+
+  def dupli
+    self.dup 
   end
 
 end

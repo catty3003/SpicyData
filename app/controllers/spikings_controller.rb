@@ -4,12 +4,30 @@ class SpikingsController < ApplicationController
   # GET /spikings
   # GET /spikings.json
   def index
-    @spikings = Spiking.all
+    #@spikings = Spiking.all
+    @search = Spiking.search(params[:q])
+    @spikings = @search.result
+    @search.build_condition 
+    
+    respond_to do |format|
+      format.html
+      format.csv { send_data @spikings.to_csv }
+      format.xls
+    end    
   end
 
   # GET /spikings/1
   # GET /spikings/1.json
   def show
+    if params[:clone]
+      @spiking = @spiking.dupli
+
+
+      respond_to do |format|
+        format.html { render action: "new", notice: 'spiking was successfully cloned.' }
+      end
+      else
+    end
   end
 
   # GET /spikings/new
@@ -25,7 +43,7 @@ class SpikingsController < ApplicationController
   # POST /spikings
   # POST /spikings.json
   def create
-    @spiking = Spiking.new(spiking_params)
+    @spiking = current_user.spikings.new(spiking_params)
 
     respond_to do |format|
       if @spiking.save

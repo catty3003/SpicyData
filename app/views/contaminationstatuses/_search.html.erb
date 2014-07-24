@@ -1,0 +1,52 @@
+<%= form_tag("/contaminationstatuses", method: "get")  do %>   
+<div class="row">
+
+	<div class="col-md-2">
+		<div class="form-group has-success">
+		  <label class="control-label" for="inputSuccess"><%= label_tag :matrix_id %></label>
+			<%= select_tag :matrix_id, options_for_select(Adminmatrixname.all.collect {|c| [ c.m_common_name, c.id ] }), :multiple => true, class: "form-control" %>
+		</div>
+	</div>
+
+	<div class="col-md-2">
+		<div class="form-group has-success">
+		  <label class="control-label" for="inputSuccess"><%= label_tag :agent_id %></label>
+			<%= select_tag :agent_id, options_for_select(Adminagentname.all.collect {|c| [ c.a_common_name, c.id ] }), :multiple => true, class: "form-control" %>
+		</div>
+	</div>	
+
+	<div class="col-md-2">
+		<div class="form-group has-success">
+		  <label class="control-label" for="inputSuccess"><%= label_tag :spiking_id %></label>
+			<%= select_tag :spiking_id, options_for_select(Spiking.all.collect {|c| [ c.spik_short_name, c.id ] }), :multiple => true, class: "form-control" %>
+		</div>
+	</div>	
+
+	<div class="col-md-2">
+		<div class="form-group has-success">
+		  <label class="control-label" for="inputSuccess"><%= label_tag "Treat. temp."%></label>
+			<%= select_tag :treatment_id, options_for_select(Treatment.all.collect {|c| [ c.temperature_in_degree, c.id ] }), :multiple => true, class: "form-control" %>
+		</div>
+	</div>
+
+	<div class="col-md-2">
+		<div class="form-group has-success">
+		  <label class="control-label" for="inputSuccess"><%= label_tag "Treat. pressure"%></label>
+			<%= select_tag :treatment_id, options_for_select(Treatment.all.collect {|c| [ c.pressure, c.id ] }), :multiple => true, class: "form-control" %>
+		</div>
+	</div>	
+
+	<div class="col-md-2">
+		<div class="form-group has-success">
+		  <label class="control-label" for="inputSuccess"><%= label_tag :detection_id %></label>
+			<%= select_tag :detection_id, options_for_select(Detection.all.collect {|c| [ c.d_short_name, c.id ] }), :multiple => true, class: "form-control" %>
+		</div>
+	</div>
+
+  <div class="col-md-12">
+  	<%= submit_tag "Search" , class: "btn btn-info btn-sm btn-block" %>
+		</div>		
+	</div>
+
+</div>
+<% end %>

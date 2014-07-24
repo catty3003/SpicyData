@@ -5,14 +5,21 @@ class ContaminationstatusesController < ApplicationController
   # GET /contaminationstatuses.json
   def index
     @contaminationstatuses = Contaminationstatus.all
+
+    @contaminationstatuses = @contaminationstatuses.where(matrix_id: params[:matrix_id]) if params[:matrix_id]
+    @contaminationstatuses = @contaminationstatuses.where(agent_id: params[:agent_id]) if params[:agent_id]
+    @contaminationstatuses = @contaminationstatuses.where(spiking_id: params[:spiking_id]) if params[:spiking_id]
+    @contaminationstatuses = @contaminationstatuses.where(treatment_id: params[:treatment_id]) if params[:treatment_id]
+    @contaminationstatuses = @contaminationstatuses.where(samplepreparation_id: params[:samplepreparation_id]) if params[:samplepreparation_id]
+    @contaminationstatuses = @contaminationstatuses.where(detection_id: params[:detection_id]) if params[:detection_id]
     
+
     respond_to do |format|
       format.html
       format.csv { send_data @agents.to_csv }
       format.xls
     end
-
-    
+   
     @references = Reference.all
     @references_for_dropdown = []
     @references.each do |i|
@@ -214,7 +221,8 @@ class ContaminationstatusesController < ApplicationController
   # POST /contaminationstatuses
   # POST /contaminationstatuses.json
   def create
-    @contaminationstatus = Contaminationstatus.new(contaminationstatus_params)
+    @contaminationstatus = current_user.contaminationstatuses.new(contaminationstatus_params)
+
 
     respond_to do |format|
       if @contaminationstatus.save

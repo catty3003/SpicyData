@@ -11,6 +11,8 @@
     <%= javascript_include_tag :defaults, :cache => false %>
     <%= csrf_meta_tags %>
 
+
+
       <!--custom CSS -->
      
     <!--<link href="http://bootswatch.com/amelia/bootstrap.css" rel="stylesheet">-->
@@ -34,7 +36,10 @@
     <div id="footer" >
       <div class="row">
         <div class="col-md-12">
-          <p id="f_id">Copyright &copy; Mai Dinh Thanh</p>
+          <div id="f_id">
+            <%= link_to "Impressum", home_impressum_path, class: "btn btn-info btn-sm" %>
+            <%= link_to "EU-SPICED", "http://www.spiced.eu/", class: "btn btn-info btn-sm", :target => "_blank" %>
+          </div>
         </div>
       </div>
     </div>
@@ -42,6 +47,5 @@
 
   </body>
 </html>
-
 
 

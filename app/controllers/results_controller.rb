@@ -4,7 +4,16 @@ class ResultsController < ApplicationController
   # GET /results
   # GET /results.json
   def index
-    @results = Result.all
+   #@results = Result.all
+    @search = Result.search(params[:q])
+    @results = @search.result
+    @search.build_condition 
+   
+    respond_to do |format|
+      format.html
+      format.csv { send_data @results.to_csv }
+      format.xls
+    end   
   end
 
   # GET /results/1
@@ -24,7 +33,7 @@ class ResultsController < ApplicationController
   # POST /results
   # POST /results.json
   def create
-    @result = Result.new(result_params)
+    @result = current_user.results.new(result_params)
 
     respond_to do |format|
       if @result.save

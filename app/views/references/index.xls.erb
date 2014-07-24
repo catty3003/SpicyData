@@ -1,0 +1,51 @@
+  <table border="1">
+  	<thead>
+	    <tr>
+	      <th>Type of literatur</th>
+	      <th>First author name</th>
+	      <th>Year</th>
+	      <th>Title</th>
+	      <th>Journal</th>
+	      <th>Volume</th>
+	      <th>Page from</th>
+	      <th>Page to</th>
+	      <th>Link</th>
+	      <th>Matrix</th>
+	      <th>Agent</th>
+	      <th>Spiking</th>
+	      <th>Treatment</th>
+	      <th>Sample prep</th>
+	      <th>Detection</th>
+	      <th>Tenacity</th>
+	      <th>Reference comment</th>
+	      <th>User</th>
+	      <th></th>
+	      <th></th>
+	    </tr>
+	  </thead>
+
+	  <tbody>
+	    <% @references.each do |reference| %>
+	      <tr>
+	        <td><h4><%= link_to reference.adminreferencetype.type_of_literatur, reference_path(reference) if reference.adminreferencetype %></h4></td>
+	        <td><%= reference.first_author_name %></td>
+	        <td><%= reference.year %></td>
+	        <td><%= reference.title %></td>
+	        <td><%= reference.journal %></td>
+	        <td><%= reference.volume %></td>
+	        <td><%= reference.page_from %></td>
+	        <td><%= reference.page_to %></td>
+	        <td><%= reference.link %></td>
+	        <td><%= reference.matrix %></td>
+	        <td><%= reference.agent %></td>
+	        <td><%= reference.spiking %></td>
+	        <td><%= reference.treatment %></td>
+	        <td><%= reference.sample_prep %></td>
+	        <td><%= reference.detection %></td>
+	        <td><%= reference.tenacity %></td>
+	        <td><%= reference.r_comment %></td>
+	        <td><%= reference.user_id %></td>
+	      </tr>
+	    <% end %>
+	  </tbody>
+	</table>

@@ -15,6 +15,7 @@ class Agent < ActiveRecord::Base
   validates :isolation_source, :natural_occurence, :a_comment, presence: true
   validates :reference_id, :user_id, :numericality => { :greater_than => 0 }, presence: true
  
+  belongs_to :user
 
   accepts_nested_attributes_for :agentparams, 
   		allow_destroy: true, 

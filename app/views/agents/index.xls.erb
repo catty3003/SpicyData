@@ -31,7 +31,7 @@
             <% agent.agentparams.order(:infected_species).each do |p| %>
 
             <tr>
-              <td width="30%"><h4><%= link_to agent.adminagentname.a_common_name, agent_path(agent) if agent.adminagentname %></h4></td>
+              <td><h4><%= link_to agent.adminagentname.a_common_name, agent_path(agent) if agent.adminagentname %></h4></td>
               <td><%= agent.adminagentfamily.a_family if agent.adminagentfamily %></td>
               <td><%= agent.adminagentgenu.a_genus if agent.adminagentgenu %></td>
               <td><%= agent.adminagentspec.a_species if agent.adminagentspec %></td>

@@ -72,7 +72,7 @@
               </p>
 
               <p>
-                <strong>Agent:</strong>
+                <strong>reference:</strong>
                 <%= @reference.agent %>
               </p>
 
@@ -116,7 +116,12 @@
 
             </div>
           </div>    
-          <%= link_to 'Edit Reference', edit_reference_path(@reference) , class: "btn btn-warning btn-sm" %> |  | 
+          <%= link_to 'Edit Reference', edit_reference_path(@reference) , class: "btn btn-warning btn-sm" %> | 
+          <% if params[:clone] == "attributes" %>
+            
+          <% else %>
+            <%= link_to "Duplicate", reference_path(clone: "attributes"), class: "btn btn-success btn-sm"  %>
+          <% end %>           | 
           <%= link_to 'Delete', @reference, class: "btn btn-danger btn-sm", method: :delete, data: { confirm: 'Are you sure?' } %> | 
           <%= link_to 'Back to all References', references_path, class: "btn btn-info btn-sm" %>
         </div>

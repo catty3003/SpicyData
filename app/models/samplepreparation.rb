@@ -9,9 +9,23 @@ class Samplepreparation < ActiveRecord::Base
 	validates :spik_weight_of_sample, :samprep_duration, :numericality => { :less_than_or_equal_to => 100 }, presence: true
 	validates :reference_id, :user_id, :numericality => { :greater_than => 0 }, presence: true
 					
+  belongs_to :user
 
   def full_sampleprep
     "ID: " + self.samprep_short_name
   end
 
+  def self.to_csv(options = {})
+    CSV.generate(options) do |csv|
+      csv << column_names
+      all.each do |samplepreparation|
+        csv << samplepreparation.attributes.values_at(*column_names)
+      end
+    end
+  end
+
+  def dupli
+    self.dup    
+  end
+    
 end

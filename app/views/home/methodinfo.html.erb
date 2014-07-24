@@ -17,7 +17,112 @@
 				<div class="well">          
 				  <div class="panel panel-info">
 				    <div class="panel-body">	
-				    	<p>Info here</p>
+				    	<p>
+									<div class="table-responsive table-scrollable">
+									 <table class="table table-striped table-bordered table-hover ">
+										<tr class="tableizer-firstrow"><th>Notation case sensitive</th><th>Name</th><th>Kind of property / quantity</th><th>Convert to</th><th>Conversion function / factor</th><th>Inverse conversion function / factor</th><th>Object type</th><th>Display in GUI as</th></tr>
+										 <tr><td>%</td><td>percent</td><td>Arbitrary Fraction</td><td>[1]</td><td>x/1e2</td><td>x*1e2</td><td>&nbsp;</td><td>%</td></tr>
+										 <tr><td>% Activated</td><td>% Activated</td><td>Number Fraction</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>% Activated</td></tr>
+										 <tr><td>% Inactivated</td><td>percentage inactivated from 100% starting population</td><td>Number Fraction</td><td>% Survival</td><td>100-x</td><td>100-x</td><td>&nbsp;</td><td>% Inactivated</td></tr>
+										 <tr><td>% non-germinating spores</td><td>percentage of non-germinating spores from 100% starting population</td><td>Number Fraction</td><td>% Survival</td><td>100-x</td><td>100-x</td><td>&nbsp;</td><td>% non-germinating spores</td></tr>
+										 <tr><td>% Survival</td><td>percentage survivors from 100% starting population</td><td>Number Fraction</td><td>% Survival</td><td>x</td><td>x</td><td>&nbsp;</td><td>% Survival</td></tr>
+										 <tr><td>% vol/vol</td><td>% vol/vol</td><td>Volume Ratio</td><td>µL/mL</td><td>x*10</td><td>x/10</td><td>&nbsp;</td><td>% vol/vol</td></tr>
+										 <tr><td>% vol/wt</td><td>% vol/wt</td><td>Volume Concentration</td><td>% vol/wt</td><td>x</td><td>x</td><td>&nbsp;</td><td>% vol/wt</td></tr>
+										 <tr><td>% wt/vol</td><td>% wt/vol</td><td>Mass Concentration</td><td>g/L</td><td>x*10</td><td>x/10</td><td>&nbsp;</td><td>% wt/vol</td></tr>
+										 <tr><td>% wt/wt</td><td>% wt/wt</td><td>Mass Ratio</td><td>mg/g</td><td>x*10</td><td>x/10</td><td>&nbsp;</td><td>% wt/wt</td></tr>
+										 <tr><td>[aw]</td><td>Water activity</td><td>Dimensionless quantity</td><td>[aw]</td><td>x</td><td>x</td><td>&nbsp;</td><td>[aw]</td></tr>
+										 <tr><td>[Fluorescence]</td><td>Fluorescence quantum yield</td><td>Dimensionless quantity</td><td>[Fluorescence]</td><td>x</td><td>x</td><td>&nbsp;</td><td>[Fluorescence]</td></tr>
+										 <tr><td>[pH]</td><td>pH value</td><td>Dimensionless quantity</td><td>[pH]</td><td>x</td><td>x</td><td>&nbsp;</td><td>[pH]</td></tr>
+										 <tr><td>[ppb]</td><td>parts per billion</td><td>Arbitrary Fraction</td><td>[1]</td><td>x/1e9</td><td>x*1e9</td><td>&nbsp;</td><td>ppb</td></tr>
+										 <tr><td>[ppm]</td><td>parts per million </td><td>Arbitrary Fraction</td><td>[1]</td><td>x/1e6</td><td>x*1e6</td><td>&nbsp;</td><td>ppm</td></tr>
+										 <tr><td>[Probability]</td><td>Probability</td><td>Dimensionless quantity</td><td>[Probability]</td><td>x</td><td>x</td><td>&nbsp;</td><td>[Probability]</td></tr>
+										 <tr><td>µL/mL</td><td>microliter pro ml</td><td>Volume Ratio</td><td>µL/mL</td><td>x</td><td>x</td><td>&nbsp;</td><td>µL/mL</td></tr>
+										 <tr><td>0/1</td><td>Boolean</td><td>True/False Value</td><td>0/1</td><td>x</td><td>x</td><td>&nbsp;</td><td>True/False</td></tr>
+										 <tr><td>1</td><td>CFU (count) - without reference unit (g or ml)</td><td>Number</td><td>1</td><td>x</td><td>x</td><td>CFU</td><td>count</td></tr>
+										 <tr><td>1/0.1mL</td><td>count per 0.1 ml</td><td>Number Concentration (count/vol)</td><td>1/mL</td><td>x*10</td><td>x/10</td><td>&nbsp;</td><td>count/0.1mL</td></tr>
+										 <tr><td>1/100g</td><td>number of objects per 100g</td><td>Number Content (count/mass)</td><td>1/g</td><td>x/100</td><td>x*100</td><td>&nbsp;</td><td>count/100g</td></tr>
+										 <tr><td>1/100g</td><td>colony forming units per 100g</td><td>Number Content (count/mass)</td><td>1/g</td><td>x/100</td><td>x*100</td><td>CFU</td><td>count/100g</td></tr>
+										 <tr><td>1/100g</td><td>Plaque forming units per 100g</td><td>Number Content (count/mass)</td><td>1/g</td><td>x/100</td><td>x*100</td><td>PFU</td><td>count/100g</td></tr>
+										 <tr><td>1/25g</td><td>number of objects per 25g</td><td>Number Content (count/mass)</td><td>1/g</td><td>x/25</td><td>x*25</td><td>&nbsp;</td><td>count/25g</td></tr>
+										 <tr><td>1/25g</td><td>colony forming units per 25g</td><td>Number Content (count/mass)</td><td>1/g</td><td>x/25</td><td>x*25</td><td>CFU</td><td>count/25g</td></tr>
+										 <tr><td>1/25g</td><td>Plaque forming units per 25g</td><td>Number Content (count/mass)</td><td>1/g</td><td>x/25</td><td>x*25</td><td>PFU</td><td>count/25g</td></tr>
+										 <tr><td>1/cm2</td><td>colony forming units per cm2</td><td>Number Aeric (number/area)</td><td>1/cm2</td><td>x</td><td>x</td><td>CFU</td><td>count/cm2</td></tr>
+										 <tr><td>1/g</td><td>number of objects per g</td><td>Number Content (count/mass)</td><td>1/g</td><td>x</td><td>x</td><td>&nbsp;</td><td>count/g</td></tr>
+										 <tr><td>1/g</td><td>colony forming units per g</td><td>Number Content (count/mass)</td><td>1/g</td><td>x</td><td>x</td><td>CFU</td><td>count/g</td></tr>
+										 <tr><td>1/g</td><td>Plaque forming units per g</td><td>Number Content (count/mass)</td><td>1/g</td><td>x</td><td>x</td><td>PFU</td><td>count/g</td></tr>
+										 <tr><td>1/g</td><td>spores per g</td><td>Number Content (count/mass)</td><td>1/g</td><td>x</td><td>x</td><td>Spores</td><td>count/g</td></tr>
+										 <tr><td>1/mL</td><td>count per ml</td><td>Number Concentration (count/vol)</td><td>1/mL</td><td>x</td><td>x</td><td>&nbsp;</td><td>count/mL</td></tr>
+										 <tr><td>1/mL</td><td>colony forming units per ml</td><td>Number Concentration (count/vol)</td><td>1/mL</td><td>x</td><td>x</td><td>CFU</td><td>count/mL</td></tr>
+										 <tr><td>1/mL</td><td>Plaque forming units per ml</td><td>Number Concentration (count/vol)</td><td>1/mL</td><td>x</td><td>x</td><td>PFU</td><td>count/mL</td></tr>
+										 <tr><td>1/mL</td><td>number spores per milliliter</td><td>Number Concentration (count/vol)</td><td>1/mL</td><td>x</td><td>x</td><td>Spores</td><td>count/mL</td></tr>
+										 <tr><td>a_j</td><td>year - mean Julian</td><td>Time</td><td>s</td><td>x*31557600</td><td>x/31557600</td><td>&nbsp;</td><td>a</td></tr>
+										 <tr><td>bar</td><td>bar</td><td>Pressure</td><td>Pa</td><td>x*1e5</td><td>x/1e5</td><td>&nbsp;</td><td>bar</td></tr>
+										 <tr><td>Cel</td><td>degree Celsius</td><td>Temperature</td><td>K</td><td>x+273.15</td><td>x-273.15</td><td>&nbsp;</td><td>°C</td></tr>
+										 <tr><td>cm</td><td>centimeter</td><td>Length</td><td>m</td><td>x/100</td><td>x*100</td><td>&nbsp;</td><td>cm</td></tr>
+										 <tr><td>d</td><td>day</td><td>Time</td><td>s</td><td>x*86400</td><td>x/86400</td><td>&nbsp;</td><td>d</td></tr>
+										 <tr><td>degF</td><td>degree Fahrenheit</td><td>Temperature</td><td>K</td><td>(x+459.67)*5/9</td><td>x*9/5-459.67</td><td>&nbsp;</td><td>°F</td></tr>
+										 <tr><td>fg/mL</td><td>femptogram per milliliter</td><td>Mass Concentration</td><td>g/L</td><td>x/1e9</td><td>x*1e9</td><td>&nbsp;</td><td>fg/mL</td></tr>
+										 <tr><td>g</td><td>gram</td><td>Mass</td><td>g</td><td>x</td><td>x</td><td>&nbsp;</td><td>g</td></tr>
+										 <tr><td>g/kg</td><td>gram per kilogram</td><td>Mass Ratio</td><td>mg/g</td><td>x</td><td>x</td><td>&nbsp;</td><td>g/kg</td></tr>
+										 <tr><td>g/L</td><td>gram per liter</td><td>Mass Concentration</td><td>g/L</td><td>x</td><td>x</td><td>&nbsp;</td><td>g/L</td></tr>
+										 <tr><td>h</td><td>hour</td><td>Time</td><td>s</td><td>x*3600</td><td>x/3600</td><td>&nbsp;</td><td>h</td></tr>
+										 <tr><td>K</td><td>Kelvin</td><td>Temperature</td><td>K</td><td>x</td><td>x</td><td>&nbsp;</td><td>K</td></tr>
+										 <tr><td>kg</td><td>kilogram</td><td>Mass</td><td>g</td><td>x*1000</td><td>x/1000</td><td>&nbsp;</td><td>kg</td></tr>
+										 <tr><td>kGy</td><td>energy dose</td><td>Energy Content</td><td>kGy</td><td>x</td><td>x</td><td>&nbsp;</td><td>kGy</td></tr>
+										 <tr><td>kGy/h</td><td>kGy per hour</td><td>Energy Content Rate</td><td>kGy/h</td><td>x</td><td>x</td><td>&nbsp;</td><td>kGy/h</td></tr>
+										 <tr><td>ln(1)</td><td>ln CFU (count) - without reference unit (g or ml)</td><td>Number</td><td>1</td><td>exp(x)</td><td>ln(x)</td><td>CFU</td><td>ln(count)</td></tr>
+										 <tr><td>ln(1/g)</td><td>ln(number of objects per g)</td><td>Number Content (count/mass)</td><td>1/g</td><td>exp(x)</td><td>ln(x)</td><td>&nbsp;</td><td>ln(count/g)</td></tr>
+										 <tr><td>ln(1/mL)</td><td>ln(count per ml)</td><td>Number Concentration (count/vol)</td><td>1/mL</td><td>exp(x)</td><td>ln(x)</td><td>&nbsp;</td><td>ln(count/mL)</td></tr>
+										 <tr><td>log10(1)</td><td>log10(CFU at t=x) - log10(CFU at t=0) - !! without reference unit (g or ml) !!</td><td>Number Difference</td><td>log10(1)</td><td>x</td><td>x</td><td>CFU</td><td>diff_log10(count)</td></tr>
+										 <tr><td>log10(1)</td><td>log10 CFU surving spores  - !! without reference unit (g or ml) !!</td><td>Number Difference</td><td>log10(1)</td><td>x</td><td>x</td><td>Spores</td><td>diff_log10(count)</td></tr>
+										 <tr><td>log10(1)</td><td>log10(CFU control) - log10(CFU sample) - !! without reference unit (g or ml) !!</td><td>Number Difference</td><td>log10(1)</td><td>x</td><td>x</td><td>CFU</td><td>diff_log10(count)</td></tr>
+										 <tr><td>log10(1)</td><td>log surviving spores - !! without reference unit (g or ml) !!</td><td>Number Difference</td><td>log10(1)</td><td>x</td><td>x</td><td>Spores</td><td>diff_log10(count)</td></tr>
+										 <tr><td>log10(1)</td><td>log10(spores at t=0) - log10(spores at t=x) - !! without reference unit (g or ml) !!</td><td>Number Difference</td><td>log10(1)</td><td>x</td><td>x</td><td>Spores</td><td>diff_log10(count)</td></tr>
+										 <tr><td>log10(1)</td><td>log surviving spores - !! without reference unit (g or ml) !!</td><td>Number Difference</td><td>log10(1)</td><td>x</td><td>x</td><td>Spores</td><td>diff_log10(count)</td></tr>
+										 <tr><td>log10(1)</td><td>log10 CFU (count) - without reference unit (g or ml)</td><td>Number</td><td>1</td><td>10^x</td><td>log10(x)</td><td>CFU</td><td>log10(count)</td></tr>
+										 <tr><td>log10(1/100g)</td><td>log10(number of objects per 100g)</td><td>Number Content (count/mass)</td><td>1/g</td><td>10^x/100</td><td>log10(x*100)</td><td>&nbsp;</td><td>log10(count/100g)</td></tr>
+										 <tr><td>log10(1/100g)</td><td>log10(colony forming units per 100g)</td><td>Number Content (count/mass)</td><td>1/g</td><td>10^x/100</td><td>log10(x*100)</td><td>CFU</td><td>log10(count/100g)</td></tr>
+										 <tr><td>log10(1/100g)</td><td>log10(Plaque forming units per 100g)</td><td>Number Content (count/mass)</td><td>1/g</td><td>10^x/100</td><td>log10(x*100)</td><td>PFU</td><td>log10(count/100g)</td></tr>
+										 <tr><td>log10(1/25g)</td><td>log10(number of objects per 25g)</td><td>Number Content (count/mass)</td><td>1/g</td><td>10^x/25</td><td>log10(x*25)</td><td>&nbsp;</td><td>log10(count/25g)</td></tr>
+										 <tr><td>log10(1/25g)</td><td>log10(colony forming units per 25g)</td><td>Number Content (count/mass)</td><td>1/g</td><td>10^x/25</td><td>log10(x*25)</td><td>CFU</td><td>log10(count/25g)</td></tr>
+										 <tr><td>log10(1/25g)</td><td>log10(Plaque forming units per 25g)</td><td>Number Content (count/mass)</td><td>1/g</td><td>10^x/25</td><td>log10(x*25)</td><td>PFU</td><td>log10(count/25g)</td></tr>
+										 <tr><td>log10(1/cm2)</td><td>log10(colony forming units per cm2)</td><td>Number Aeric (number/area)</td><td>1/cm2</td><td>10^x</td><td>log10(x)</td><td>CFU</td><td>log10(count/cm2)</td></tr>
+										 <tr><td>log10(1/g)</td><td>log10(number of objects per g)</td><td>Number Content (count/mass)</td><td>1/g</td><td>10^x</td><td>log10(x)</td><td>&nbsp;</td><td>log10(count/g)</td></tr>
+										 <tr><td>log10(1/g)</td><td>log10(colony forming units per g)</td><td>Number Content (count/mass)</td><td>1/g</td><td>10^x</td><td>log10(x)</td><td>CFU</td><td>log10(count/g)</td></tr>
+										 <tr><td>log10(1/g)</td><td>log10(Plaque forming units per g)</td><td>Number Content (count/mass)</td><td>1/g</td><td>10^x</td><td>log10(x)</td><td>PFU</td><td>log10(count/g)</td></tr>
+										 <tr><td>log10(1/g)</td><td>log10(cfu/g control) - log10(cfu/g sample)</td><td>Number Content Difference</td><td>log10(1/g)</td><td>x</td><td>x</td><td>CFU</td><td>diff_(log10(count/g))</td></tr>
+										 <tr><td>log10(1/g)</td><td>log10(colony forming units per g)</td><td>Number Content (count/mass)</td><td>1/g</td><td>10^x</td><td>log10(x)</td><td>CFU</td><td>log10(count/g)</td></tr>
+										 <tr><td>log10(1/kg)</td><td>log10(spores units per kg)</td><td>Number Content (count/mass)</td><td>1/g</td><td>10^x/1000</td><td>log10(x*1000)</td><td>Spores</td><td>log10(count/g)</td></tr>
+										 <tr><td>log10(1/mL)</td><td>log10(count per ml)</td><td>Number Concentration (count/vol)</td><td>1/mL</td><td>10^x</td><td>log10(x)</td><td>&nbsp;</td><td>log10(count/mL)</td></tr>
+										 <tr><td>log10(1/mL)</td><td>log10(colony forming units per ml)</td><td>Number Concentration (count/vol)</td><td>1/mL</td><td>10^x</td><td>log10(x)</td><td>CFU</td><td>log10(count/mL)</td></tr>
+										 <tr><td>log10(1/mL)</td><td>log10(Plaque forming units per ml)</td><td>Number Concentration (count/vol)</td><td>1/mL</td><td>10^x</td><td>log10(x)</td><td>PFU</td><td>log10(count/mL)</td></tr>
+										 <tr><td>log10(1/mL)</td><td>log10(cfu spores / ml)</td><td>Number Concentration (count/vol)</td><td>1/mL</td><td>10^x</td><td>log10(x)</td><td>Spores</td><td>log10(count/mL)</td></tr>
+										 <tr><td>log10(1/mL)</td><td>reduction of spores: log10(initial spore concentration) - log10(surviving spore concentration)</td><td>Number Concentration Difference</td><td>log10(1/mL)</td><td>x</td><td>x</td><td>Spores</td><td>diff_(log10(count/mL))</td></tr>
+										 <tr><td>log10(1/mL)</td><td>log10(cfu spores / ml)</td><td>Number Concentration (count/vol)</td><td>1/mL</td><td>10^x</td><td>log10(x)</td><td>Spores</td><td>log10(count/mL)</td></tr>
+										 <tr><td>log10(1/mL)</td><td>reduction of concentration: log10(control concentration) - log10(sample concentration)</td><td>Number Concentration Difference</td><td>log10(1/mL)</td><td>x</td><td>x</td><td>&nbsp;</td><td>diff_(log10(count/mL))</td></tr>
+										 <tr><td>log10(1/mL)</td><td>log10((CFU+1)/ml)</td><td>Number Concentration (count/vol)</td><td>1/mL</td><td>10^x</td><td>log10(x)</td><td>CFU</td><td>log10(count +1/mL)</td></tr>
+										 <tr><td>log10(ng/g)</td><td>log10(nanogram per gram)</td><td>Mass Ratio</td><td>mg/g</td><td>10^x/1e6</td><td>log10(x*1e6)</td><td>&nbsp;</td><td>log10(ng/g)</td></tr>
+										 <tr><td>log10(ng/mL)</td><td>log10(nanogram per ml)</td><td>Mass Concentration</td><td>g/L</td><td>10^x/1e6</td><td>log10(x*1e6)</td><td>&nbsp;</td><td>log10(ng/mL)</td></tr>
+										 <tr><td>m</td><td>meter</td><td>Length</td><td>m</td><td>x</td><td>x</td><td>&nbsp;</td><td>m</td></tr>
+										 <tr><td>mg/g</td><td>milligram per gram</td><td>Mass Ratio</td><td>mg/g</td><td>x</td><td>x</td><td>&nbsp;</td><td>mg/g</td></tr>
+										 <tr><td>mg/kg</td><td>milligram per kilogram</td><td>Mass Ratio</td><td>mg/g</td><td>x/1e3</td><td>x*1e3</td><td>&nbsp;</td><td>mg/kg</td></tr>
+										 <tr><td>mg/L</td><td>milligram per liter</td><td>Mass Concentration</td><td>g/L</td><td>x/1e3</td><td>x*1e3</td><td>&nbsp;</td><td>mg/L</td></tr>
+										 <tr><td>mg/mL</td><td>milligram per milliliter</td><td>Mass Concentration</td><td>g/L</td><td>x</td><td>x</td><td>&nbsp;</td><td>mg/mL</td></tr>
+										 <tr><td>min</td><td>minute</td><td>Time</td><td>s</td><td>x*60</td><td>x/60</td><td>&nbsp;</td><td>min</td></tr>
+										 <tr><td>mmol/g</td><td>millimole per gram</td><td>Mole Content</td><td>mmol/g</td><td>x</td><td>x</td><td>&nbsp;</td><td>mmol/g</td></tr>
+										 <tr><td>mo_j</td><td>month - mean Julian</td><td>Time</td><td>s</td><td>x*2629800</td><td>x/2629800</td><td>&nbsp;</td><td>mo</td></tr>
+										 <tr><td>MPa</td><td>Megapascal</td><td>Pressure</td><td>Pa</td><td>x*1e6</td><td>x/1e6</td><td>&nbsp;</td><td>MPa</td></tr>
+										 <tr><td>ng/g</td><td>nanogram per gram</td><td>Mass Ratio</td><td>mg/g</td><td>x/1e6</td><td>x*1e6</td><td>&nbsp;</td><td>ng/g</td></tr>
+										 <tr><td>ng/L</td><td>nanogram per liter</td><td>Mass Concentration</td><td>g/L</td><td>x/1e9</td><td>x*1e9</td><td>&nbsp;</td><td>ng/L</td></tr>
+										 <tr><td>ng/mL</td><td>nanogram per ml</td><td>Mass Concentration</td><td>g/L</td><td>x/1e6</td><td>x*1e6</td><td>&nbsp;</td><td>ng/mL</td></tr>
+										 <tr><td>Pa</td><td>Pascal</td><td>Pressure</td><td>Pa</td><td>x</td><td>x</td><td>&nbsp;</td><td>Pa</td></tr>
+										 <tr><td>s</td><td>second</td><td>Time</td><td>s</td><td>x</td><td>x</td><td>&nbsp;</td><td>s</td></tr>
+										 <tr><td>ug/g</td><td>microgram per gram</td><td>Mass Ratio</td><td>mg/g</td><td>x/1e3</td><td>x*1e3</td><td>&nbsp;</td><td>ug/g</td></tr>
+										 <tr><td>ug/mL</td><td>microgram per ml</td><td>Mass Concentration</td><td>g/L</td><td>x/1e3</td><td>x*1e3</td><td>&nbsp;</td><td>ug/mL</td></tr>
+										 <tr><td>wk</td><td>week</td><td>Time</td><td>s</td><td>x*604800</td><td>x/604800</td><td>&nbsp;</td><td>wk</td></tr>
+										</table>
+										</div>				    		
+				    	</p>
 				    </div>
 				  </div>
 				</div>		

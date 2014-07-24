@@ -4,12 +4,30 @@ class DetectionsController < ApplicationController
   # GET /detections
   # GET /detections.json
   def index
-    @detections = Detection.all
+    #@detections = Detection.all
+    @search = Detection.search(params[:q])
+    @detections = @search.result
+    @search.build_condition 
+    
+    respond_to do |format|
+      format.html
+      format.csv { send_data @detections.to_csv }
+      format.xls
+    end
   end
 
   # GET /detections/1
   # GET /detections/1.json
   def show
+    if params[:clone]
+      @detection = @detection.dupli
+
+
+      respond_to do |format|
+        format.html { render action: "new", notice: 'detection was successfully cloned.' }
+      end
+      else
+    end
   end
 
   # GET /detections/new
@@ -25,7 +43,7 @@ class DetectionsController < ApplicationController
   # POST /detections
   # POST /detections.json
   def create
-    @detection = Detection.new(detection_params)
+    @detection = current_user.detections.new(detection_params)
 
     respond_to do |format|
       if @detection.save
