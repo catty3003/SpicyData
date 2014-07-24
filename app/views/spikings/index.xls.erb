@@ -1,0 +1,55 @@
+  <table border="1">
+  	<thead>
+	    <tr>
+	      <th>Spiking short name</th>
+	      <th>Spiking long name</th>
+	      <th>Spiking process description</th>
+	      <th>Spiking device needed</th>
+	      <th>Pros</th>
+	      <th>Cons</th>
+	      <th>Spik weight of sample</th>
+	      <th>Spik weight of sample unit</th>
+	      <th>Cfu of inoculum per ml</th>
+	      <th>Cfu per gram spice spiked</th>
+	      <th>Carrier substance</th>
+	      <th>Carrier fluid</th>
+	      <th>Spik duration</th>
+	      <th>Spik duration unit</th>
+	      <th>Spik comment</th>
+	      <th>Reference</th>
+	      <th>User</th>
+	      <th></th>
+	      <th></th>
+	    </tr>
+	  </thead>
+
+
+    <tbody>
+      <% @spikings.each do |spiking| %>         
+          
+            <% spiking.spikingparams.each do |p| %>
+
+            <tr>
+			        <td><h4><%= link_to spiking.spik_short_name, spiking_path(spiking) %></h4></td>
+			        <td><%= spiking.spik_long_name %></td>
+			        <td><%= spiking.spik_process_description %></td>
+			        <td><%= spiking.spik_device_needed %></td>
+			        <td><%= spiking.pros %></td>
+			        <td><%= spiking.cons %></td>
+			        <td><%= p.spik_weight_of_sample  if p.spik_weight_of_sample  %> </td>
+			        <td><%= p.spik_weight_of_sample_unit  if p.spik_weight_of_sample_unit  %></td>
+			        <td><%= p.cfu_of_inoculum_per_ml  if p.cfu_of_inoculum_per_ml  %></td>
+			        <td><%= p.cfu_per_gram_spice_spiked  if p.cfu_per_gram_spice_spiked  %></td>
+			        <td><%= p.carrier_substance  if p.carrier_substance  %></td>
+			        <td><%= p.carrier_fluid  if p.carrier_fluid  %></td>
+			        <td><%= p.spik_duration  if p.spik_duration  %></td>
+			        <td><%= p.spik_duration_unit  if p.spik_duration_unit  %></td>
+			        <td><%= p.spik_comment  if p.spik_comment  %></td>	      
+							<td><%= spiking.reference_id %></td>
+			        <td><%= spiking.user_id %></td>
+
+           <% end %> 
+        </tr>
+      <% end %>
+    </tbody>
+  </table>

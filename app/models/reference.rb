@@ -13,4 +13,13 @@ class Reference < ActiveRecord::Base
     "ID: " + self.id.to_s + ". " + self.first_author_name + " (" + self.year.to_s + "): " + self.title
   end
   
+  def self.to_csv(options = {})
+    CSV.generate(options) do |csv|
+      csv << column_names
+      all.each do |reference|
+        csv << reference.attributes.values_at(*column_names)
+      end
+    end
+  end
+
 end

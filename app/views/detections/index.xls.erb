@@ -1,0 +1,124 @@
+  <table border="1">
+  
+		<thead>
+		    <tr>
+		      <th>Detection short name</th>
+		      <th>Detection long name</th>
+		      <th>Detection method validated for condiments</th>
+		      <th>Detection process description</th>
+		      <th>Detection weight of sample</th>
+		      <th>Detection weight of sample unit</th>
+		      <th>Detection method dilution</th>
+		      <th>Detection method type</th>
+		      <th>Duration until result</th>
+		      <th>Duration until result unit</th>
+		      <th>Target gen</th>
+		      <th>Target protein</th>
+		      <th>Other characteristic</th>
+		      <th>Technique</th>
+		      <th>Medium</th>
+		      <th>Agar</th>
+		      <th>Incubation duration</th>
+		      <th>Incubation duration unit</th>
+		      <th>Incubation temp</th>
+		      <th>Sample volume per disc</th>
+		      <th>Medium volume per disc</th>
+		      <th>Verification</th>
+		      <th>Interpretation</th>
+		      <th>Detection device needed</th>
+		      <th>Method for comparison</th>
+		      <th>LOD</th>
+		      <th>Sensitivity (%)</th>
+		      <th>Specifity (%)</th>
+		      <th>Reliability score</th>
+		      <th>Detection comment</th>
+		      <th>Reference</th>
+		      <th>User</th>
+		      <th></th>
+		      <th></th>
+		    </tr>
+		  </thead>
+
+		  <tbody>
+		    <% @detections.each do |detection| %>
+		      <tr>
+		        <td><h4><%= link_to detection.d_short_name, detection_path(detection) %></h4></td>
+		        <td><%= detection.d_long_name %></td>
+		        <td><%= detection.d_method_validated_for_condiments %></td>
+		        <td><%= detection.d_process_description %></td>
+		        <td><%= detection.d_weight_of_sample %></td>
+		        <td><%= detection.d_weight_of_sample_unit %></td>
+		        <td><%= detection.detection_method_dilution %></td>
+		        <td><%= detection.admindetectiontype.detection_method_type if detection.admindetectiontype %></td>
+		        <td><%= detection.duration_until_result %></td>
+		        <td><%= detection.duration_until_result_unit %></td>
+		        <td><%= detection.target_gen %></td>
+		        <td><%= detection.target_protein %></td>
+		        <td><%= detection.other_characteristic %></td>
+		        <td><%= detection.technique %></td>
+		        <td>
+		        	<% detection.culdetecs.each do |p| %>
+		            <ul>
+		              <li><%= p.medium %></li>
+		            </ul>
+	            <% end %>            
+		        </td>
+		        <td>
+		        	<% detection.culdetecs.each do |p| %>
+		            <ul>
+		              <li><%= p.agar %></li>
+		            </ul>
+	            <% end %>            
+		        </td>
+		        <td>
+		        	<% detection.culdetecs.each do |p| %>
+		            <ul>
+		              <li><%= p.incubation_duration %></li>
+		            </ul>
+	            <% end %>            
+		        </td>
+		        <td>
+		        	<% detection.culdetecs.each do |p| %>
+		            <ul>
+		              <li><%= p.incubation_duration_unit %></li>
+		            </ul>
+	            <% end %>            
+		        </td>
+		        <td>
+		        	<% detection.culdetecs.each do |p| %>
+		            <ul>
+		              <li><%= p.incubation_temp %></li>
+		            </ul>
+	            <% end %>            
+		        </td>
+		        <td>
+		        	<% detection.culdetecs.each do |p| %>
+		            <ul>
+		              <li><%= p.sample_volume_per_disc %></li>
+		            </ul>
+	            <% end %>            
+		        </td>
+		        <td>
+		        	<% detection.culdetecs.each do |p| %>
+		            <ul>
+		              <li><%= p.medium_volume_per_disc %></li>
+		            </ul>
+	            <% end %>            
+		        </td>
+		        <td><%= detection.verification %></td>
+		        <td><%= detection.interpretation %></td>
+		        <td><%= detection.d_device_needed %></td>
+		        <td><%= detection.method_for_comparison %></td>
+		        <td><%= detection.lod %></td>
+		        <td><%= detection.sensitivity %></td>
+		        <td><%= detection.specifity %></td>
+		        <td><%= detection.reliability_score %></td>
+		        <td><%= detection.d_comment %></td>
+		        <td><%= detection.reference_id %></td>
+		        <td><%= detection.user_id %></td>
+
+		      </tr>
+		    <% end %>
+		  </tbody>
+		</table>
+		

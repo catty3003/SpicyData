@@ -5,6 +5,11 @@ class MatricesController < ApplicationController
   # GET /matrices.json
   def index
     @matrices = Matrix.all
+    respond_to do |format|
+      format.html
+      format.csv { send_data @matrices.to_csv }
+      format.xls
+    end
   end
 
   # GET /matrices/1

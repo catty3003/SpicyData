@@ -13,4 +13,13 @@ class Treatment < ActiveRecord::Base
     "ID: " + self.id.to_s + ". " + self.t_comment
   end
 
+  def self.to_csv(options = {})
+    CSV.generate(options) do |csv|
+      csv << column_names
+      all.each do |treatment|
+        csv << treatment.attributes.values_at(*column_names)
+      end
+    end
+  end
+  
 end

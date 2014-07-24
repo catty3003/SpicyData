@@ -1,0 +1,51 @@
+  <table border="1">
+  	<thead>
+	    <tr>
+	      <th>Total sample number</th>
+	      <th>Inoculum concentration initial</th>
+	      <th>Concentration unit</th>
+	      <th>Tena duration</th>
+	      <th>Tena duration unit</th>
+	      <th>Final concentration</th>
+	      <th>F concentration unit</th>
+	      <th>Decimal reduction</th>
+	      <th>Tena comment</th>	      
+	      <th>Reference</th>
+	      <th>User</th>
+	      <th></th>
+	      <th></th>
+	    </tr>
+	  </thead>
+
+	  <tbody>
+	    <% @tenacities.each do |tenacity| %>
+	   	 <% tenacity.tenacityparams.each do |p| %>	
+	      <tr>
+	        <td><h4><%= link_to tenacity.total_sample_number, tenacity_path(tenacity) %></h4></td>
+	        <td><%= tenacity.inoculum_concentration_initial %></td>
+	        <td><%= tenacity.i_concentration_unit %></td>
+	        <td>
+	              <%= p.tena_duration  if p.tena_duration  %>
+	        </td>
+	        <td>
+	              <%= p.tena_duration_unit  if p.tena_duration_unit  %>
+	        </td>
+	        <td>
+	              <%= p.final_concentration  if p.final_concentration  %>
+	        </td>
+	        <td>
+	              <%= p.f_concentration_unit  if p.f_concentration_unit  %>
+	        </td>
+					<td>
+	              <%= p.decimal_reduction  if p.decimal_reduction  %>
+	        </td>
+	        <td>
+	              <%= p.tena_comment  if p.tena_comment  %>
+          </td>             
+	        <td><%= tenacity.reference_id %></td>
+	        <td><%= tenacity.user_id %></td>
+	        <% end %> 
+	      </tr>
+	    <% end %>
+	  </tbody>
+	</table> 

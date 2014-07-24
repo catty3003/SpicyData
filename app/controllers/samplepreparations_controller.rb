@@ -5,6 +5,11 @@ class SamplepreparationsController < ApplicationController
   # GET /samplepreparations.json
   def index
     @samplepreparations = Samplepreparation.all
+    respond_to do |format|
+      format.html
+      format.csv { send_data @samplepreparations.to_csv }
+      format.xls
+    end    
   end
 
   # GET /samplepreparations/1

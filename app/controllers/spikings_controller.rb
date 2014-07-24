@@ -5,6 +5,11 @@ class SpikingsController < ApplicationController
   # GET /spikings.json
   def index
     @spikings = Spiking.all
+    respond_to do |format|
+      format.html
+      format.csv { send_data @spikings.to_csv }
+      format.xls
+    end    
   end
 
   # GET /spikings/1

@@ -1,0 +1,63 @@
+  <table border="1">
+  	<thead>
+	    <tr>
+	      <th>Matrix common name</th>
+	      <th>Matrixatrix genus</th>
+	      <th>Matrix species</th>
+	      <th>Other matrix name</th>
+	      <th>Plant part</th>
+	      <th>Storage form</th>
+	      <th>Product form</th>
+	      <th>Place of origin</th>
+	      <th>Date of harvest</th>
+	      <th>Relative humidity during harvest</th>
+	      <th>Temperature during harvest</th>
+	      <th>Pre treatment</th>
+	      <th>Sampling date</th>
+	      <th>Matrixatrix pH</th>
+	      <th>Matrix available water</th>
+	      <th>Humidity of matrix</th>
+	      <th>Ash (%)</th>
+	      <th>Sand (%)</th>
+	      <th>Lipids (%)</th>
+	      <th>Further ingredients</th>
+	      <th>Matrix comment</th>
+	      <th>Reference</th>
+	      <th>User</th>
+	      <th></th>
+	      <th></th>
+	    </tr>
+	  </thead>
+
+	  <tbody>
+	    <% @matrices.each do |matrix| %>
+	      <tr>
+	        <td><h4><%= link_to matrix.adminmatrixname.m_common_name, matrix_path(matrix) if matrix.adminmatrixname %></h4></td>
+	        <td><%= matrix.adminmatrixgenu.m_genus if matrix.adminmatrixgenu %></td>
+	        <td><%= matrix.adminmatrixspec.m_species if matrix.adminmatrixspec %></td>
+	        <td><%= matrix.other_matrix_name %></td>
+	        <td><%= matrix.adminmatrixplantpart.plant_part if matrix.adminmatrixplantpart %></td>
+	        <td><%= matrix.adminmatrixstorageform.storage_form if matrix.adminmatrixstorageform %></td>
+	        <td><%= matrix.adminmatrixproductform.product_form if matrix.adminmatrixproductform %></td>
+	        <td><%= matrix.place_of_origin %></td>
+	        <td><%= matrix.date_of_harvest %></td>
+	        <td><%= matrix.relative_humidity_during_harvest %></td>
+	        <td><%= matrix.temperature_during_harvest %></td>
+	        <td><%= matrix.pre_treatment %></td>
+	        <td><%= matrix.sampling_date %></td>
+	        <td><%= matrix.m_ph %></td>
+	        <td><%= matrix.m_aw %></td>
+	        <td><%= matrix.humidity_of_matrix %></td>
+	        <td><%= matrix.ash %></td>
+	        <td><%= matrix.sand %></td>
+	        <td><%= matrix.lipids %></td>
+	        <td><%= matrix.further_ingredients %></td>
+	        <td><%= matrix.m_comment %></td>
+	        <td><%= matrix.reference_id %></td>
+	        <td><%= matrix.user_id %></td>
+
+	      </tr>
+	    <% end %>
+	  </tbody>
+	</table>
+

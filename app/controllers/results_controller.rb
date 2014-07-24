@@ -5,6 +5,11 @@ class ResultsController < ApplicationController
   # GET /results.json
   def index
     @results = Result.all
+    respond_to do |format|
+      format.html
+      format.csv { send_data @results.to_csv }
+      format.xls
+    end   
   end
 
   # GET /results/1

@@ -14,10 +14,12 @@
         </div>
       </div>     
 
-      <div class="col-md-9" id="rightCol">     
+      <div class="col-md-9" id="rightCol"> 
+        <%= link_to 'New Reference', new_reference_path, class: "btn btn-success"  %>   
+        <%= link_to 'Export XLS', url_for(:format => 'xls'), class: "btn btn-success " %> 
+        <%= link_to 'Export CSV', url_for(:format => 'csv'), class: "btn btn-success " %> <br><br>        
         <%= render 'tablereferences' %>                  
         <br>
-        <%= link_to 'New Reference', new_reference_path, class: "btn btn-success"  %>
       </div>
       
     </div>

@@ -11,4 +11,13 @@ class Spiking < ActiveRecord::Base
     "ID: " + self.spik_short_name
   end
 
+  def self.to_csv(options = {})
+    CSV.generate(options) do |csv|
+      csv << column_names
+      all.each do |spiking|
+        csv << spiking.attributes.values_at(*column_names)
+      end
+    end
+  end
+
 end

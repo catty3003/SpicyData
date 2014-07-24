@@ -5,6 +5,11 @@ class ReferencesController < ApplicationController
   # GET /references.json
   def index
     @references = Reference.all
+    respond_to do |format|
+      format.html
+      format.csv { send_data @references.to_csv }
+      format.xls
+    end    
   end
 
   # GET /references/1

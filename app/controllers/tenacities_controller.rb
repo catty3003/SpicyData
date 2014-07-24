@@ -5,6 +5,11 @@ class TenacitiesController < ApplicationController
   # GET /tenacities.json
   def index
     @tenacities = Tenacity.all
+    respond_to do |format|
+      format.html
+      format.csv { send_data @tenacities.to_csv }
+      format.xls
+    end    
   end
 
   # GET /tenacities/1
