@@ -19,6 +19,15 @@ class MatricesController < ApplicationController
   # GET /matrices/1
   # GET /matrices/1.json
   def show
+    if params[:clone]
+      @matrix = @matrix.dupli
+
+
+      respond_to do |format|
+        format.html { render action: "new", notice: 'matrix was successfully cloned.' }
+      end
+      else
+    end
   end
 
   # GET /matrices/new

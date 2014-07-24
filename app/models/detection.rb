@@ -20,5 +20,9 @@ class Detection < ActiveRecord::Base
       end
     end
   end
+  
+  def dupli
+    detection = self.deep_clone :include => :culdetecs
+  end
 
 end

@@ -22,4 +22,8 @@ class Matrix < ActiveRecord::Base
     end
   end
 
+  def dupli
+    self.dup 
+  end
+
 end

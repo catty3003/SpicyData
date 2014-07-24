@@ -26,11 +26,6 @@ class ContaminationstatusesController < ApplicationController
       @references_for_dropdown << [i.full_ref, i.id]
     end
 
-def search
-  index
-  render :index
-end
-
     @matrices = Matrix.all
     @matrices_for_dropdown = []
     @matrices.each do |i|

@@ -178,7 +178,13 @@
 
             </div>
           </div>    
-          <%= link_to 'Edit Detection', edit_detection_path(@detection), class: "btn btn-warning btn-sm" %> |  | 
+          <%= link_to 'Edit Detection', edit_detection_path(@detection), class: "btn btn-warning btn-sm" %> | 
+          <% if params[:clone] == "attributes" %>
+            
+          <% else %>
+            <%= link_to "Duplicate", detection_path(clone: "attributes"), class: "btn btn-success btn-sm"  %>
+          <% end %> | 
+ | 
           <%= link_to 'Delete', @detection, class: "btn btn-danger btn-sm", method: :delete, data: { confirm: 'Are you sure?' } %> | 
           <%= link_to 'Back to all Detections', detections_path, class: "btn btn-info btn-sm" %>   
         </div>

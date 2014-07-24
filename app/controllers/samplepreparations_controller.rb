@@ -19,6 +19,15 @@ class SamplepreparationsController < ApplicationController
   # GET /samplepreparations/1
   # GET /samplepreparations/1.json
   def show
+    if params[:clone]
+      @samplepreparation = @samplepreparation.dupli
+
+
+      respond_to do |format|
+        format.html { render action: "new", notice: 'samplepreparation was successfully cloned.' }
+      end
+      else
+    end
   end
 
   # GET /samplepreparations/new

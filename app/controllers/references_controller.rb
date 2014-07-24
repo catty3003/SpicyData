@@ -20,6 +20,15 @@ class ReferencesController < ApplicationController
   # GET /references/1
   # GET /references/1.json
   def show
+    if params[:clone]
+      @reference = @reference.dupli
+
+
+      respond_to do |format|
+        format.html { render action: "new", notice: 'reference was successfully cloned.' }
+      end
+      else
+    end
   end
 
   # GET /references/new

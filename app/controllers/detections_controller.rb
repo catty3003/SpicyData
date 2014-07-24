@@ -19,6 +19,15 @@ class DetectionsController < ApplicationController
   # GET /detections/1
   # GET /detections/1.json
   def show
+    if params[:clone]
+      @detection = @detection.dupli
+
+
+      respond_to do |format|
+        format.html { render action: "new", notice: 'detection was successfully cloned.' }
+      end
+      else
+    end
   end
 
   # GET /detections/new

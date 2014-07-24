@@ -19,6 +19,15 @@ class TenacitiesController < ApplicationController
   # GET /tenacities/1
   # GET /tenacities/1.json
   def show
+    if params[:clone]
+      @tenacity = @tenacity.dupli
+
+
+      respond_to do |format|
+        format.html { render action: "new", notice: 'tenacity was successfully cloned.' }
+      end
+      else
+    end
   end
 
   # GET /tenacities/new

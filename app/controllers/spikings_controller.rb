@@ -19,6 +19,15 @@ class SpikingsController < ApplicationController
   # GET /spikings/1
   # GET /spikings/1.json
   def show
+    if params[:clone]
+      @spiking = @spiking.dupli
+
+
+      respond_to do |format|
+        format.html { render action: "new", notice: 'spiking was successfully cloned.' }
+      end
+      else
+    end
   end
 
   # GET /spikings/new

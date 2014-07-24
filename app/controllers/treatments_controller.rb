@@ -19,6 +19,15 @@ class TreatmentsController < ApplicationController
   # GET /treatments/1
   # GET /treatments/1.json
   def show
+    if params[:clone]
+      @treatment = @treatment.dupli
+
+
+      respond_to do |format|
+        format.html { render action: "new", notice: 'treatment was successfully cloned.' }
+      end
+      else
+    end
   end
 
   # GET /treatments/new
