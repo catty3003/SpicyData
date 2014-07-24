@@ -22,4 +22,8 @@ class Reference < ActiveRecord::Base
     end
   end
 
+  def dupli
+    self.dup    
+  end
+
 end

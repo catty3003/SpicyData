@@ -14,4 +14,9 @@ class Samplepreparation < ActiveRecord::Base
       end
     end
   end
+
+  def dupli
+    self.dup    
+  end
+    
 end

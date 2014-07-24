@@ -19,6 +19,10 @@ class Tenacity < ActiveRecord::Base
       end
     end
   end
-  
+ 
+  def dupli
+    agent = self.deep_clone :include => :tenacityparams
+  end
+   
 end
 

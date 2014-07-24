@@ -20,4 +20,8 @@ class Spiking < ActiveRecord::Base
     end
   end
 
+  def dupli
+    agent = self.deep_clone :include => :spikingparams
+  end
+  
 end
