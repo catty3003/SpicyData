@@ -1,15 +1,17 @@
 <div class="jumbotron">
-	<h1>Welcome to the SPICED database</h1>
 
-<% if current_user.present? %>
-	<h3> Please check the help funtion before you start.</h3>
+
+	<% if current_user.present? %>
+		<h1>Hello <%= current_user.username %> <%= current_user.surname %>. <br> Welcome to the SPICED database</h1>
+		<h3> Please check the help funtion before you start.</h3>
 	<% else %>
-	<p class="lead">
-	    Please log in to insert data or have a look at the data.
-	</p>
- 	<%= link_to 'Login', new_user_session_path, class: "btn btn-lg btn-success" %>
-	<%= link_to 'Sign up', new_user_registration_path, class: "btn btn-lg btn-success" %>
-<% end %>
+		<h1>Welcome to the SPICED database</h1>
+		<p class="lead">
+		    Please log in to insert data or have a look at the data.
+		</p>
+	 	<%= link_to 'Login', new_user_session_path, class: "btn btn-lg btn-success" %>
+		<%= link_to 'Sign up', new_user_registration_path, class: "btn btn-lg btn-success" %>
+	<% end %>
 </div>
 
 <div class="row marketing">
