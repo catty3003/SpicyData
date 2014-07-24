@@ -4,7 +4,12 @@ class AgentsController < ApplicationController
   # GET /agents
   # GET /agents.json
   def index
-    @agents = Agent.all
+    #@agents = Agent.all
+
+    @search = Agent.search(params[:q])
+    @agents = @search.result
+    @search.build_condition 
+
     respond_to do |format|
       format.html
       format.csv { send_data @agents.to_csv }

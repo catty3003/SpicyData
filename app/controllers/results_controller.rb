@@ -4,7 +4,11 @@ class ResultsController < ApplicationController
   # GET /results
   # GET /results.json
   def index
-    @results = Result.all
+   #@results = Result.all
+    @search = Result.search(params[:q])
+    @results = @search.result
+    @search.build_condition 
+   
     respond_to do |format|
       format.html
       format.csv { send_data @results.to_csv }

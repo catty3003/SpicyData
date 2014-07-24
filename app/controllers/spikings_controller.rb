@@ -4,7 +4,11 @@ class SpikingsController < ApplicationController
   # GET /spikings
   # GET /spikings.json
   def index
-    @spikings = Spiking.all
+    #@spikings = Spiking.all
+    @search = Spiking.search(params[:q])
+    @spikings = @search.result
+    @search.build_condition 
+    
     respond_to do |format|
       format.html
       format.csv { send_data @spikings.to_csv }

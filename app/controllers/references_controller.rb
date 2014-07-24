@@ -4,7 +4,12 @@ class ReferencesController < ApplicationController
   # GET /references
   # GET /references.json
   def index
-    @references = Reference.all
+    #@references = Reference.all
+
+    @search = Reference.search(params[:q])
+    @references = @search.result
+    @search.build_condition 
+
     respond_to do |format|
       format.html
       format.csv { send_data @references.to_csv }

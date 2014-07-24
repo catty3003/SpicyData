@@ -4,7 +4,11 @@ class DetectionsController < ApplicationController
   # GET /detections
   # GET /detections.json
   def index
-    @detections = Detection.all
+    #@detections = Detection.all
+    @search = Detection.search(params[:q])
+    @detections = @search.result
+    @search.build_condition 
+    
     respond_to do |format|
       format.html
       format.csv { send_data @detections.to_csv }

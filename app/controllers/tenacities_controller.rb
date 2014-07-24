@@ -4,7 +4,11 @@ class TenacitiesController < ApplicationController
   # GET /tenacities
   # GET /tenacities.json
   def index
-    @tenacities = Tenacity.all
+    #@tenacities = Tenacity.all
+    @search = Tenacity.search(params[:q])
+    @tenacities = @search.result
+    @search.build_condition 
+        
     respond_to do |format|
       format.html
       format.csv { send_data @tenacities.to_csv }

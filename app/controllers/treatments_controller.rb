@@ -4,7 +4,11 @@ class TreatmentsController < ApplicationController
   # GET /treatments
   # GET /treatments.json
   def index
-    @treatments = Treatment.all
+   #@treatments = Treatment.all
+    @search = Treatment.search(params[:q])
+    @treatments = @search.result
+    @search.build_condition 
+   
       respond_to do |format|
       format.html
       format.csv { send_data @treatments.to_csv }

@@ -4,7 +4,11 @@ class SamplepreparationsController < ApplicationController
   # GET /samplepreparations
   # GET /samplepreparations.json
   def index
-    @samplepreparations = Samplepreparation.all
+    #@samplepreparations = Samplepreparation.all
+    @search = Samplepreparation.search(params[:q])
+    @samplepreparations = @search.result
+    @search.build_condition 
+    
     respond_to do |format|
       format.html
       format.csv { send_data @samplepreparations.to_csv }

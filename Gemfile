@@ -48,3 +48,4 @@ gem 'nested_form'
 gem 'devise'
 gem 'cancan'
 gem 'role_model'
+gem "ransack"
