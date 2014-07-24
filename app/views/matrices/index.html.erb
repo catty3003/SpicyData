@@ -14,10 +14,31 @@
         </div>
       </div>     
 
-      <div class="col-md-9" id="rightCol">         
+      <div class="col-md-9" id="rightCol">  
+
+
+        <div class="well"><%= search_form_for @search do |f| %>
+          <%= f.condition_fields do |c| %>
+            <div class="field">
+              <%= c.attribute_fields do |a| %>
+                <%= a.attribute_select associations: [:adminmatrixname, :adminmatrixgenu, :adminmatrixspec, :adminmatrixplantpart, :adminmatrixstorageform, :adminmatrixproductform  ] %>
+              <% end %>
+              <%= c.predicate_select %>
+              <%= c.value_fields do |v| %>
+                <%= v.text_field :value %>
+              <% end %>
+              </div>
+            <% end %>
+            <div class="actions"><%= f.submit "Search", class: "btn btn-info"  %></div>
+          <% end %>
+        </div>
+
+
+        <%= link_to 'New Matrix', new_matrix_path, class: "btn btn-success"  %>
+        <%= link_to 'Export XLS', url_for(:format => 'xls'), class: "btn btn-success " %> 
+        <%= link_to 'Export CSV', url_for(:format => 'csv'), class: "btn btn-success " %> <br><br>       
         <%= render 'tablematrices' %>
         <br>
-        <%= link_to 'New Matrix', new_matrix_path, class: "btn btn-success"  %>
         </div>
     </div>
   </div>

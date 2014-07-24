@@ -1,6 +1,6 @@
 class AdminmatrixproductformsController < ApplicationController
   before_action :set_adminmatrixproductform, only: [:show, :edit, :update, :destroy]
-
+  before_filter :authenticate_user!, :except => [:some_action_without_auth]
   # GET /adminmatrixproductforms
   # GET /adminmatrixproductforms.json
   def index

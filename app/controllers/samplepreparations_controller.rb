@@ -1,15 +1,33 @@
 class SamplepreparationsController < ApplicationController
   before_action :set_samplepreparation, only: [:show, :edit, :update, :destroy]
-
+  before_filter :authenticate_user!, :except => [:some_action_without_auth]
   # GET /samplepreparations
   # GET /samplepreparations.json
   def index
-    @samplepreparations = Samplepreparation.all
+    #@samplepreparations = Samplepreparation.all
+    @search = Samplepreparation.search(params[:q])
+    @samplepreparations = @search.result
+    @search.build_condition 
+    
+    respond_to do |format|
+      format.html
+      format.csv { send_data @samplepreparations.to_csv }
+      format.xls
+    end    
   end
 
   # GET /samplepreparations/1
   # GET /samplepreparations/1.json
   def show
+    if params[:clone]
+      @samplepreparation = @samplepreparation.dupli
+
+
+      respond_to do |format|
+        format.html { render action: "new", notice: 'samplepreparation was successfully cloned.' }
+      end
+      else
+    end
   end
 
   # GET /samplepreparations/new
@@ -24,7 +42,7 @@ class SamplepreparationsController < ApplicationController
   # POST /samplepreparations
   # POST /samplepreparations.json
   def create
-    @samplepreparation = Samplepreparation.new(samplepreparation_params)
+    @samplepreparation = current_user.samplepreparation.new(samplepreparation_params)
 
     respond_to do |format|
       if @samplepreparation.save

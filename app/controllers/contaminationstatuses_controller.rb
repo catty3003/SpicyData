@@ -1,20 +1,82 @@
 class ContaminationstatusesController < ApplicationController
   before_action :set_contaminationstatus, only: [:show, :edit, :update, :destroy]
-
+  before_filter :authenticate_user!, :except => [:some_action_without_auth]
   # GET /contaminationstatuses
   # GET /contaminationstatuses.json
   def index
     @contaminationstatuses = Contaminationstatus.all
+
+    @contaminationstatuses = @contaminationstatuses.where(matrix_id: params[:matrix_id]) if params[:matrix_id]
+    @contaminationstatuses = @contaminationstatuses.where(agent_id: params[:agent_id]) if params[:agent_id]
+    @contaminationstatuses = @contaminationstatuses.where(spiking_id: params[:spiking_id]) if params[:spiking_id]
+    @contaminationstatuses = @contaminationstatuses.where(treatment_id: params[:treatment_id]) if params[:treatment_id]
+    @contaminationstatuses = @contaminationstatuses.where(samplepreparation_id: params[:samplepreparation_id]) if params[:samplepreparation_id]
+    @contaminationstatuses = @contaminationstatuses.where(detection_id: params[:detection_id]) if params[:detection_id]
     
-    @matrices = Matrix.all 
-    @agents =Agent.all 
-    @detections = Detection.all
+
+    respond_to do |format|
+      format.html
+      format.csv { send_data @agents.to_csv }
+      format.xls
+    end
+   
     @references = Reference.all
-    @results = Result.all
-    @samplepreparations = Samplepreparation.all
+    @references_for_dropdown = []
+    @references.each do |i|
+      @references_for_dropdown << [i.full_ref, i.id]
+    end
+
+    @matrices = Matrix.all
+    @matrices_for_dropdown = []
+    @matrices.each do |i|
+      # class of dependent option must be equal to id of parent one
+      @matrices_for_dropdown << [i.full_matrix, i.id, {class: i.reference.id}]
+    end
+
+    @agents = Agent.all
+    @agents_for_dropdown = []
+    @agents.each do |i|
+      # class of dependent option must be equal to id of parent one
+      @agents_for_dropdown << [i.full_agent, i.id, {class: i.reference.id}]
+    end
+
     @spikings = Spiking.all
-    @tenacities = Tenacity.all
+    @spikings_for_dropdown = []
+    @spikings.each do |i|
+      # class of dependent option must be equal to id of parent one
+      @spikings_for_dropdown << [i.full_spik, i.id, {class: i.reference.id}]
+    end
+
     @treatments = Treatment.all
+    @treatments_for_dropdown = []
+    @treatments.each do |i|
+      # class of dependent option must be equal to id of parent one
+      @treatments_for_dropdown << [i.full_treat, i.id, {class: i.reference.id}]
+    end
+
+    @samplepreparations = Samplepreparation.all
+    @samplepreparations_for_dropdown = []
+    @samplepreparations.each do |i|
+      # class of dependent option must be equal to id of parent one
+      @samplepreparations_for_dropdown << [i.full_sampleprep, i.id, {class: i.reference.id}]
+    end
+
+    @detections = Detection.all
+    @detections_for_dropdown = []
+    @detections.each do |i|
+      # class of dependent option must be equal to id of parent one
+      @detections_for_dropdown << [i.full_detec, i.id, {class: i.reference.id}]
+    end
+
+    @tenacities = Tenacity.all
+    @tenacities_for_dropdown = []
+    @tenacities.each do |i|
+      # class of dependent option must be equal to id of parent one
+      @tenacities_for_dropdown << [i.full_tena, i.id, {class: i.reference.id}]
+    end
+
+    @results = Result.all
+
   end
 
   # GET /contaminationstatuses/1
@@ -25,10 +87,14 @@ class ContaminationstatusesController < ApplicationController
 
 
       respond_to do |format|
-        format.html { render action: "new", notice: 'agent was successfully cloned.' }
+        format.html { render action: "clone", notice: 'agent was successfully cloned.' }
       end
       else
     end    
+  end
+
+  def clone
+    @contaminationstatus = Contaminationstatus.new
   end
 
   # GET /contaminationstatuses/new
@@ -38,19 +104,125 @@ class ContaminationstatusesController < ApplicationController
     @references = Reference.all
     @references_for_dropdown = []
     @references.each do |i|
-      @references_for_dropdown = @references_for_dropdown << [i.first_author_name,i.id]
+      @references_for_dropdown << [i.full_ref, i.id]
     end
-        
+
+    @matrices = Matrix.all
+    @matrices_for_dropdown = []
+    @matrices.each do |i|
+      # class of dependent option must be equal to id of parent one
+      @matrices_for_dropdown << [i.full_matrix, i.id, {class: i.reference.id}]
+    end
+
+    @agents = Agent.all
+    @agents_for_dropdown = []
+    @agents.each do |i|
+      # class of dependent option must be equal to id of parent one
+      @agents_for_dropdown << [i.full_agent, i.id, {class: i.reference.id}]
+    end
+
+    @spikings = Spiking.all
+    @spikings_for_dropdown = []
+    @spikings.each do |i|
+      # class of dependent option must be equal to id of parent one
+      @spikings_for_dropdown << [i.full_spik, i.id, {class: i.reference.id}]
+    end
+
+    @treatments = Treatment.all
+    @treatments_for_dropdown = []
+    @treatments.each do |i|
+      # class of dependent option must be equal to id of parent one
+      @treatments_for_dropdown << [i.full_treat, i.id, {class: i.reference.id}]
+    end
+
+    @samplepreparations = Samplepreparation.all
+    @samplepreparations_for_dropdown = []
+    @samplepreparations.each do |i|
+      # class of dependent option must be equal to id of parent one
+      @samplepreparations_for_dropdown << [i.full_sampleprep, i.id, {class: i.reference.id}]
+    end
+
+    @detections = Detection.all
+    @detections_for_dropdown = []
+    @detections.each do |i|
+      # class of dependent option must be equal to id of parent one
+      @detections_for_dropdown << [i.full_detec, i.id, {class: i.reference.id}]
+    end
+
+    @tenacities = Tenacity.all
+    @tenacities_for_dropdown = []
+    @tenacities.each do |i|
+      # class of dependent option must be equal to id of parent one
+      @tenacities_for_dropdown << [i.full_tena, i.id, {class: i.reference.id}]
+    end
+ 
   end
 
   # GET /contaminationstatuses/1/edit
   def edit
+
+    @references = Reference.all
+    @references_for_dropdown = []
+    @references.each do |i|
+      @references_for_dropdown << [i.full_ref, i.id]
+    end
+
+    @matrices = Matrix.all
+    @matrices_for_dropdown = []
+    @matrices.each do |i|
+      # class of dependent option must be equal to id of parent one
+      @matrices_for_dropdown << [i.full_matrix, i.id, {class: i.reference.id}]
+    end
+
+    @agents = Agent.all
+    @agents_for_dropdown = []
+    @agents.each do |i|
+      # class of dependent option must be equal to id of parent one
+      @agents_for_dropdown << [i.full_agent, i.id, {class: i.reference.id}]
+    end
+
+    @spikings = Spiking.all
+    @spikings_for_dropdown = []
+    @spikings.each do |i|
+      # class of dependent option must be equal to id of parent one
+      @spikings_for_dropdown << [i.full_spik, i.id, {class: i.reference.id}]
+    end
+
+    @treatments = Treatment.all
+    @treatments_for_dropdown = []
+    @treatments.each do |i|
+      # class of dependent option must be equal to id of parent one
+      @treatments_for_dropdown << [i.full_treat, i.id, {class: i.reference.id}]
+    end
+
+    @samplepreparations = Samplepreparation.all
+    @samplepreparations_for_dropdown = []
+    @samplepreparations.each do |i|
+      # class of dependent option must be equal to id of parent one
+      @samplepreparations_for_dropdown << [i.full_sampleprep, i.id, {class: i.reference.id}]
+    end
+
+    @detections = Detection.all
+    @detections_for_dropdown = []
+    @detections.each do |i|
+      # class of dependent option must be equal to id of parent one
+      @detections_for_dropdown << [i.full_detec, i.id, {class: i.reference.id}]
+    end
+
+    @tenacities = Tenacity.all
+    @tenacities_for_dropdown = []
+    @tenacities.each do |i|
+      # class of dependent option must be equal to id of parent one
+      @tenacities_for_dropdown << [i.full_tena, i.id, {class: i.reference.id}]
+    end
+
   end
 
   # POST /contaminationstatuses
   # POST /contaminationstatuses.json
   def create
-    @contaminationstatus = Contaminationstatus.new(contaminationstatus_params)
+    @contaminationstatus = current_user.contaminationstatuses.new(contaminationstatus_params)
+
 
     respond_to do |format|
       if @contaminationstatus.save

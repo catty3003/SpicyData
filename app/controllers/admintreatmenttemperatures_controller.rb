@@ -1,6 +1,6 @@
 class AdmintreatmenttemperaturesController < ApplicationController
   before_action :set_admintreatmenttemperature, only: [:show, :edit, :update, :destroy]
-
+  before_filter :authenticate_user!, :except => [:some_action_without_auth]
   # GET /admintreatmenttemperatures
   # GET /admintreatmenttemperatures.json
   def index

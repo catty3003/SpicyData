@@ -1,10 +1,15 @@
 class AgentsController < ApplicationController
   before_action :set_agent, only: [:show, :edit, :update, :destroy, :clone]
-
+  before_filter :authenticate_user!, :except => [:some_action_without_auth]
   # GET /agents
   # GET /agents.json
   def index
-    @agents = Agent.all
+    #@agents = Agent.all
+
+    @search = Agent.search(params[:q])
+    @agents = @search.result
+    @search.build_condition 
+
     respond_to do |format|
       format.html
       format.csv { send_data @agents.to_csv }
@@ -39,7 +44,7 @@ class AgentsController < ApplicationController
   # POST /agents
   # POST /agents.json
   def create
-    @agent = Agent.new(agent_params)
+    @agent = current_user.agents.new(agent_params)
 
     respond_to do |format|
       if @agent.save

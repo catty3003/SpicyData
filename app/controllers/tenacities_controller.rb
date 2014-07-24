@@ -1,15 +1,33 @@
 class TenacitiesController < ApplicationController
   before_action :set_tenacity, only: [:show, :edit, :update, :destroy]
-
+  before_filter :authenticate_user!, :except => [:some_action_without_auth]
   # GET /tenacities
   # GET /tenacities.json
   def index
-    @tenacities = Tenacity.all
+    #@tenacities = Tenacity.all
+    @search = Tenacity.search(params[:q])
+    @tenacities = @search.result
+    @search.build_condition 
+        
+    respond_to do |format|
+      format.html
+      format.csv { send_data @tenacities.to_csv }
+      format.xls
+    end    
   end
 
   # GET /tenacities/1
   # GET /tenacities/1.json
   def show
+    if params[:clone]
+      @tenacity = @tenacity.dupli
+
+
+      respond_to do |format|
+        format.html { render action: "new", notice: 'tenacity was successfully cloned.' }
+      end
+      else
+    end
   end
 
   # GET /tenacities/new
@@ -25,7 +43,7 @@ class TenacitiesController < ApplicationController
   # POST /tenacities
   # POST /tenacities.json
   def create
-    @tenacity = Tenacity.new(tenacity_params)
+    @tenacity = current_user.tenacities.new(tenacity_params)
 
     respond_to do |format|
       if @tenacity.save

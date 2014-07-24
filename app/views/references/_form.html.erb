@@ -16,27 +16,27 @@
   <div class="panel panel-info">
     <div class="panel-body">
 
-      <div class="field">
+      <div class="form-group">
         <%= f.label :"type_of_literatur" %><br>
         <%= f.collection_select :adminreferencetype_id, Adminreferencetype.all.order(:type_of_literatur), :id, :type_of_literatur, {include_blank: true}, {class: "form-control"} %>
       </div>
-      <div class="field">
+      <div class="form-group">
         <%= f.label :first_author_name %><br>
         <%= f.text_field :first_author_name, class: "form-control" %>
       </div>
-      <div class="field">
+      <div class="form-group">
         <%= f.label :year %><br>
         <%= f.number_field :year, class: "form-control" %>
       </div>
-      <div class="field">
+      <div class="form-group">
         <%= f.label :title %><br>
         <%= f.text_field :title, class: "form-control" %>
       </div>
-      <div class="field">
+      <div class="form-group">
         <%= f.label :journal %><br>
         <%= f.text_field :journal, class: "form-control" %>
       </div>
-      <div class="field">
+      <div class="form-group">
         <%= f.label :volume %><br>
         <%= f.number_field :volume, class: "form-control" %>
       </div>
@@ -54,7 +54,7 @@
           </div>              
         </div>         
       </div>
-      <div class="field">
+      <div class="form-group">
         <%= f.label :link %><br>
         <%= f.text_field :link, class: "form-control" %>
       </div>
@@ -63,33 +63,33 @@
           <div class="panel-body">
             <h3>This Reference include inforations about: </h3>
             <div class="col-md-3">              
-              <div class="field">
+              <div class="form-group">
                 <%= f.check_box :matrix %> 
                 <%= f.label :matrix %>
               </div>
-              <div class="field">
+              <div class="form-group">
                 <%= f.check_box :agent %>
                 <%= f.label :agent %>
               </div>
-              <div class="field">
+              <div class="form-group">
                 <%= f.check_box :tenacity %>
                 <%= f.label :tenacity %>        
               </div>              
             </div>          
             <div class="col-md-3">
-              <div class="field">
+              <div class="form-group">
+                <%= f.label :"Sample preparation" %>                
                 <%= f.check_box :sample_prep %>
-                <%= f.label :"Sample preparation" %>
               </div>
-              <div class="field">
+              <div class="form-group">
                 <%= f.check_box :detection %>
                 <%= f.label :detection %>
               </div>
-              <div class="field">
+              <div class="form-group">
                 <%= f.check_box :spiking %>
                 <%= f.label :spiking %>
               </div>
-              <div class="field">
+              <div class="form-group">
                 <%= f.check_box :treatment %>
                 <%= f.label :treatment %>
               </div>
@@ -97,11 +97,11 @@
           </div>
         </div> 
       </div>    
-      <div class="field">
+      <div class="form-group">
         <%= f.label :"Reference comment" %><br>
         <%= f.text_area :r_comment, class: "form-control" %>
       </div>
-      <div class="field">
+      <div class="form-group">
         <%= f.label :user_id %><br>
         <%= f.number_field :user_id , class: "form-control"%>
       </div>

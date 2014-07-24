@@ -1,0 +1,58 @@
+  <table border="1">    
+      <thead>
+        <tr>
+          <th>Temperature treatment</th>
+          <th>Temperature (°C)</th>
+          <th>Steam treatment</th>
+          <th>Steam (°C)</th>
+          <th>Treatment wiht fumigation gas</th>
+          <th>Fumigation (°C)</th>
+          <th>Optical treatment</th>
+          <th>Mechanical treatment</th>
+          <th>Process type</th>
+          <th>Treatment ph</th>
+          <th>Pressure</th>
+          <th>Kgy dose</th>
+          <th>Treatment available water</th>
+          <th>Treatment water activity</th>
+          <th>Other condition</th>
+          <th>Treatment duration</th>
+          <th>Treatment duration unit</th>
+          <th>Treatment comment</th>
+          <th>Reference</th>
+          <th>User</th>
+          <th>Matrix</th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @treatments.each do |treatment| %>
+          <tr>
+            <td><h4><%= link_to treatment.admintreatmenttemperature.temperature, treatment_path(treatment) if treatment.admintreatmenttemperature %></h4></td>
+            <td><%= treatment.temperature_in_degree %></td>
+            <td><%= treatment.admintreatmentsteam.steam if treatment.admintreatmentsteam %></td>
+            <td><%= treatment.steam_in_percent %></td>
+            <td><%= treatment.admintreatmentfumigation.fumigation_gas if treatment.admintreatmentfumigation %></td>
+            <td><%= treatment.fumigation_gas_in_percent %></td>
+            <td><%= treatment.admintreatmentoptical.optical if treatment.admintreatmentoptical %></td>
+            <td><%= treatment.admintreatmentmechanical.mechanical if treatment.admintreatmentmechanical %></td>
+            <td><%= treatment.admintreatmentprocesstype.process_type if treatment.admintreatmentprocesstype %></td>
+            <td><%= treatment.t_ph %></td>
+            <td><%= treatment.pressure %></td>
+            <td><%= treatment.kgy_dose %></td>
+            <td><%= treatment.t_aw %></td>
+            <td><%= treatment.water_activity %></td>
+            <td><%= treatment.other_condition %></td>
+            <td><%= treatment.treat_duration %></td>
+            <td><%= treatment.treat_duration_unit %></td>
+            <td><%= treatment.t_comment %></td>
+            <td><%= treatment.reference_id %></td>
+            <td><%= treatment.user_id %></td>
+            <td><%= treatment.matrix_id %></td>
+
+          </tr>
+        <% end %>
+      </tbody>
+    </table>

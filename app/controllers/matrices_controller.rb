@@ -1,15 +1,33 @@
 class MatricesController < ApplicationController
   before_action :set_matrix, only: [:show, :edit, :update, :destroy]
-
+  before_filter :authenticate_user!, :except => [:some_action_without_auth]
   # GET /matrices
   # GET /matrices.json
   def index
-    @matrices = Matrix.all
+    #@matrices = Matrix.all
+    @search = Matrix.search(params[:q])
+    @matrices = @search.result
+    @search.build_condition 
+        
+    respond_to do |format|
+      format.html
+      format.csv { send_data @matrices.to_csv }
+      format.xls
+    end
   end
 
   # GET /matrices/1
   # GET /matrices/1.json
   def show
+    if params[:clone]
+      @matrix = @matrix.dupli
+
+
+      respond_to do |format|
+        format.html { render action: "new", notice: 'matrix was successfully cloned.' }
+      end
+      else
+    end
   end
 
   # GET /matrices/new
@@ -24,7 +42,7 @@ class MatricesController < ApplicationController
   # POST /matrices
   # POST /matrices.json
   def create
-    @matrix = Matrix.new(matrix_params)
+    @matrix = current_user.matrices.new(matrix_params)
 
     respond_to do |format|
       if @matrix.save

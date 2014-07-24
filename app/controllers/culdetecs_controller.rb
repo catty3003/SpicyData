@@ -1,6 +1,6 @@
 class CuldetecsController < ApplicationController
   before_action :set_culdetec, only: [:show, :edit, :update, :destroy]
-
+  before_filter :authenticate_user!, :except => [:some_action_without_auth]
   # GET /culdetecs
   # GET /culdetecs.json
   def index

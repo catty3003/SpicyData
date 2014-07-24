@@ -20,50 +20,42 @@
         <th>Agent comment</th>
         <th>Reference</th>
         <th>User</th>
+        <th></th>
+        <th></th>
       </tr>
     </thead>
 
     <tbody>
-      <% @agents.each do |agent| %>
-        <tr>
-          <td width="30%"><h4><%= link_to agent.adminagentname.a_common_name, agent_path(agent) if agent.adminagentname %></h4></td>
-          <td><%= agent.adminagentfamily.a_family if agent.adminagentfamily %></td>
-          <td><%= agent.adminagentgenu.a_genus if agent.adminagentgenu %></td>
-          <td><%= agent.adminagentspec.a_species if agent.adminagentspec %></td>
-          <td><%= agent.subspecies %></td>
-          <td><%= agent.serovar %></td>
-          <td><%= agent.other_agent_name %></td>
-          <td><%= agent.ref_number %></td>
-          <td><%= agent.rate_of_illness %></td>
-          <td><%= agent.morbidity %></td>
-          <td><%= agent.mortality %></td>
-          <td><%= agent.isolation_source %></td>
-          <td><%= agent.natural_occurence %></td>
-          <td>
+      <% @agents.each do |agent| %>          
+          
             <% agent.agentparams.order(:infected_species).each do |p| %>
-              <ul>
-                <li><%= p.infected_species if p.infected_species %></li>
-              </ul>
-            <% end %>            
-          </td>
-          <td>
-            <% agent.agentparams.order(:infected_species).each do |p| %>
-              <ul>
-                <li><%= p.infectious_dose if p.infectious_dose %></li> 
-              </ul>
-            <% end %>            
-          </td>
-          <td>
-            <% agent.agentparams.order(:infected_species).each do |p| %>
-              <ul>
-                <li><%= p.level_of_infectious_dose if p.level_of_infectious_dose %></li> 
-              </ul>
-            <% end %>            
-          </td>         
-          <td><%= agent.a_comment %></td>
-          <td><%= agent.reference_id %></td>
-          <td><%= agent.user_id %></td>
+
+            <tr>
+              <td><h4><%= link_to agent.adminagentname.a_common_name, agent_path(agent) if agent.adminagentname %></h4></td>
+              <td><%= agent.adminagentfamily.a_family if agent.adminagentfamily %></td>
+              <td><%= agent.adminagentgenu.a_genus if agent.adminagentgenu %></td>
+              <td><%= agent.adminagentspec.a_species if agent.adminagentspec %></td>
+              <td><%= agent.subspecies %></td>
+              <td><%= agent.serovar %></td>
+              <td><%= agent.other_agent_name %></td>
+              <td><%= agent.ref_number %></td>
+              <td><%= agent.rate_of_illness %></td>
+              <td><%= agent.morbidity %></td>
+              <td><%= agent.mortality %></td>
+              <td><%= agent.isolation_source %></td>
+              <td><%= agent.natural_occurence %></td>             
+              <td><%= p.infected_species if p.infected_species %></td>   
+              <td><%= p.infectious_dose if p.infectious_dose %></td> 
+              <td><%= p.level_of_infectious_dose if p.level_of_infectious_dose %></td>                
+              <td><%= agent.a_comment %></td>
+              <td><%= agent.reference_id %></td>
+              <td><%= agent.user_id %></td>
+
+           <% end %> 
         </tr>
       <% end %>
     </tbody>
   </table>
+
+
+          

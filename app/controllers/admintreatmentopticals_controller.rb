@@ -1,6 +1,6 @@
 class AdmintreatmentopticalsController < ApplicationController
   before_action :set_admintreatmentoptical, only: [:show, :edit, :update, :destroy]
-
+  before_filter :authenticate_user!, :except => [:some_action_without_auth]
   # GET /admintreatmentopticals
   # GET /admintreatmentopticals.json
   def index

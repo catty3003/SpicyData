@@ -45,3 +45,7 @@ end
 # gem 'debugger', group: [:development, :test]
 gem 'deep_cloneable', '~> 2.0.0'
 gem 'nested_form'
+gem 'devise'
+gem 'cancan'
+gem 'role_model'
+gem "ransack"

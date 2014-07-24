@@ -1,6 +1,6 @@
 class AdminmatrixplantpartsController < ApplicationController
   before_action :set_adminmatrixplantpart, only: [:show, :edit, :update, :destroy]
-
+  before_filter :authenticate_user!, :except => [:some_action_without_auth]
   # GET /adminmatrixplantparts
   # GET /adminmatrixplantparts.json
   def index

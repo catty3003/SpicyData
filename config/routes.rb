@@ -1,4 +1,5 @@
 SpicyData::Application.routes.draw do
+  devise_for :users
   resources :tenacities
 
   resources :tenacityparams
@@ -57,11 +58,13 @@ SpicyData::Application.routes.draw do
   get "home/join_discuss"
   get "home/change_profile"
   get "home/admin"
+  get "home/impressum"
+  get "contaminationstatuses/clone"
 
 
   resources :results
 
-  resources :contaminationstatuses
+  resources :contaminationstatuses 
 
   resources :references
 

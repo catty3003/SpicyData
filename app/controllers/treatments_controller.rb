@@ -1,15 +1,33 @@
 class TreatmentsController < ApplicationController
   before_action :set_treatment, only: [:show, :edit, :update, :destroy]
-
+  before_filter :authenticate_user!, :except => [:some_action_without_auth]
   # GET /treatments
   # GET /treatments.json
   def index
-    @treatments = Treatment.all
+   #@treatments = Treatment.all
+    @search = Treatment.search(params[:q])
+    @treatments = @search.result
+    @search.build_condition 
+   
+      respond_to do |format|
+      format.html
+      format.csv { send_data @treatments.to_csv }
+      format.xls
+    end  
   end
 
   # GET /treatments/1
   # GET /treatments/1.json
   def show
+    if params[:clone]
+      @treatment = @treatment.dupli
+
+
+      respond_to do |format|
+        format.html { render action: "new", notice: 'treatment was successfully cloned.' }
+      end
+      else
+    end
   end
 
   # GET /treatments/new
@@ -24,7 +42,7 @@ class TreatmentsController < ApplicationController
   # POST /treatments
   # POST /treatments.json
   def create
-    @treatment = Treatment.new(treatment_params)
+    @treatment = current_user.treatments.new(treatment_params)
 
     respond_to do |format|
       if @treatment.save
