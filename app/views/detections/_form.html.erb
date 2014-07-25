@@ -15,6 +15,7 @@
 <div class="well">          
   <div class="panel panel-info">
     <div class="panel-body">
+
       <div class="form-group">
         <%= f.label :reference_id %><br>
         <%= f.select :reference_id, Reference.all.order(:first_author_name, :year).collect {|c| [ c.full_ref, c.id ] }, { :include_blank => true, :selected => @detection.reference_id}, class: "form-control" %>
@@ -39,6 +40,7 @@
         <%= f.label :"detection_device_needed " %><br>
         <%= f.text_field :d_device_needed, class: "form-control" %>
       </div>
+
       <div class="row">
         <div class="panel panel-info">
           <div class="panel-body">
@@ -70,7 +72,8 @@
             </div>
           </div>
         </div>
-      </div>          
+      </div>   
+
       <div class="row">
         <div class="panel panel-info">
           <h3>molecular detection method</h3>
@@ -125,6 +128,7 @@
         <%= f.label :"method_for_comparison " %><br>
         <%= f.text_area :method_for_comparison, class: "form-control" %>
       </div>
+
       <div class="row">
         <div class="col-md-3">
           <div class="form-group">
@@ -151,10 +155,10 @@
           </div>
         </div>
       </div>
+      <div>
         <%= f.label :"detection_comment " %><br>
         <%= f.text_area :d_comment, class: "form-control" %>
-      </div>
-
+      </div> 
     </div>
   </div>
   <div class="actions">

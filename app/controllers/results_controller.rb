@@ -33,7 +33,7 @@ class ResultsController < ApplicationController
   # POST /results
   # POST /results.json
   def create
-    @result = current_user.results.new(result_params)
+    @result = Result.new(result_params)
 
     respond_to do |format|
       if @result.save
