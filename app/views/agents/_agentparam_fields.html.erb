@@ -1,15 +1,24 @@
-  <div class="form-group">
-    <%= f.link_to_remove "Remove these exposure to hazard attribute fields.", class: "btn btn-danger btn-sm" %>
-  </div>
-  <div class="field">
-    <%= f.label :infectious_dose %><br>
-    <%= f.text_field :infectious_dose, class: "form-control" %>
-  </div>
-  <div class="field">
-    <%= f.label :level_of_infectious_dose %><br>
-    <%= f.text_field :level_of_infectious_dose, class: "form-control" %>
-  </div>
-  <div class="field">
-    <%= f.label :infected_species %><br>
-    <%= f.text_field :infected_species, class: "form-control" %>
-  </div>
+
+  <div class="col-md-6">
+    <div class="panel panel-info">
+      <div class="panel-body">
+
+
+            <%= f.link_to_remove "Remove exposure to hazard attribute fields.", class: "btn btn-danger btn-sm" %>
+
+          <div class="field">
+            <%= f.label :infectious_dose %><br>
+            <%= f.text_field :infectious_dose, class: "form-control" %>
+          </div>
+          <div class="field">
+            <%= f.label :level_of_infectious_dose %><br>
+            <%= f.text_field :level_of_infectious_dose, class: "form-control" %>
+          </div>
+          <div class="field">
+            <%= f.label :infected_species %><br>
+            <%= f.text_field :infected_species, class: "form-control" %>
+          </div>
+
+      </div> 
+    </div> 
+  </div> 

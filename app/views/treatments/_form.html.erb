@@ -15,90 +15,133 @@
 <div class="well">          
   <div class="panel panel-info">
     <div class="panel-body">
-      
-      <div class="field">
-        <%= f.label :"Temperature treatment" %><br>
-        <%= f.collection_select :admintreatmenttemperature_id, Admintreatmenttemperature.all.order(:temperature), :id, :temperature, {include_blank: true}, {class: "form-control"} %>
-      </div>
-      <div class="field">
-        <%= f.label :"Temperature (°C)"%><br>
-        <%= f.text_field :temperature_in_degree %>
-      </div>
-      <div class="field">
-        <%= f.label :"Steam treatment" %><br>
-        <%= f.collection_select :admintreatmentsteam_id, Admintreatmentsteam.all.order(:steam), :id, :steam, {include_blank: true}, {class: "form-control"} %>
-      </div>
-      <div class="field">
-        <%= f.label :"Steam (%)" %><br>
-        <%= f.text_field :steam_in_percent %>
-      </div>
-      <div class="field">
-        <%= f.label :"Treatment wiht fumigation_gas" %><br>
-        <%= f.collection_select :admintreatmentfumigation_id, Admintreatmentfumigation.all.order(:fumigation_gas), :id, :fumigation_gas, {include_blank: true}, {class: "form-control"} %>
-      </div>
-      <div class="field">
-        <%= f.label :"Fumigation gas (%)"%><br>
-        <%= f.text_field :fumigation_gas_in_percent %>
-      </div>
-      <div class="field">
-        <%= f.label :"Optical treatment" %><br>
-        <%= f.collection_select :admintreatmentoptical_id, Admintreatmentoptical.all.order(:optical), :id, :optical, {include_blank: true}, {class: "form-control"} %>
-      </div>
-      <div class="field">
-        <%= f.label :"Mechanical treatment" %><br>
-        <%= f.collection_select :admintreatmentmechanical_id, Admintreatmentmechanical.all.order(:mechanical), :id, :mechanical, {include_blank: true}, {class: "form-control"} %>
-      </div>
-      <div class="field">
+      <div class="form-group">
+        <%= f.label :reference_id %><br>
+        <%= f.select :reference_id, Reference.all.order(:first_author_name, :year).collect {|c| [ c.full_ref, c.id ] }, { :include_blank => true, :selected => @treatment.reference_id}, class: "form-control" %>
+      </div>  
+      <div class="form-group">
         <%= f.label :"Process type" %><br>
         <%= f.collection_select :admintreatmentprocesstype_id, Admintreatmentprocesstype.all.order(:process_type), :id, :process_type, {include_blank: true}, {class: "form-control"} %>
       </div>
-      <div class="field">
-        <%= f.label :"Treatment pH" %><br>
-        <%= f.text_field :t_ph %>
+      <div class="form-group">
+        <%= f.label :"treat duration" %><br>
+            <%= f.radio_button :treat_duration_unit, "seconds"  %> <%= f.label :treat_duration_unit, "seconds" %>
+            <%= f.radio_button :treat_duration_unit, "minutes"  %> <%= f.label :treat_duration_unit, "mminutes" %>
+            <%= f.radio_button :treat_duration_unit, "hours"  %> <%= f.label :treat_duration_unit, "hours" %> 
+        <%= f.text_field :treat_duration, class: "form-control"  %>
       </div>
-      <div class="field">
-        <%= f.label :pressure %><br>
-        <%= f.text_field :pressure %>
-      </div>
-      <div class="field">
-        <%= f.label :kgy_dose %><br>
-        <%= f.text_field :kgy_dose %>
-      </div>
-      <div class="field">
-        <%= f.label :"Treatment available water" %><br>
-        <%= f.text_field :t_aw %>
-      </div>
-      <div class="field">
-        <%= f.label :water_activity %><br>
-        <%= f.text_field :water_activity %>
-      </div>
-      <div class="field">
-        <%= f.label :other_condition %><br>
-        <%= f.text_field :other_condition %>
-      </div>
-      <div class="field">
-        <%= f.label :treat_duration %><br>
-        <%= f.text_field :treat_duration %>
-      </div>
-      <div class="field">
-        <%= f.label :treat_duration_unit %><br>
-        <%= f.text_field :treat_duration_unit %>
-      </div>
-      <div class="field">
+
+      <div class="row">
+          <div class="panel panel-info">
+            <div class="panel-body">
+
+              <div class="form-group">
+                <%= f.label :"Mechanical treatment" %><br>
+                <%= f.collection_select :admintreatmentmechanical_id, Admintreatmentmechanical.all.order(:mechanical), :id, :mechanical, {include_blank: true}, {class: "form-control"} %>
+              </div>
+
+              <div class="row">
+                <div class="col-md-8"> 
+                  <div class="form-group">
+                    <%= f.label :"Temperature treatment" %><br>
+                    <%= f.collection_select :admintreatmenttemperature_id, Admintreatmenttemperature.all.order(:temperature), :id, :temperature, {include_blank: true}, {class: "form-control"} %>
+                  </div>
+                </div>
+                <div class="col-md-4"> 
+                  <div class="form-group">
+                    <%= f.label :"Temperature (°C)"%><br>
+                    <%= f.text_field :temperature_in_degree, class: "form-control"  %>
+                  </div>
+                </div>
+              </div>   
+              
+              <div class="row">
+                <div class="col-md-8"> 
+                  <div class="form-group">
+                    <%= f.label :"Steam treatment" %><br>
+                    <%= f.collection_select :admintreatmentsteam_id, Admintreatmentsteam.all.order(:steam), :id, :steam, {include_blank: true}, {class: "form-control"} %>
+                  </div>
+                </div>
+                <div class="col-md-4"> 
+                  <div class="form-group">
+                    <%= f.label :"Steam (%)" %><br>
+                    <%= f.text_field :steam_in_percent, class: "form-control"  %>
+                  </div>
+                </div>
+              </div> 
+
+
+              <div class="row">
+                <div class="col-md-8"> 
+                  <div class="form-group">
+                    <%= f.label :"Treatment wiht fumigation_gas" %><br>
+                    <%= f.collection_select :admintreatmentfumigation_id, Admintreatmentfumigation.all.order(:fumigation_gas), :id, :fumigation_gas, {include_blank: true}, {class: "form-control"} %>
+                  </div>
+                </div>
+                <div class="col-md-4"> 
+                  <div class="form-group">
+                    <%= f.label :"Fumigation gas (%)"%><br>
+                    <%= f.text_field :fumigation_gas_in_percent, class: "form-control"  %>
+                  </div>
+                </div>
+              </div> 
+
+              <div class="row">
+                <div class="col-md-8"> 
+                  <div class="form-group">
+                    <%= f.label :"Optical treatment" %><br>
+                    <%= f.collection_select :admintreatmentoptical_id, Admintreatmentoptical.all.order(:optical), :id, :optical, {include_blank: true}, {class: "form-control"} %>
+                  </div>
+                </div>
+                <div class="col-md-4"> 
+                  <div class="form-group">
+                    <%= f.label :"kgy dose" %><br>
+                    <%= f.text_field :kgy_dose, class: "form-control"  %>
+                  </div>
+                </div>
+              </div> 
+
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <%= f.label :"Treatment pH" %><br>
+                    <%= f.text_field :t_ph, class: "form-control"  %>
+                  </div>
+                </div>
+                 <div class="col-md-6">
+                  <div class="form-group">
+                    <%= f.label :"Treatment pressure" %><br>
+                    <%= f.text_field :pressure, class: "form-control"  %>
+                  </div>
+                </div>       
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <%= f.label :"Treatment available water" %><br>
+                    <%= f.text_field :t_aw, class: "form-control"  %>
+                  </div>
+                </div>
+                 <div class="col-md-6">
+                  <div class="form-group">
+                    <%= f.label :"Treatment water_activity" %><br>
+                    <%= f.text_field :water_activity, class: "form-control"  %>
+                  </div>
+                </div>       
+              </div>
+
+                  <div class="form-group">
+                    <%= f.label :"other_conditions" %><br>
+                    <%= f.text_field :other_condition, class: "form-control"  %>
+                  </div>
+               </div>
+            </div>
+        </div>
+
+      <div class="form-group">
         <%= f.label :"Treatment comment" %><br>
-        <%= f.text_area :t_comment %>
-      </div>
-      <div class="field">
-        <%= f.label :reference_id %><br>
-        <%= f.select :reference_id, Reference.all.order(:first_author_name, :year).collect {|c| [ c.full_ref, c.id ] }, { :include_blank => true, :selected => @treatment.reference_id}, class: "form-control" %>
-      </div>
-      <div class="field">
-        <%= f.label :user_id %><br>
-        <%= f.number_field :user_id %>
-      </div>
-      <div class="field">
-        <%= f.label :matrix_id %><br>
-        <%= f.number_field :matrix_id %>
+        <%= f.text_area :t_comment, class: "form-control"  %>
       </div>
 
     </div>

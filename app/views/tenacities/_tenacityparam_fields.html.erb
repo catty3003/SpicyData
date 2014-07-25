@@ -1,27 +1,34 @@
-  <div class="form-group">
-    <%= f.link_to_remove "Remove these Tenacity parameter fields.", class: "btn btn-danger btn-sm" %>
-  </div>
-  <div class="field">
-    <%= f.label :tena_duration %><br>
-    <%= f.text_field :tena_duration %>
-  </div>
-  <div class="field">
-    <%= f.label :tena_duration_unit %><br>
-    <%= f.text_field :tena_duration_unit %>
-  </div>
-  <div class="field">
-    <%= f.label :final_concentration %><br>
-    <%= f.number_field :final_concentration %>
-  </div>
-  <div class="field">
-    <%= f.label :f_concentration_unit %><br>
-    <%= f.text_field :f_concentration_unit %>
-  </div>
-  <div class="field">
-    <%= f.label :decimal_reduction %><br>
-    <%= f.text_field :decimal_reduction %>
-  </div>
-  <div class="field">
-    <%= f.label :tena_comment %><br>
-    <%= f.text_area :tena_comment %>
-  </div>
+  <div class="col-md-6">
+    <div class="panel panel-info">
+      <div class="panel-body">
+        <div class="form-group">
+          <%= f.link_to_remove "Remove these Tenacity parameter fields.", class: "btn btn-danger btn-sm" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :tena_duration %><br>
+          <%= f.text_field :tena_duration, class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :tena_duration_unit %><br>
+          <%= f.text_field :tena_duration_unit, class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :final_concentration %><br>
+          <%= f.number_field :final_concentration, class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :f_concentration_unit %><br>
+          <%= f.text_field :f_concentration_unit, class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :decimal_reduction %><br>
+          <%= f.text_field :decimal_reduction, class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :tena_comment %><br>
+          <%= f.text_area :tena_comment, class: "form-control" %>
+        </div>
+
+      </div> 
+    </div> 
+  </div> 

@@ -14,101 +14,128 @@
 <div class="well">          
   <div class="panel panel-info">
     <div class="panel-body">  
+      <div class="form-group">
+        <%= f.label :reference_id %><br>
+        <%= f.select :reference_id, Reference.all.collect {|c| [ c.full_ref, c.id ] }, { :include_blank => true, :selected => @matrix.reference_id}, class: "form-control" %>
+      </div> 
+      <div class="row">
+        <div class="col-md-6">
+          <div class="panel panel-info">
+            <div class="panel-body">
+              <div class="form-group">
+                <%= f.label :"Matrix common name" %><br>
+                <%= f.collection_select :adminmatrixname_id, Adminmatrixname.all.order(:m_common_name), :id, :m_common_name, {include_blank: true}, {class: "form-control"} %>
+              </div>
 
-  <div class="form-group">
-    <%= f.label :"Matrix common name" %><br>
-    <%= f.collection_select :adminmatrixname_id, Adminmatrixname.all.order(:m_common_name), :id, :m_common_name, {include_blank: true}, {class: "form-control"} %>
-  </div>
-
-  <div class="field">
-    <%= f.label :"Matrix genus" %><br>
-    <%= f.collection_select :adminmatrixgenu_id, Adminmatrixgenu.all.order(:m_genus), :id, :m_genus, {include_blank: true}, {class: "form-control"} %>
-  </div>
-  <div class="field">
-    <%= f.label :"Matrix species" %><br>
-    <%= f.collection_select :adminmatrixspec_id, Adminmatrixspec.all.order(:m_species), :id, :m_species, {include_blank: true}, {class: "form-control"} %>
-  </div>
-  <div class="field">
-    <%= f.label :other_matrix_name %><br>
-    <%= f.text_field :other_matrix_name, :placeholder=>"if no matrix name above match, otherwise: n.a.", class: "form-control"  %>
-  </div>
-  <div class="field">
-    <%= f.label :"Plant part" %><br>
-    <%= f.collection_select :adminmatrixplantpart_id, Adminmatrixplantpart.all.order(:plant_part), :id, :plant_part, {include_blank: true}, {class: "form-control"} %>
-  </div>
-  <div class="field">
-    <%= f.label :"Storage form" %><br>
-    <%= f.collection_select :adminmatrixstorageform_id, Adminmatrixstorageform.all.order(:storage_form), :id, :storage_form, {include_blank: true}, {class: "form-control"} %>
-  </div>
-  <div class="field">
-    <%= f.label :adminmatrixproductform_id %><br>
-    <%= f.collection_select :adminmatrixproductform_id, Adminmatrixproductform.all.order(:product_form), :id, :product_form, {include_blank: true}, {class: "form-control"} %>
-  </div>
-  <div class="field">
-    <%= f.label :place_of_origin %><br>
-    <%= f.text_field :place_of_origin, class: "form-control" %>
-  </div>
-  <div class="field">
-    <%= f.label :date_of_harvest %><br>
-    <%= f.date_select :date_of_harvest, class: "form-control" %>
-  </div>
-  <div class="field">
-    <%= f.label :"relative_humidity_during_harvest (%)" %><br>
-    <%= f.text_field :relative_humidity_during_harvest, class: "form-control" %>
-  </div>
-  <div class="field">
-    <%= f.label :"temperature_during_harvest (°C)" %><br>
-    <%= f.text_field :temperature_during_harvest, class: "form-control" %>
-  </div>
-  <div class="field">
-    <%= f.label :"pre-treatment" %><br>
-    <%= f.text_field :pre_treatment, :placeholder=>"if unkown: n.a." , class: "form-control"%>
-  </div>
-  <div class="field">
-    <%= f.label :sampling_date %><br>
-    <%= f.date_select :sampling_date, class: "form-control" %>
-  </div>
-  <div class="field">
-    <%= f.label :'Matrix PH-value' %><br>
-    <%= f.text_field :m_ph, class: "form-control" %>
-  </div>
-  <div class="field">
-    <%= f.label :"Initial matrix available water" %><br>
-    <%= f.text_field :m_aw, class: "form-control" %>
-  </div>
-  <div class="field">
-    <%= f.label :"humidity_of_matrix (%)" %><br>
-    <%= f.text_field :humidity_of_matrix, class: "form-control" %>
-  </div>
-  <div class="field">
-    <%= f.label :"ash (%)" %><br>
-    <%= f.text_field :ash, class: "form-control" %>
-  </div>
-  <div class="field">
-    <%= f.label :"sand (%)" %><br>
-    <%= f.text_field :sand, class: "form-control" %>
-  </div>
-  <div class="field">
-    <%= f.label :"lipids (%)" %><br>
-    <%= f.text_field :lipids, class: "form-control" %>
-  </div>
-  <div class="field">
-    <%= f.label :further_ingredients %><br>
-    <%= f.text_field :further_ingredients, class: "form-control" %>
-  </div>
-  <div class="field">
-    <%= f.label :"Matrix comment" %><br>
-    <%= f.text_area :m_comment, class: "form-control" %>
-  </div>
-  <div class="field">
-    <%= f.label :reference_id %><br>
-    <%= f.select :reference_id, Reference.all.collect {|c| [ c.full_ref, c.id ] }, { :include_blank => true, :selected => @matrix.reference_id}, class: "form-control" %>
-  </div> 
-  <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.number_field :user_id, class: "form-control" %>
-  </div>
-
+              <div class="form-group">
+                <%= f.label :"Matrix genus" %><br>
+                <%= f.collection_select :adminmatrixgenu_id, Adminmatrixgenu.all.order(:m_genus), :id, :m_genus, {include_blank: true}, {class: "form-control"} %>
+              </div>
+              <div class="form-group">
+                <%= f.label :"Matrix species" %><br>
+                <%= f.collection_select :adminmatrixspec_id, Adminmatrixspec.all.order(:m_species), :id, :m_species, {include_blank: true}, {class: "form-control"} %>
+              </div>
+              <div class="form-group">
+                <%= f.label :other_matrix_name %><br>
+                <%= f.text_field :other_matrix_name, :placeholder=>"if no matrix name above match, otherwise: n.a.", class: "form-control"  %>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="panel panel-info">
+            <div class="panel-body">
+              <div class="form-group">
+                <%= f.label :"Plant part" %><br>
+                <%= f.collection_select :adminmatrixplantpart_id, Adminmatrixplantpart.all.order(:plant_part), :id, :plant_part, {include_blank: true}, {class: "form-control"} %>
+              </div>
+              <div class="form-group">
+                <%= f.label :"Storage form" %><br>
+                <%= f.collection_select :adminmatrixstorageform_id, Adminmatrixstorageform.all.order(:storage_form), :id, :storage_form, {include_blank: true}, {class: "form-control"} %>
+              </div>
+              <div class="form-group">
+                <%= f.label :"Product form" %><br>
+                <%= f.collection_select :adminmatrixproductform_id, Adminmatrixproductform.all.order(:product_form), :id, :product_form, {include_blank: true}, {class: "form-control"} %>
+              </div>
+              <div class="form-group">
+                <%= f.label :"place of origin" %><br>
+                <%= f.text_field :place_of_origin, class: "form-control" %>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="panel panel-info">
+            <div class="panel-body">     
+              <div class="form-group">
+                <%= f.label :"date of harvest" %><br>
+                <%= f.date_select :date_of_harvest, class: "form-control" %>
+              </div>                     
+              <div class="form-group">
+                <%= f.label :"relative_humidity_during_harvest (%)" %><br>
+                <%= f.text_field :relative_humidity_during_harvest, class: "form-control" %>
+              </div>
+              <div class="form-group">
+                <%= f.label :"temperature_during_harvest (°C)" %><br>
+                <%= f.text_field :temperature_during_harvest, class: "form-control" %>
+              </div>
+              <div class="form-group">
+                <%= f.label :"pre treatment" %><br>
+                <%= f.text_field :pre_treatment, :placeholder=>"if unkown: n.a." , class: "form-control"%>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="panel panel-info">
+            <div class="panel-body">               
+              <div class="form-group">
+                <%= f.label :sampling_date %><br>
+                <%= f.date_select :sampling_date, class: "form-control" %>
+              </div>
+              <div class="form-group">
+                <%= f.label :'Matrix PH-value' %><br>
+                <%= f.text_field :m_ph, class: "form-control" %>
+              </div>
+              <div class="form-group">
+                <%= f.label :"Initial matrix available water" %><br>
+                <%= f.text_field :m_aw, class: "form-control" %>
+              </div>
+              <div class="form-group">
+                <%= f.label :"humidity_of_matrix (%)" %><br>
+                <%= f.text_field :humidity_of_matrix, class: "form-control" %>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="panel panel-info">
+            <div class="panel-body">                
+              <div class="form-group">
+                <%= f.label :"ash (%)" %><br>
+                <%= f.text_field :ash, class: "form-control" %>
+              </div>
+              <div class="form-group">
+                <%= f.label :"sand (%)" %><br>
+                <%= f.text_field :sand, class: "form-control" %>
+              </div>
+              <div class="form-group">
+                <%= f.label :"lipids (%)" %><br>
+                <%= f.text_field :lipids, class: "form-control" %>
+              </div>
+              <div class="form-group">
+                <%= f.label :"further ingredients" %><br>
+                <%= f.text_field :further_ingredients, class: "form-control" %>
+              </div>
+               </div>
+            </div>
+          </div>
+        </div> 
+              <div class="form-group">
+        <%= f.label :"Matrix comment" %><br>
+        <%= f.text_area :m_comment, class: "form-control" %>
+      </div>
+      </div>            
     </div>
   </div>
   <div class="actions">
