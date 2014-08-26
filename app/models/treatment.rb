@@ -9,8 +9,8 @@ class Treatment < ActiveRecord::Base
 	belongs_to :admintreatmentmechanical 
 	validates :admintreatmenttemperature_id, :admintreatmentsteam_id, :admintreatmentfumigation_id, 
 						:admintreatmentoptical_id, :admintreatmentmechanical_id, :admintreatmentprocesstype_id, 
-						:reference_id, :user_id, :matrix_id, :numericality => { :greater_than => 0 }, presence: true
-	validates :temperature_in_degree, :steam_in_percent, :fumigation_gas_in_percent, :t_ph, :pressure, :kgy_dose, :t_aw, :water_activity, :treat_duration, :numericality => { :less_than_or_equal_to => 100 }, presence: true 
+						:reference_id, :user_id, :numericality => { :greater_than => 0 }, presence: true
+	validates  :steam_in_percent, :fumigation_gas_in_percent, :t_ph, :pressure, :kgy_dose, :t_aw, :water_activity, :treat_duration, :numericality => { :less_than_or_equal_to => 100 }, presence: true 
 	belongs_to :admintreatmentprocesstype 
   belongs_to :user
 

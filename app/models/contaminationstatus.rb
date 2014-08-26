@@ -8,10 +8,7 @@ class Contaminationstatus < ActiveRecord::Base
 	belongs_to :treatment
 	belongs_to :spiking
 	belongs_to :result
-  validates :cfu_natural_contamination, :numericality => { :less_than_or_equal_to => 100 }, presence: true
-  validates :cfu_natural_contamination_unit, presence: true
-  validates :matrix_id, :agent_id, :tenacity_id, :treatment_id, :spiking_id, :samplepreparation_id, :detection_id, :reference_id, :user_id, :result_id, :numericality => { :greater_than => 0 }, presence: true
-
+ 
   belongs_to :adminmatrixname
   belongs_to :user
 

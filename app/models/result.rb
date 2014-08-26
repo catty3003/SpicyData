@@ -1,7 +1,7 @@
 class Result < ActiveRecord::Base
 	has_many :contaminationstatuses, dependent: :nullify
-	validates :cfu_initial, :cfu_detected, :numericality => { :less_than_or_equal_to => 100 }, presence: true
-	validates :cfu_initial_unit, :cfu_detected_unit, :r_comment, :detectability, presence: true
+	validates :cfu_initial, :cfu_detected, numericality:true, presence: true
+	validates :cfu_initial_unit, :cfu_detected_unit, :r_comment, presence: true
 	
 
 	def full_res

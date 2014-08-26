@@ -10,7 +10,6 @@ class Reference < ActiveRecord::Base
 	belongs_to :adminreferencetype 
 	validates :adminreferencetype_id, :year, :volume, :page_from, :page_to, :user_id, :numericality => { :greater_than => 0 }, presence: true
 	validates :first_author_name, :title, :journal, :link, :r_comment, presence: true
-	validates :matrix, :agent, :spiking, :treatment, :sample_prep, :detection, :tenacity, presence: true 
   belongs_to :user
 
 	def full_ref

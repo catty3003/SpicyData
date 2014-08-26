@@ -107,12 +107,14 @@
               </p>
 
               <p>
-                <strong>User:</strong>
-                <%= @reference.user_id %>
+                <strong>User name:</strong>
+                <%= @reference.user.username %> <%= @reference.user.surname %>
               </p>
-
-
-
+              <p>
+              <p>
+                <strong>User institution:</strong>
+                <%= @reference.user.institution %>
+              </p>
 
             </div>
           </div>    
