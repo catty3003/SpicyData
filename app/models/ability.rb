@@ -10,15 +10,15 @@ class Ability
       can :manage, :all
     elsif user.has_role? :editor
       # an editor can do everything to documents and reports
-      can :manage, #[attribute]
+      can :manage #[attribute]
       # but can only read, create and update charts (ie they cannot
       # be destroyed or have any other actions from the charts_controller.rb
       # executed)
-      can [:read, :create, :update], #attribute
+      can :read, :create, :update  #attribute
       # an editor can only view the annual report
-      can :read, #attribute
+      can :read #attribute
     elsif user.has_role? :guest
-      can :read, #[attribute]
+      can :read #[attribute]
     end
     # Define abilities for the passed in user here. For example:
     #
