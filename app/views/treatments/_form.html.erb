@@ -24,11 +24,10 @@
         <%= f.collection_select :admintreatmentprocesstype_id, Admintreatmentprocesstype.all.order(:process_type), :id, :process_type, {include_blank: true}, {class: "form-control"} %>
       </div>
       <div class="form-group">
-        <%= f.label :"treat duration" %><br>
+        <%= f.label :"treatment duration" %><br>
             <%= f.radio_button :treat_duration_unit, "seconds"  %> <%= f.label :treat_duration_unit, "seconds" %>
-            <%= f.radio_button :treat_duration_unit, "minutes"  %> <%= f.label :treat_duration_unit, "mminutes" %>
+            <%= f.radio_button :treat_duration_unit, "minutes"  %> <%= f.label :treat_duration_unit, "minutes" %>
             <%= f.radio_button :treat_duration_unit, "hours"  %> <%= f.label :treat_duration_unit, "hours" %> 
-        <%= f.text_field :treat_duration, class: "form-control"  %>
       </div>
 
       <div class="row">
